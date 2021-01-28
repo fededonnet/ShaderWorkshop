@@ -1,0 +1,2003 @@
+
+Dump of file glfw3.lib
+
+File Type: LIBRARY
+
+COFF SYMBOL TABLE
+000 010459F2 ABS    notype       Static       | @comp.id
+001 80000191 ABS    notype       Static       | @feat.00
+002 00000000 SECT1  notype       Static       | .drectve
+    Section length   2F, #relocs    0, #linenums    0, checksum        0
+004 00000000 SECT2  notype       Static       | .debug$S
+    Section length   BC, #relocs    0, #linenums    0, checksum        0
+006 00000000 SECT3  notype       Static       | .text$mn
+    Section length  132, #relocs    6, #linenums    0, checksum A7F487C1, selection    1 (pick no duplicates)
+008 00000000 SECT4  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x3)
+00A 00000000 SECT5  notype       Static       | .text$mn
+    Section length  2BB, #relocs   14, #linenums    0, checksum 3B3E68AC, selection    1 (pick no duplicates)
+00C 00000000 SECT6  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x5)
+00E 00000000 SECT7  notype       Static       | .text$mn
+    Section length   43, #relocs    2, #linenums    0, checksum F3A29506, selection    1 (pick no duplicates)
+010 00000000 SECT8  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x7)
+012 00000000 SECT9  notype       Static       | .text$mn
+    Section length   D6, #relocs   1B, #linenums    0, checksum 5A9B5341, selection    1 (pick no duplicates)
+014 00000000 SECTA  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x9)
+016 00000000 SECTB  notype       Static       | .text$mn
+    Section length   5B, #relocs    3, #linenums    0, checksum A2DDBE56, selection    1 (pick no duplicates)
+018 00000000 SECTC  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0xB)
+01A 00000000 SECTD  notype       Static       | .text$mn
+    Section length   1F, #relocs    3, #linenums    0, checksum EDD16E73, selection    1 (pick no duplicates)
+01C 00000000 SECTE  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0xD)
+01E 00000000 SECTF  notype       Static       | .text$mn
+    Section length   3B, #relocs    4, #linenums    0, checksum 820C5AAB, selection    1 (pick no duplicates)
+020 00000000 SECT10 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0xF)
+022 00000000 SECT11 notype       Static       | .text$mn
+    Section length   3E, #relocs    3, #linenums    0, checksum 475A72C5, selection    1 (pick no duplicates)
+024 00000000 SECT12 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x11)
+026 00000000 SECT13 notype       Static       | .text$mn
+    Section length   39, #relocs    2, #linenums    0, checksum 46A8AAC6, selection    1 (pick no duplicates)
+028 00000000 SECT14 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x13)
+02A 00000000 SECT15 notype       Static       | .text$mn
+    Section length   15, #relocs    3, #linenums    0, checksum 505BE775, selection    1 (pick no duplicates)
+02C 00000000 SECT16 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x15)
+02E 00000000 SECT17 notype       Static       | .text$mn
+    Section length  469, #relocs   21, #linenums    0, checksum 2CBE0869, selection    1 (pick no duplicates)
+030 00000000 SECT18 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x17)
+032 00000000 SECT19 notype       Static       | .text$mn
+    Section length   4E, #relocs    2, #linenums    0, checksum 906925B9, selection    1 (pick no duplicates)
+034 00000000 SECT1A notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x19)
+036 00000000 SECT1B notype       Static       | .text$mn
+    Section length   26, #relocs    2, #linenums    0, checksum B9D601A8, selection    1 (pick no duplicates)
+038 00000000 SECT1C notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x1B)
+03A 00000000 SECT1D notype       Static       | .text$mn
+    Section length   FF, #relocs   1E, #linenums    0, checksum 99FE232A, selection    1 (pick no duplicates)
+03C 00000000 SECT1E notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x1D)
+03E 00000000 UNDEF  notype       External     | __imp__FreeLibrary@4
+03F 00000000 UNDEF  notype       External     | __imp__GetProcAddress@8
+040 00000000 UNDEF  notype       External     | __imp__LoadLibraryW@4
+041 00000000 UNDEF  notype       External     | __imp__DescribePixelFormat@16
+042 00000000 UNDEF  notype       External     | __imp__SetPixelFormat@12
+043 00000000 UNDEF  notype       External     | __imp__SwapBuffers@4
+044 00000000 UNDEF  notype       External     | __imp__GetDC@4
+045 00000000 UNDEF  notype       External     | __imp__ReleaseDC@8
+046 00000000 UNDEF  notype       External     | __imp__calloc
+047 00000000 UNDEF  notype       External     | __imp__free
+048 00000000 UNDEF  notype ()    External     | __glfwCreateContextTLS
+049 00000000 UNDEF  notype ()    External     | __glfwDestroyContextTLS
+04A 00000000 UNDEF  notype ()    External     | __glfwSetContextTLS
+04B 00000000 SECT9  notype ()    External     | __glfwInitContextAPI
+04C 00000000 SECT15 notype ()    External     | __glfwTerminateContextAPI
+04D 00000000 SECT5  notype ()    External     | __glfwCreateContext
+04E 00000000 SECT7  notype ()    External     | __glfwDestroyContext
+04F 00000000 SECT3  notype ()    External     | __glfwAnalyzeContext
+050 00000000 UNDEF  notype ()    External     | __glfwIsCompositionEnabled
+051 00000000 SECTF  notype ()    External     | __glfwPlatformMakeContextCurrent
+052 00000000 UNDEF  notype ()    External     | __glfwPlatformGetCurrentContext
+053 00000000 SECT11 notype ()    External     | __glfwPlatformSwapBuffers
+054 00000000 SECT13 notype ()    External     | __glfwPlatformSwapInterval
+055 00000000 SECTB  notype ()    External     | __glfwPlatformExtensionSupported
+056 00000000 SECTD  notype ()    External     | __glfwPlatformGetProcAddress
+057 00000000 UNDEF  notype ()    External     | __glfwInputError
+058 00000000 UNDEF  notype ()    External     | __glfwStringInExtensionString
+059 00000000 UNDEF  notype ()    External     | __glfwChooseFBConfig
+05A 00000000 SECT1D notype ()    Static       | _initWGLExtensions
+05B 00000000 SECT19 notype ()    Static       | _getPixelFormatAttrib
+05C 00000000 SECT17 notype ()    Static       | _choosePixelFormat
+05D 00000000 SECT1B notype ()    External     | _glfwGetWGLContext
+05E 00000000 UNDEF  notype ()    External     | @__security_check_cookie@4
+05F 00000000 UNDEF  notype       External     | __glfwInitialized
+060 00000000 UNDEF  notype       External     | __glfw
+061 00000000 SECT1F notype       Static       | .rdata
+    Section length   1A, #relocs    0, #linenums    0, checksum 5065704B, selection    2 (pick any)
+063 00000000 SECT1F notype       External     | ??_C@_0BK@HGDBIG@wglGetExtensionsStringEXT?$AA@ (`string')
+064 00000000 SECT20 notype       Static       | .rdata
+    Section length   1A, #relocs    0, #linenums    0, checksum CE08D71D, selection    2 (pick any)
+066 00000000 SECT20 notype       External     | ??_C@_0BK@JOBLJGNA@wglGetExtensionsStringARB?$AA@ (`string')
+067 00000000 SECT21 notype       Static       | .rdata
+    Section length   1B, #relocs    0, #linenums    0, checksum 16B26229, selection    2 (pick any)
+069 00000000 SECT21 notype       External     | ??_C@_0BL@PDDHMPGF@wglCreateContextAttribsARB?$AA@ (`string')
+06A 00000000 SECT22 notype       Static       | .rdata
+    Section length   13, #relocs    0, #linenums    0, checksum AD29C7A3, selection    2 (pick any)
+06C 00000000 SECT22 notype       External     | ??_C@_0BD@IINOPBDD@wglSwapIntervalEXT?$AA@ (`string')
+06D 00000000 SECT23 notype       Static       | .rdata
+    Section length   1D, #relocs    0, #linenums    0, checksum 970C92D4, selection    2 (pick any)
+06F 00000000 SECT23 notype       External     | ??_C@_0BN@GDKHKIAN@wglGetPixelFormatAttribivARB?$AA@ (`string')
+070 00000000 SECT24 notype       Static       | .rdata
+    Section length   14, #relocs    0, #linenums    0, checksum ECC3194A, selection    2 (pick any)
+072 00000000 SECT24 notype       External     | ??_C@_0BE@BMOJHNDI@WGL_ARB_multisample?$AA@ (`string')
+073 00000000 SECT25 notype       Static       | .rdata
+    Section length   19, #relocs    0, #linenums    0, checksum 3EF916DB, selection    2 (pick any)
+075 00000000 SECT25 notype       External     | ??_C@_0BJ@CIMJOHKL@WGL_ARB_framebuffer_sRGB?$AA@ (`string')
+076 00000000 SECT26 notype       Static       | .rdata
+    Section length   19, #relocs    0, #linenums    0, checksum F58B8247, selection    2 (pick any)
+078 00000000 SECT26 notype       External     | ??_C@_0BJ@ODLLHDDH@WGL_EXT_framebuffer_sRGB?$AA@ (`string')
+079 00000000 SECT27 notype       Static       | .rdata
+    Section length   17, #relocs    0, #linenums    0, checksum 5FCC107D, selection    2 (pick any)
+07B 00000000 SECT27 notype       External     | ??_C@_0BH@NCJDMLMG@WGL_ARB_create_context?$AA@ (`string')
+07C 00000000 SECT28 notype       Static       | .rdata
+    Section length   1F, #relocs    0, #linenums    0, checksum  6176A22, selection    2 (pick any)
+07E 00000000 SECT28 notype       External     | ??_C@_0BP@JAOBDJGN@WGL_ARB_create_context_profile?$AA@ (`string')
+07F 00000000 SECT29 notype       Static       | .rdata
+    Section length   23, #relocs    0, #linenums    0, checksum A8C26943, selection    2 (pick any)
+081 00000000 SECT29 notype       External     | ??_C@_0CD@FOMFMBIL@WGL_EXT_create_context_es2_profi@ (`string')
+082 00000000 SECT2A notype       Static       | .rdata
+    Section length   22, #relocs    0, #linenums    0, checksum ABE97F0E, selection    2 (pick any)
+084 00000000 SECT2A notype       External     | ??_C@_0CC@BFGHOMNL@WGL_ARB_create_context_robustnes@ (`string')
+085 00000000 SECT2B notype       Static       | .rdata
+    Section length   15, #relocs    0, #linenums    0, checksum 61C1C2D0, selection    2 (pick any)
+087 00000000 SECT2B notype       External     | ??_C@_0BF@NPDKPIKE@WGL_EXT_swap_control?$AA@ (`string')
+088 00000000 SECT2C notype       Static       | .rdata
+    Section length   15, #relocs    0, #linenums    0, checksum 5898DD29, selection    2 (pick any)
+08A 00000000 SECT2C notype       External     | ??_C@_0BF@OGGDOHFN@WGL_ARB_pixel_format?$AA@ (`string')
+08B 00000000 SECT2D notype       Static       | .rdata
+    Section length   1E, #relocs    0, #linenums    0, checksum AFE076E0, selection    2 (pick any)
+08D 00000000 SECT2D notype       External     | ??_C@_0BO@FABLLHKK@WGL_ARB_context_flush_control?$AA@ (`string')
+08E 00000000 SECT2E notype       Static       | .rdata
+    Section length   32, #relocs    0, #linenums    0, checksum 62081681, selection    2 (pick any)
+090 00000000 SECT2E notype       External     | ??_C@_0DC@ICHAJFGA@WGL?3?5Failed?5to?5retrieve?5pixel?5fo@ (`string')
+091 00000000 SECT2F notype       Static       | .rdata
+    Section length   32, #relocs    0, #linenums    0, checksum 95083460, selection    2 (pick any)
+093 00000000 SECT2F notype       External     | ??_C@_0DC@HFHALHIB@WGL?3?5The?5driver?5does?5not?5appear?5@ (`string')
+094 00000000 SECT30 notype       Static       | .rdata
+    Section length   2C, #relocs    0, #linenums    0, checksum 4A41F780, selection    2 (pick any)
+096 00000000 SECT30 notype       External     | ??_C@_0CM@DGJKGOGD@WGL?3?5Failed?5to?5find?5a?5suitable?5p@ (`string')
+097 00000000 SECT31 notype       Static       | .rdata
+    Section length   1A, #relocs    0, #linenums    0, checksum E2F04873, selection    2 (pick any)
+099 00000000 SECT31 notype       External     | ??_C@_1BK@LCODAJLO@?$AAo?$AAp?$AAe?$AAn?$AAg?$AAl?$AA3?$AA2?$AA?4?$AAd?$AAl?$AAl?$AA?$AA@ (`string')
+09A 00000000 SECT32 notype       Static       | .rdata
+    Section length   21, #relocs    0, #linenums    0, checksum DEE71FBC, selection    2 (pick any)
+09C 00000000 SECT32 notype       External     | ??_C@_0CB@FLGENKMO@WGL?3?5Failed?5to?5load?5opengl32?4dll@ (`string')
+09D 00000000 SECT33 notype       Static       | .rdata
+    Section length   11, #relocs    0, #linenums    0, checksum 51D1D0CD, selection    2 (pick any)
+09F 00000000 SECT33 notype       External     | ??_C@_0BB@GHMBNOIP@wglCreateContext?$AA@ (`string')
+0A0 00000000 SECT34 notype       Static       | .rdata
+    Section length   11, #relocs    0, #linenums    0, checksum D018939C, selection    2 (pick any)
+0A2 00000000 SECT34 notype       External     | ??_C@_0BB@OGAIJNNO@wglDeleteContext?$AA@ (`string')
+0A3 00000000 SECT35 notype       Static       | .rdata
+    Section length   12, #relocs    0, #linenums    0, checksum CD4894DE, selection    2 (pick any)
+0A5 00000000 SECT35 notype       External     | ??_C@_0BC@FFKMKEGM@wglGetProcAddress?$AA@ (`string')
+0A6 00000000 SECT36 notype       Static       | .rdata
+    Section length    F, #relocs    0, #linenums    0, checksum 39392F7E, selection    2 (pick any)
+0A8 00000000 SECT36 notype       External     | ??_C@_0P@BBBFNDGG@wglMakeCurrent?$AA@ (`string')
+0A9 00000000 SECT37 notype       Static       | .rdata
+    Section length    E, #relocs    0, #linenums    0, checksum 4C2D4103, selection    2 (pick any)
+0AB 00000000 SECT37 notype       External     | ??_C@_0O@GCGJMHDL@wglShareLists?$AA@ (`string')
+0AC 00000000 SECT38 notype       Static       | .rdata
+    Section length   27, #relocs    0, #linenums    0, checksum CC139D53, selection    2 (pick any)
+0AE 00000000 SECT38 notype       External     | ??_C@_0CH@LDBOJGIM@WGL?3?5Failed?5to?5load?5opengl32?5fun@ (`string')
+0AF 00000000 SECT39 notype       Static       | .rdata
+    Section length   26, #relocs    0, #linenums    0, checksum  BF299E7, selection    2 (pick any)
+0B1 00000000 SECT39 notype       External     | ??_C@_0CG@GMPEPNKL@WGL?3?5Failed?5to?5retrieve?5DC?5for?5w@ (`string')
+0B2 00000000 SECT3A notype       Static       | .rdata
+    Section length   36, #relocs    0, #linenums    0, checksum 85830BB3, selection    2 (pick any)
+0B4 00000000 SECT3A notype       External     | ??_C@_0DG@EPNPJJLB@WGL?3?5Failed?5to?5retrieve?5PFD?5for?5@ (`string')
+0B5 00000000 SECT3B notype       Static       | .rdata
+    Section length   29, #relocs    0, #linenums    0, checksum E11CF88B, selection    2 (pick any)
+0B7 00000000 SECT3B notype       External     | ??_C@_0CJ@HAGOIHNO@WGL?3?5Failed?5to?5set?5selected?5pixe@ (`string')
+0B8 00000000 SECT3C notype       Static       | .rdata
+    Section length   25, #relocs    0, #linenums    0, checksum DD72B91B, selection    2 (pick any)
+0BA 00000000 SECT3C notype       External     | ??_C@_0CF@GFMDJIA@WGL?3?5Failed?5to?5create?5OpenGL?5con@ (`string')
+0BB 00000000 SECT3D notype       Static       | .rdata
+    Section length   3C, #relocs    0, #linenums    0, checksum FECD9959, selection    2 (pick any)
+0BD 00000000 SECT3D notype       External     | ??_C@_0DM@FCAOPKO@WGL?3?5Failed?5to?5enable?5sharing?5wi@ (`string')
+0BE 00000000 SECT3E notype       Static       | .rdata
+    Section length   5D, #relocs    0, #linenums    0, checksum CCBD18F2, selection    2 (pick any)
+0C0 00000000 SECT3E notype       External     | ??_C@_0FN@NPOMMKHN@WGL?3?5A?5forward?5compatible?5OpenGL@ (`string')
+0C1 00000000 SECT3F notype       Static       | .rdata
+    Section length   50, #relocs    0, #linenums    0, checksum 96334043, selection    2 (pick any)
+0C3 00000000 SECT3F notype       External     | ??_C@_0FA@OHOPKHFK@WGL?3?5OpenGL?5profile?5requested?5bu@ (`string')
+0C4 00000000 SECT40 notype       Static       | .rdata
+    Section length   4F, #relocs    0, #linenums    0, checksum 2714662A, selection    2 (pick any)
+0C6 00000000 SECT40 notype       External     | ??_C@_0EP@EKHGPGGO@WGL?3?5OpenGL?5ES?5requested?5but?5WGL@ (`string')
+0C7 00000000 UNDEF  notype       External     | ___security_cookie
+
+String Table Size = 0xA24 bytes
+
+COFF SYMBOL TABLE
+000 010459F2 ABS    notype       Static       | @comp.id
+001 80000191 ABS    notype       Static       | @feat.00
+002 00000000 SECT1  notype       Static       | .drectve
+    Section length   2F, #relocs    0, #linenums    0, checksum        0
+004 00000000 SECT2  notype       Static       | .debug$S
+    Section length   C0, #relocs    0, #linenums    0, checksum        0
+006 00000000 SECT3  notype       Static       | .text$mn
+    Section length    1, #relocs    0, #linenums    0, checksum  26D930A, selection    1 (pick no duplicates)
+008 00000000 SECT4  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x3)
+00A 00000000 SECT5  notype       Static       | .text$mn
+    Section length  247, #relocs   14, #linenums    0, checksum 1BA91A40, selection    1 (pick no duplicates)
+00C 00000000 SECT6  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x5)
+00E 00000000 SECT7  notype       Static       | .text$mn
+    Section length  17D, #relocs    8, #linenums    0, checksum E234F88E, selection    1 (pick no duplicates)
+010 00000000 SECT8  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x7)
+012 00000000 SECT9  notype       Static       | .text$mn
+    Section length   81, #relocs    8, #linenums    0, checksum F9B56ED3, selection    1 (pick no duplicates)
+014 00000000 SECTA  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x9)
+016 00000000 SECTB  notype       Static       | .text$mn
+    Section length   30, #relocs    3, #linenums    0, checksum 3AF864E6, selection    1 (pick no duplicates)
+018 00000000 SECTC  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0xB)
+01A 00000000 SECTD  notype       Static       | .text$mn
+    Section length   25, #relocs    3, #linenums    0, checksum 7B9D89BF, selection    1 (pick no duplicates)
+01C 00000000 SECTE  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0xD)
+01E 00000000 SECTF  notype       Static       | .text$mn
+    Section length   7B, #relocs    5, #linenums    0, checksum 2D66D75F, selection    1 (pick no duplicates)
+020 00000000 SECT10 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0xF)
+022 00000000 UNDEF  notype       External     | __imp__free
+023 00000000 SECT3  notype ()    External     | __glfwInitJoysticks
+024 00000000 SECTD  notype ()    External     | __glfwTerminateJoysticks
+025 00000000 UNDEF  notype ()    External     | __glfwCreateUTF8FromWideString
+026 00000000 SECTB  notype ()    External     | __glfwPlatformJoystickPresent
+027 00000000 SECT5  notype ()    External     | __glfwPlatformGetJoystickAxes
+028 00000000 SECT7  notype ()    External     | __glfwPlatformGetJoystickButtons
+029 00000000 SECT9  notype ()    External     | __glfwPlatformGetJoystickName
+02A 00000000 SECTF  notype ()    Static       | _normalizeAxis
+02B 00000000 UNDEF  notype ()    External     | @__security_check_cookie@4
+02C 00000000 UNDEF  notype       External     | __glfw
+02D 00000000 UNDEF  notype       External     | ___security_cookie
+02E 00000000 UNDEF  notype       External     | __fltused
+02F 00000000 SECT11 notype       Static       | .rdata
+    Section length    4, #relocs    0, #linenums    0, checksum 8DE5B576, selection    2 (pick any)
+031 00000000 SECT11 notype       External     | __real@3f800000
+032 00000000 SECT12 notype       Static       | .rdata
+    Section length    4, #relocs    0, #linenums    0, checksum 76DC4190, selection    2 (pick any)
+034 00000000 SECT12 notype       External     | __real@40000000
+035 00000000 SECT13 notype       Static       | .rdata
+    Section length   10, #relocs    0, #linenums    0, checksum BEB81BC0, selection    2 (pick any)
+037 00000000 SECT13 notype       External     | __xmm@00000006000000020000000300000001
+038 00000000 SECT14 notype       Static       | .rdata
+    Section length   10, #relocs    0, #linenums    0, checksum 7FD65539, selection    2 (pick any)
+03A 00000000 SECT14 notype       External     | __xmm@00000009000000080000000c00000004
+03B 00000000 SECT15 notype       Static       | .rdata
+    Section length   10, #relocs    0, #linenums    0, checksum 156790BB, selection    2 (pick any)
+03D 00000000 SECT15 notype       External     | __xmm@41f00000000000000000000000000000
+
+String Table Size = 0x1B3 bytes
+
+COFF SYMBOL TABLE
+000 010459F2 ABS    notype       Static       | @comp.id
+001 80000191 ABS    notype       Static       | @feat.00
+002 00000000 SECT1  notype       Static       | .drectve
+    Section length   2F, #relocs    0, #linenums    0, checksum        0
+004 00000000 SECT2  notype       Static       | .debug$S
+    Section length   BC, #relocs    0, #linenums    0, checksum        0
+006 00000000 SECT3  notype       Static       | .text$mn
+    Section length   72, #relocs    6, #linenums    0, checksum 189D0E32, selection    1 (pick no duplicates)
+008 00000000 SECT4  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x3)
+00A 00000000 SECT5  notype       Static       | .text$mn
+    Section length  1C3, #relocs    B, #linenums    0, checksum E33F07CE, selection    1 (pick no duplicates)
+00C 00000000 SECT6  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x5)
+00E 00000000 SECT7  notype       Static       | .text$mn
+    Section length   90, #relocs    B, #linenums    0, checksum  2DEE4EF, selection    1 (pick no duplicates)
+010 00000000 SECT8  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x7)
+012 00000000 SECT9  notype       Static       | .text$mn
+    Section length   9D, #relocs    8, #linenums    0, checksum 5EC28F49, selection    1 (pick no duplicates)
+014 00000000 SECTA  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x9)
+016 00000000 SECTB  notype       Static       | .text$mn
+    Section length   13, #relocs    1, #linenums    0, checksum 4D42B3F5, selection    1 (pick no duplicates)
+018 00000000 SECTC  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0xB)
+01A 00000000 SECTD  notype       Static       | .text$mn
+    Section length   3B, #relocs    3, #linenums    0, checksum  7410F72, selection    1 (pick no duplicates)
+01C 00000000 SECTE  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0xD)
+01E 00000000 SECTF  notype       Static       | .text$mn
+    Section length   A4, #relocs   11, #linenums    0, checksum BF2B965B, selection    1 (pick no duplicates)
+020 00000000 SECT10 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0xF)
+022 00000000 SECT11 notype       Static       | .text$mn
+    Section length   54, #relocs    2, #linenums    0, checksum 8509A4E5, selection    1 (pick no duplicates)
+024 00000000 SECT12 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x11)
+026 00000000 SECT13 notype       Static       | .text$mn
+    Section length   51, #relocs    3, #linenums    0, checksum 39D05C1F, selection    1 (pick no duplicates)
+028 00000000 SECT14 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x13)
+02A 00000000 SECT15 notype       Static       | .text$mn
+    Section length   E6, #relocs    5, #linenums    0, checksum 25211B31, selection    1 (pick no duplicates)
+02C 00000000 SECT16 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x15)
+02E 00000000 SECT17 notype       Static       | .text$mn
+    Section length   45, #relocs    1, #linenums    0, checksum D3727748, selection    1 (pick no duplicates)
+030 00000000 SECT18 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x17)
+032 00000000 SECT19 notype       Static       | .text$mn
+    Section length   51, #relocs    3, #linenums    0, checksum 39D05C1F, selection    1 (pick no duplicates)
+034 00000000 SECT1A notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x19)
+036 00000000 SECT1B notype       Static       | .text$mn
+    Section length   13, #relocs    1, #linenums    0, checksum 254145E7, selection    1 (pick no duplicates)
+038 00000000 SECT1C notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x1B)
+03A 00000000 SECT1D notype       Static       | .text$mn
+    Section length   13, #relocs    1, #linenums    0, checksum DD830E51, selection    1 (pick no duplicates)
+03C 00000000 SECT1E notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x1D)
+03E 00000000 SECT1F notype       Static       | .text$mn
+    Section length  1A4, #relocs    D, #linenums    0, checksum C8356623, selection    1 (pick no duplicates)
+040 00000000 SECT20 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x1F)
+042 00000000 SECT21 notype       Static       | .text$mn
+    Section length   18, #relocs    2, #linenums    0, checksum 42B88AD8, selection    1 (pick no duplicates)
+044 00000000 SECT22 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x21)
+046 00000000 SECT23 notype       Static       | .text$mn
+    Section length   13, #relocs    1, #linenums    0, checksum 8B17BAA7, selection    1 (pick no duplicates)
+048 00000000 SECT24 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x23)
+04A 00000000 SECT25 notype       Static       | .text$mn
+    Section length   F2, #relocs   13, #linenums    0, checksum 3A82B7BD, selection    1 (pick no duplicates)
+04C 00000000 SECT26 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x25)
+04E 00000000 SECT27 notype       Static       | .text$mn
+    Section length   6D, #relocs    6, #linenums    0, checksum A66FE634, selection    1 (pick no duplicates)
+050 00000000 SECT28 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x27)
+052 00000000 SECT29 notype       Static       | .text$mn
+    Section length   44, #relocs    2, #linenums    0, checksum 20B07AE9, selection    1 (pick no duplicates)
+054 00000000 SECT2A notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x29)
+056 00000000 SECT2B notype       Static       | .text$mn
+    Section length   9F, #relocs    4, #linenums    0, checksum 75526A06, selection    1 (pick no duplicates)
+058 00000000 SECT2C notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x2B)
+05A 00000000 SECT2D notype       Static       | .text$mn
+    Section length   55, #relocs    3, #linenums    0, checksum  A349058, selection    1 (pick no duplicates)
+05C 00000000 SECT2E notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x2D)
+05E 00000000 SECT2F notype       Static       | .text$mn
+    Section length   46, #relocs    5, #linenums    0, checksum D5EC0255, selection    1 (pick no duplicates)
+060 00000000 SECT30 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x2F)
+062 00000000 SECT31 notype       Static       | .text$mn
+    Section length   39, #relocs    4, #linenums    0, checksum 27DEFC4D, selection    1 (pick no duplicates)
+064 00000000 SECT32 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x31)
+066 00000000 SECT33 notype       Static       | .text$mn
+    Section length   13, #relocs    1, #linenums    0, checksum A1E22B8A, selection    1 (pick no duplicates)
+068 00000000 SECT34 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x33)
+06A 00000000 SECT35 notype       Static       | .text$mn
+    Section length    B, #relocs    2, #linenums    0, checksum FE787CA8, selection    1 (pick no duplicates)
+06C 00000000 SECT36 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x35)
+06E 00000000 SECT37 notype       Static       | .text$mn
+    Section length   18, #relocs    1, #linenums    0, checksum 1E1A4E78, selection    1 (pick no duplicates)
+070 00000000 SECT38 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x37)
+072 00000000 SECT39 notype       Static       | .text$mn
+    Section length   11, #relocs    1, #linenums    0, checksum E67571D3, selection    1 (pick no duplicates)
+074 00000000 SECT3A notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x39)
+076 00000000 SECT3B notype       Static       | .text$mn
+    Section length   11, #relocs    1, #linenums    0, checksum E67571D3, selection    1 (pick no duplicates)
+078 00000000 SECT3C notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x3B)
+07A 00000000 SECT3D notype       Static       | .text$mn
+    Section length   B0, #relocs    9, #linenums    0, checksum 98BC559A, selection    1 (pick no duplicates)
+07C 00000000 SECT3E notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x3D)
+07E 00000000 SECT3F notype       Static       | .text$mn
+    Section length   15, #relocs    3, #linenums    0, checksum 2D92D5E0, selection    1 (pick no duplicates)
+080 00000000 SECT40 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x3F)
+082 00000000 SECT41 notype       Static       | .text$mn
+    Section length  20F, #relocs   16, #linenums    0, checksum 8F088DC8, selection    1 (pick no duplicates)
+084 00000000 SECT42 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x41)
+086 00000000 SECT43 notype       Static       | .text$mn
+    Section length   2B, #relocs    2, #linenums    0, checksum C4F54A32, selection    1 (pick no duplicates)
+088 00000000 SECT44 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x43)
+08A 00000000 SECT45 notype       Static       | .text$mn
+    Section length   8E, #relocs    9, #linenums    0, checksum BAE69E73, selection    1 (pick no duplicates)
+08C 00000000 SECT46 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x45)
+08E 00000000 SECT47 notype       Static       | .text$mn
+    Section length   7A, #relocs    6, #linenums    0, checksum 51773232, selection    1 (pick no duplicates)
+090 00000000 SECT48 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x47)
+092 00000000 SECT49 notype       Static       | .text$mn
+    Section length   50, #relocs    1, #linenums    0, checksum  AED6467, selection    1 (pick no duplicates)
+094 00000000 SECT4A notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x49)
+096 00000000 SECT4B notype       Static       | .text$mn
+    Section length   AB, #relocs    3, #linenums    0, checksum C0E4E91E, selection    1 (pick no duplicates)
+098 00000000 SECT4C notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x4B)
+09A 00000000 SECT4D notype       Static       | .text$mn
+    Section length   50, #relocs    1, #linenums    0, checksum  AED6467, selection    1 (pick no duplicates)
+09C 00000000 SECT4E notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x4D)
+09E 00000000 SECT4F notype       Static       | .text$mn
+    Section length   1C, #relocs    0, #linenums    0, checksum D3034DB1, selection    1 (pick no duplicates)
+0A0 00000000 SECT50 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x4F)
+0A2 00000000 SECT51 notype       Static       | .text$mn
+    Section length   28, #relocs    0, #linenums    0, checksum 333C6DC8, selection    1 (pick no duplicates)
+0A4 00000000 SECT52 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x51)
+0A6 00000000 SECT53 notype       Static       | .text$mn
+    Section length   26, #relocs    2, #linenums    0, checksum 2CB630EA, selection    1 (pick no duplicates)
+0A8 00000000 SECT54 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x53)
+0AA 00000000 SECT55 notype       Static       | .text$mn
+    Section length   3F, #relocs    4, #linenums    0, checksum 46C18A8E, selection    1 (pick no duplicates)
+0AC 00000000 SECT56 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x55)
+0AE 00000000 SECT57 notype       Static       | .text$mn
+    Section length    E, #relocs    1, #linenums    0, checksum 78BD4C72, selection    1 (pick no duplicates)
+0B0 00000000 SECT58 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x57)
+0B2 00000000 SECT59 notype       Static       | .text$mn
+    Section length   5F, #relocs    6, #linenums    0, checksum 4F6E0AEC, selection    1 (pick no duplicates)
+0B4 00000000 SECT5A notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x59)
+0B6 00000000 SECT5B notype       Static       | .text$mn
+    Section length   54, #relocs    7, #linenums    0, checksum AFB9C7DD, selection    1 (pick no duplicates)
+0B8 00000000 SECT5C notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x5B)
+0BA 00000000 SECT5D notype       Static       | .text$mn
+    Section length   A0, #relocs    3, #linenums    0, checksum BB4F8DA1, selection    1 (pick no duplicates)
+0BC 00000000 SECT5E notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x5D)
+0BE 00000000 SECT5F notype       Static       | .text$mn
+    Section length   61, #relocs    6, #linenums    0, checksum 56A36D5F, selection    1 (pick no duplicates)
+0C0 00000000 SECT60 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x5F)
+0C2 00000000 SECT61 notype       Static       | .text$mn
+    Section length  A1C, #relocs   67, #linenums    0, checksum 653C602A, selection    1 (pick no duplicates)
+0C4 00000000 SECT62 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x61)
+0C6 00000000 UNDEF  notype       External     | __imp__GetModuleHandleW@4
+0C7 00000000 UNDEF  notype       External     | __imp__GlobalAlloc@8
+0C8 00000000 UNDEF  notype       External     | __imp__GlobalLock@4
+0C9 00000000 UNDEF  notype       External     | __imp__GlobalUnlock@4
+0CA 00000000 UNDEF  notype       External     | __imp__GlobalFree@4
+0CB 00000000 UNDEF  notype       External     | __imp__CreateBitmap@20
+0CC 00000000 UNDEF  notype       External     | __imp__DeleteObject@4
+0CD 00000000 UNDEF  notype       External     | __imp__CreateDIBSection@24
+0CE 00000000 UNDEF  notype       External     | __imp__TrackMouseEvent@4
+0CF 00000000 UNDEF  notype       External     | __imp__TranslateMessage@4
+0D0 00000000 UNDEF  notype       External     | __imp__DispatchMessageW@4
+0D1 00000000 UNDEF  notype       External     | __imp__PeekMessageW@20
+0D2 00000000 UNDEF  notype       External     | __imp__GetMessageTime@0
+0D3 00000000 UNDEF  notype       External     | __imp__PostMessageW@16
+0D4 00000000 UNDEF  notype       External     | __imp__WaitMessage@0
+0D5 00000000 UNDEF  notype       External     | __imp__DefWindowProcW@16
+0D6 00000000 UNDEF  notype       External     | __imp__RegisterClassW@4
+0D7 00000000 UNDEF  notype       External     | __imp__UnregisterClassW@8
+0D8 00000000 UNDEF  notype       External     | __imp__CreateWindowExW@48
+0D9 00000000 UNDEF  notype       External     | __imp__DestroyWindow@4
+0DA 00000000 UNDEF  notype       External     | __imp__ShowWindow@8
+0DB 00000000 UNDEF  notype       External     | __imp__SetWindowPos@28
+0DC 00000000 UNDEF  notype       External     | __imp__IsWindowVisible@4
+0DD 00000000 UNDEF  notype       External     | __imp__IsIconic@4
+0DE 00000000 UNDEF  notype       External     | __imp__BringWindowToTop@4
+0DF 00000000 UNDEF  notype       External     | __imp__OpenClipboard@4
+0E0 00000000 UNDEF  notype       External     | __imp__CloseClipboard@0
+0E1 00000000 UNDEF  notype       External     | __imp__SetClipboardData@8
+0E2 00000000 UNDEF  notype       External     | __imp__GetClipboardData@4
+0E3 00000000 UNDEF  notype       External     | __imp__EmptyClipboard@0
+0E4 00000000 UNDEF  notype       External     | __imp__SetFocus@4
+0E5 00000000 UNDEF  notype       External     | __imp__GetActiveWindow@0
+0E6 00000000 UNDEF  notype       External     | __imp__GetKeyState@4
+0E7 00000000 UNDEF  notype       External     | __imp__GetAsyncKeyState@4
+0E8 00000000 UNDEF  notype       External     | __imp__SetCapture@4
+0E9 00000000 UNDEF  notype       External     | __imp__ReleaseCapture@0
+0EA 00000000 UNDEF  notype       External     | __imp__SetForegroundWindow@4
+0EB 00000000 UNDEF  notype       External     | __imp__GetDC@4
+0EC 00000000 UNDEF  notype       External     | __imp__ReleaseDC@8
+0ED 00000000 UNDEF  notype       External     | __imp__SetWindowTextW@8
+0EE 00000000 UNDEF  notype       External     | __imp__GetClientRect@8
+0EF 00000000 UNDEF  notype       External     | __imp__AdjustWindowRectEx@16
+0F0 00000000 UNDEF  notype       External     | __imp__SetCursorPos@8
+0F1 00000000 UNDEF  notype       External     | __imp__SetCursor@4
+0F2 00000000 UNDEF  notype       External     | __imp__GetCursorPos@4
+0F3 00000000 UNDEF  notype       External     | __imp__ClipCursor@4
+0F4 00000000 UNDEF  notype       External     | __imp__ClientToScreen@8
+0F5 00000000 UNDEF  notype       External     | __imp__ScreenToClient@8
+0F6 00000000 UNDEF  notype       External     | __imp__WindowFromPoint@8
+0F7 00000000 UNDEF  notype       External     | __imp__SetRect@20
+0F8 00000000 UNDEF  notype       External     | __imp__GetWindowLongW@8
+0F9 00000000 UNDEF  notype       External     | __imp__SetWindowLongW@12
+0FA 00000000 UNDEF  notype       External     | __imp__LoadCursorW@8
+0FB 00000000 UNDEF  notype       External     | __imp__LoadIconW@8
+0FC 00000000 UNDEF  notype       External     | __imp__DestroyIcon@4
+0FD 00000000 UNDEF  notype       External     | __imp__CreateIconIndirect@4
+0FE 00000000 UNDEF  notype       External     | __imp__CopyIcon@4
+0FF 00000000 UNDEF  notype       External     | __imp__calloc
+100 00000000 UNDEF  notype       External     | __imp__free
+101 00000000 UNDEF  notype ()    External     | __glfwCreateContext
+102 00000000 UNDEF  notype ()    External     | __glfwDestroyContext
+103 00000000 UNDEF  notype ()    External     | __glfwAnalyzeContext
+104 00000000 SECT3D notype ()    External     | __glfwRegisterWindowClass
+105 00000000 SECT3F notype ()    External     | __glfwUnregisterWindowClass
+106 00000000 UNDEF  notype ()    External     | __glfwCreateWideStringFromUTF8
+107 00000000 UNDEF  notype ()    External     | __glfwCreateUTF8FromWideString
+108 00000000 UNDEF  notype ()    External     | __glfwSetVideoMode
+109 00000000 UNDEF  notype ()    External     | __glfwRestoreVideoMode
+10A 00000000 SECT11 notype ()    External     | __glfwPlatformGetCursorPos
+10B 00000000 SECT29 notype ()    External     | __glfwPlatformSetCursorPos
+10C 00000000 SECT3  notype ()    External     | __glfwPlatformApplyCursorMode
+10D 00000000 UNDEF  notype ()    External     | __glfwPlatformGetMonitorPos
+10E 00000000 UNDEF  notype ()    External     | __glfwPlatformGetVideoMode
+10F 00000000 SECT25 notype ()    External     | __glfwPlatformSetClipboardString
+110 00000000 SECTF  notype ()    External     | __glfwPlatformGetClipboardString
+111 00000000 SECT9  notype ()    External     | __glfwPlatformCreateWindow
+112 00000000 SECTD  notype ()    External     | __glfwPlatformDestroyWindow
+113 00000000 SECT2F notype ()    External     | __glfwPlatformSetWindowTitle
+114 00000000 SECT17 notype ()    External     | __glfwPlatformGetWindowPos
+115 00000000 SECT2B notype ()    External     | __glfwPlatformSetWindowPos
+116 00000000 SECT19 notype ()    External     | __glfwPlatformGetWindowSize
+117 00000000 SECT2D notype ()    External     | __glfwPlatformSetWindowSize
+118 00000000 SECT13 notype ()    External     | __glfwPlatformGetFramebufferSize
+119 00000000 SECT15 notype ()    External     | __glfwPlatformGetWindowFrameSize
+11A 00000000 SECT1D notype ()    External     | __glfwPlatformIconifyWindow
+11B 00000000 SECT23 notype ()    External     | __glfwPlatformRestoreWindow
+11C 00000000 SECT31 notype ()    External     | __glfwPlatformShowWindow
+11D 00000000 SECT33 notype ()    External     | __glfwPlatformUnhideWindow
+11E 00000000 SECT1B notype ()    External     | __glfwPlatformHideWindow
+11F 00000000 SECT37 notype ()    External     | __glfwPlatformWindowFocused
+120 00000000 SECT39 notype ()    External     | __glfwPlatformWindowIconified
+121 00000000 SECT3B notype ()    External     | __glfwPlatformWindowVisible
+122 00000000 SECT1F notype ()    External     | __glfwPlatformPollEvents
+123 00000000 SECT35 notype ()    External     | __glfwPlatformWaitEvents
+124 00000000 SECT21 notype ()    External     | __glfwPlatformPostEmptyEvent
+125 00000000 UNDEF  notype ()    External     | __glfwPlatformMakeContextCurrent
+126 00000000 SECT5  notype ()    External     | __glfwPlatformCreateCursor
+127 00000000 SECT7  notype ()    External     | __glfwPlatformCreateStandardCursor
+128 00000000 SECTB  notype ()    External     | __glfwPlatformDestroyCursor
+129 00000000 SECT27 notype ()    External     | __glfwPlatformSetCursor
+12A 00000000 UNDEF  notype ()    External     | __glfwInputWindowFocus
+12B 00000000 UNDEF  notype ()    External     | __glfwInputWindowPos
+12C 00000000 UNDEF  notype ()    External     | __glfwInputWindowSize
+12D 00000000 UNDEF  notype ()    External     | __glfwInputFramebufferSize
+12E 00000000 UNDEF  notype ()    External     | __glfwInputWindowIconify
+12F 00000000 UNDEF  notype ()    External     | __glfwInputWindowDamage
+130 00000000 UNDEF  notype ()    External     | __glfwInputWindowCloseRequest
+131 00000000 UNDEF  notype ()    External     | __glfwInputKey
+132 00000000 UNDEF  notype ()    External     | __glfwInputChar
+133 00000000 UNDEF  notype ()    External     | __glfwInputScroll
+134 00000000 UNDEF  notype ()    External     | __glfwInputMouseClick
+135 00000000 UNDEF  notype ()    External     | __glfwInputCursorMotion
+136 00000000 UNDEF  notype ()    External     | __glfwInputCursorEnter
+137 00000000 UNDEF  notype ()    External     | __glfwInputMonitorChange
+138 00000000 UNDEF  notype ()    External     | __glfwInputError
+139 00000000 UNDEF  notype ()    External     | __glfwInputDrop
+13A 00000000 UNDEF  notype       External     | __imp__DragQueryFileW@16
+13B 00000000 UNDEF  notype       External     | __imp__DragQueryPoint@8
+13C 00000000 UNDEF  notype       External     | __imp__DragFinish@4
+13D 00000000 UNDEF  notype       External     | __imp__DragAcceptFiles@8
+13E 00000000 SECT51 notype ()    Static       | _getWindowStyle
+13F 00000000 SECT4F notype ()    Static       | _getWindowExStyle
+140 00000000 SECT5F notype ()    Static       | _updateClipRect
+141 00000000 SECT55 notype ()    Static       | _hideCursor
+142 00000000 SECT45 notype ()    Static       | _disableCursor
+143 00000000 SECT59 notype ()    Static       | _restoreCursor
+144 00000000 SECT5B notype ()    Static       | _translateCursorShape
+145 00000000 SECT4D notype ()    Static       | _getKeyMods
+146 00000000 SECT49 notype ()    Static       | _getAsyncKeyMods
+147 00000000 SECT5D notype ()    Static       | _translateKey
+148 00000000 SECT47 notype ()    Static       | _enterFullscreenMode
+149 00000000 SECT57 notype ()    Static       | _leaveFullscreenMode
+14A 00000000 SECT61 notype ()    Static       | _windowProc@16
+14B 00000000 SECT4B notype ()    Static       | _getFullWindowSize
+14C 00000000 SECT41 notype ()    Static       | _createWindow
+14D 00000000 SECT43 notype ()    Static       | _destroyWindow
+14E 00000000 SECT53 notype ()    External     | _glfwGetWin32Window
+14F 00000000 UNDEF  notype ()    External     | @__security_check_cookie@4
+150 00000000 UNDEF  notype ()    External     | _memcpy
+151 00000000 UNDEF  notype ()    External     | _memset
+152 00000078 SECT7  notype       Static       | $LN15
+153 00000015 SECT7  notype       Label        | $LN7
+154 0000001C SECT7  notype       Label        | $LN8
+155 00000023 SECT7  notype       Label        | $LN9
+156 0000002A SECT7  notype       Label        | $LN10
+157 00000031 SECT7  notype       Label        | $LN11
+158 00000038 SECT7  notype       Label        | $LN12
+159 0000003C SECT5B notype       Static       | $LN12
+15A 00000015 SECT5B notype       Label        | $LN4
+15B 0000001B SECT5B notype       Label        | $LN5
+15C 00000021 SECT5B notype       Label        | $LN6
+15D 00000027 SECT5B notype       Label        | $LN7
+15E 0000002D SECT5B notype       Label        | $LN8
+15F 00000033 SECT5B notype       Label        | $LN9
+160 00000818 SECT61 notype       Static       | $LN128
+161 0000003D SECT61 notype       Label        | $LN13
+162 00000064 SECT61 notype       Label        | $LN15
+163 000000A0 SECT61 notype       Label        | $LN64
+164 00000144 SECT61 notype       Label        | $LN73
+165 00000858 SECT61 notype       Static       | $LN100
+166 00000830 SECT61 notype       Static       | $LN129
+167 000001B8 SECT61 notype       Label        | $LN12
+168 000001CD SECT61 notype       Label        | $LN23
+169 000001E0 SECT61 notype       Label        | $LN24
+16A 00000239 SECT61 notype       Label        | $LN26
+16B 00000258 SECT61 notype       Label        | $LN27
+16C 00000277 SECT61 notype       Label        | $LN28
+16D 000002A3 SECT61 notype       Label        | $LN30
+16E 00000350 SECT61 notype       Label        | $LN78
+16F 00000978 SECT61 notype       Static       | $LN101
+170 00000954 SECT61 notype       Static       | $LN130
+171 00000408 SECT61 notype       Label        | $LN36
+172 000004C7 SECT61 notype       Label        | $LN45
+173 000004D4 SECT61 notype       Label        | $LN46
+174 0000057B SECT61 notype       Label        | $LN56
+175 00000659 SECT61 notype       Label        | $LN61
+176 00000675 SECT61 notype       Label        | $LN62
+177 000006B1 SECT61 notype       Label        | $LN63
+178 000006DE SECT61 notype       Label        | $LN84
+179 000006FB SECT61 notype       Label        | $LN86
+17A 0000021D SECT61 notype       Label        | $LN114
+17B 00000000 UNDEF  notype       External     | __glfwInitialized
+17C 00000000 UNDEF  notype       External     | __glfw
+17D 00000000 SECT63 notype       Static       | .rdata
+    Section length   30, #relocs    0, #linenums    0, checksum 2EF2C4F2, selection    2 (pick any)
+17F 00000000 SECT63 notype       External     | ??_C@_0DA@CDIFIIJI@Win32?3?5Failed?5to?5convert?5window?5@ (`string')
+180 00000000 SECT64 notype       Static       | .rdata
+    Section length    E, #relocs    0, #linenums    0, checksum AF9FA7DA, selection    2 (pick any)
+182 00000000 SECT64 notype       External     | ??_C@_1O@IBNLCBOC@?$AAG?$AAL?$AAF?$AAW?$AA3?$AA0?$AA?$AA@ (`string')
+183 00000000 SECT65 notype       Static       | .rdata
+    Section length   1F, #relocs    0, #linenums    0, checksum 83802DC1, selection    2 (pick any)
+185 00000000 SECT65 notype       External     | ??_C@_0BP@BFHGHOIO@Win32?3?5Failed?5to?5create?5window?$AA@ (`string')
+186 00000000 SECT66 notype       Static       | .rdata
+    Section length   14, #relocs    0, #linenums    0, checksum 43764A02, selection    2 (pick any)
+188 00000000 SECT66 notype       External     | ??_C@_1BE@LDFMCOHA@?$AAG?$AAL?$AAF?$AAW?$AA_?$AAI?$AAC?$AAO?$AAN?$AA?$AA@ (`string')
+189 00000000 SECT67 notype       Static       | .rdata
+    Section length   27, #relocs    0, #linenums    0, checksum 1FF0F9AA, selection    2 (pick any)
+18B 00000000 SECT67 notype       External     | ??_C@_0CH@GAPNPCHF@Win32?3?5Failed?5to?5register?5window@ (`string')
+18C 00000000 SECT68 notype       Static       | .rdata
+    Section length   28, #relocs    0, #linenums    0, checksum A554337F, selection    2 (pick any)
+18E 00000000 SECT68 notype       External     | ??_C@_0CI@LDEHPBDB@Win32?3?5Failed?5to?5create?5standard@ (`string')
+18F 00000000 SECT69 notype       Static       | .rdata
+    Section length   2A, #relocs    0, #linenums    0, checksum 83190A48, selection    2 (pick any)
+191 00000000 SECT69 notype       External     | ??_C@_0CK@JIIJNNEM@Win32?3?5Failed?5to?5convert?5string?5@ (`string')
+192 00000000 SECT6A notype       Static       | .rdata
+    Section length   36, #relocs    0, #linenums    0, checksum EC678753, selection    2 (pick any)
+194 00000000 SECT6A notype       External     | ??_C@_0DG@CGDLBFFB@Win32?3?5Failed?5to?5allocate?5global@ (`string')
+195 00000000 SECT6B notype       Static       | .rdata
+    Section length   20, #relocs    0, #linenums    0, checksum BBD0BED4, selection    2 (pick any)
+197 00000000 SECT6B notype       External     | ??_C@_0CA@FNCFBEIG@Win32?3?5Failed?5to?5open?5clipboard?$AA@ (`string')
+198 00000000 SECT6C notype       Static       | .rdata
+    Section length   2D, #relocs    0, #linenums    0, checksum 6F799A74, selection    2 (pick any)
+19A 00000000 SECT6C notype       External     | ??_C@_0CN@FGAGPCCP@Win32?3?5Failed?5to?5convert?5clipboa@ (`string')
+19B 00000000 SECT6D notype       Static       | .rdata
+    Section length   2E, #relocs    0, #linenums    0, checksum 3E9FE7DE, selection    2 (pick any)
+19D 00000000 SECT6D notype       External     | ??_C@_0CO@MCBPBAMK@Win32?3?5Failed?5to?5convert?5wide?5st@ (`string')
+19E 00000000 UNDEF  notype       External     | ___security_cookie
+19F 00000000 UNDEF  notype       External     | __fltused
+1A0 00000000 SECT6E notype       Static       | .rdata
+    Section length    8, #relocs    0, #linenums    0, checksum 52E4314A, selection    2 (pick any)
+1A2 00000000 SECT6E notype       External     | __real@405e000000000000
+1A3 00000000 SECT6F notype       Static       | .rdata
+    Section length   10, #relocs    0, #linenums    0, checksum 8BED836F, selection    2 (pick any)
+1A5 00000000 SECT6F notype       External     | __xmm@80000000000000008000000000000000
+
+String Table Size = 0xF9A bytes
+
+COFF SYMBOL TABLE
+000 010459F2 ABS    notype       Static       | @comp.id
+001 80000191 ABS    notype       Static       | @feat.00
+002 00000000 SECT1  notype       Static       | .drectve
+    Section length   2F, #relocs    0, #linenums    0, checksum        0
+004 00000000 SECT2  notype       Static       | .debug$S
+    Section length   BC, #relocs    0, #linenums    0, checksum        0
+006 00000000 SECT3  notype       Static       | .text$mn
+    Section length   32, #relocs    5, #linenums    0, checksum 99B2C6D9, selection    1 (pick no duplicates)
+008 00000000 SECT4  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x3)
+00A 00000000 SECT5  notype       Static       | .text$mn
+    Section length   16, #relocs    3, #linenums    0, checksum 335EFB91, selection    1 (pick no duplicates)
+00C 00000000 SECT6  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x5)
+00E 00000000 SECT7  notype       Static       | .text$mn
+    Section length    D, #relocs    2, #linenums    0, checksum 901E1B23, selection    1 (pick no duplicates)
+010 00000000 SECT8  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x7)
+012 00000000 SECT9  notype       Static       | .text$mn
+    Section length   11, #relocs    2, #linenums    0, checksum 98E60615, selection    1 (pick no duplicates)
+014 00000000 SECTA  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x9)
+016 00000000 UNDEF  notype       External     | __imp__TlsAlloc@0
+017 00000000 UNDEF  notype       External     | __imp__TlsGetValue@4
+018 00000000 UNDEF  notype       External     | __imp__TlsSetValue@8
+019 00000000 UNDEF  notype       External     | __imp__TlsFree@4
+01A 00000000 SECT3  notype ()    External     | __glfwCreateContextTLS
+01B 00000000 SECT5  notype ()    External     | __glfwDestroyContextTLS
+01C 00000000 SECT9  notype ()    External     | __glfwSetContextTLS
+01D 00000000 SECT7  notype ()    External     | __glfwPlatformGetCurrentContext
+01E 00000000 UNDEF  notype ()    External     | __glfwInputError
+01F 00000000 UNDEF  notype       External     | __glfw
+020 00000000 SECTB  notype       Static       | .rdata
+    Section length   24, #relocs    0, #linenums    0, checksum 51CDE4A8, selection    2 (pick any)
+022 00000000 SECTB  notype       External     | ??_C@_0CE@MEIEKJIC@Win32?3?5Failed?5to?5allocate?5TLS?5in@ (`string')
+
+String Table Size = 0x100 bytes
+
+COFF SYMBOL TABLE
+000 010459F2 ABS    notype       Static       | @comp.id
+001 80000191 ABS    notype       Static       | @feat.00
+002 00000000 SECT1  notype       Static       | .drectve
+    Section length   2F, #relocs    0, #linenums    0, checksum        0
+004 00000000 SECT2  notype       Static       | .debug$S
+    Section length   BC, #relocs    0, #linenums    0, checksum        0
+006 00000000 SECT3  notype       Static       | .text$mn
+    Section length   88, #relocs    E, #linenums    0, checksum 260D043F, selection    1 (pick no duplicates)
+008 00000000 SECT4  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x3)
+00A 00000000 SECT5  notype       Static       | .text$mn
+    Section length   4E, #relocs    7, #linenums    0, checksum E0118512, selection    1 (pick no duplicates)
+00C 00000000 SECT6  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x5)
+00E 00000000 SECT7  notype       Static       | .text$mn
+    Section length   56, #relocs    7, #linenums    0, checksum 6E5C2601, selection    1 (pick no duplicates)
+010 00000000 SECT8  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x7)
+012 00000000 SECT9  notype       Static       | .text$mn
+    Section length   2D, #relocs    3, #linenums    0, checksum EA54D28D, selection    1 (pick no duplicates)
+014 00000000 SECTA  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x9)
+016 00000000 UNDEF  notype       External     | __imp__QueryPerformanceCounter@4
+017 00000000 UNDEF  notype       External     | __imp__QueryPerformanceFrequency@4
+018 00000000 SECT3  notype ()    External     | __glfwInitTimer
+019 00000000 SECT5  notype ()    External     | __glfwPlatformGetTime
+01A 00000000 SECT7  notype ()    External     | __glfwPlatformSetTime
+01B 00000000 SECT9  notype ()    Static       | _getRawTime
+01C 00000000 UNDEF  notype ()    External     | __dtoul3
+01D 00000000 UNDEF  notype ()    External     | __ultod3
+01E 00000000 UNDEF  notype       External     | __glfw
+01F 00000000 UNDEF  notype       External     | __fltused
+020 00000000 SECTB  notype       Static       | .rdata
+    Section length    8, #relocs    0, #linenums    0, checksum 79FC9EFA, selection    2 (pick any)
+022 00000000 SECTB  notype       External     | __real@3f50624dd2f1a9fc
+023 00000000 SECTC  notype       Static       | .rdata
+    Section length    8, #relocs    0, #linenums    0, checksum A2DACC80, selection    2 (pick any)
+025 00000000 SECTC  notype       External     | __real@3ff0000000000000
+
+String Table Size = 0xCA bytes
+
+COFF SYMBOL TABLE
+000 010459F2 ABS    notype       Static       | @comp.id
+001 80000191 ABS    notype       Static       | @feat.00
+002 00000000 SECT1  notype       Static       | .drectve
+    Section length   2F, #relocs    0, #linenums    0, checksum        0
+004 00000000 SECT2  notype       Static       | .debug$S
+    Section length   C0, #relocs    0, #linenums    0, checksum        0
+006 00000000 SECT3  notype       Static       | .text$mn
+    Section length   A2, #relocs    7, #linenums    0, checksum 8FCB329A, selection    1 (pick no duplicates)
+008 00000000 SECT4  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x3)
+00A 00000000 SECT5  notype       Static       | .text$mn
+    Section length   89, #relocs    4, #linenums    0, checksum 3E7F5B60, selection    1 (pick no duplicates)
+00C 00000000 SECT6  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x5)
+00E 00000000 SECT7  notype       Static       | .text$mn
+    Section length  2B1, #relocs   16, #linenums    0, checksum 9AAF72DE, selection    1 (pick no duplicates)
+010 00000000 SECT8  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x7)
+012 00000000 SECT9  notype       Static       | .text$mn
+    Section length   A2, #relocs    5, #linenums    0, checksum D6D212DF, selection    1 (pick no duplicates)
+014 00000000 SECTA  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x9)
+016 00000000 SECTB  notype       Static       | .text$mn
+    Section length  1C1, #relocs    A, #linenums    0, checksum 3D26FC1F, selection    1 (pick no duplicates)
+018 00000000 SECTC  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0xB)
+01A 00000000 SECTD  notype       Static       | .text$mn
+    Section length   4C, #relocs    0, #linenums    0, checksum 7E63BCAD, selection    1 (pick no duplicates)
+01C 00000000 SECTE  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0xD)
+01E 00000000 SECTF  notype       Static       | .text$mn
+    Section length   C2, #relocs    9, #linenums    0, checksum FBFF7758, selection    1 (pick no duplicates)
+020 00000000 SECT10 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0xF)
+022 00000000 SECT11 notype       Static       | .text$mn
+    Section length   29, #relocs    1, #linenums    0, checksum EBD42ABE, selection    1 (pick no duplicates)
+024 00000000 SECT12 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x11)
+026 00000000 SECT13 notype       Static       | .text$mn
+    Section length  11A, #relocs    A, #linenums    0, checksum 16480637, selection    1 (pick no duplicates)
+028 00000000 SECT14 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x13)
+02A 00000000 SECT15 notype       Static       | .text$mn
+    Section length   25, #relocs    2, #linenums    0, checksum 77CC49C7, selection    1 (pick no duplicates)
+02C 00000000 SECT16 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x15)
+02E 00000000 SECT17 notype       Static       | .text$mn
+    Section length   25, #relocs    2, #linenums    0, checksum 2665C679, selection    1 (pick no duplicates)
+030 00000000 SECT18 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x17)
+032 00000000 UNDEF  notype       External     | __imp__CreateDCW@16
+033 00000000 UNDEF  notype       External     | __imp__DeleteDC@4
+034 00000000 UNDEF  notype       External     | __imp__GetDeviceCaps@8
+035 00000000 UNDEF  notype       External     | __imp__GetDeviceGammaRamp@8
+036 00000000 UNDEF  notype       External     | __imp__SetDeviceGammaRamp@8
+037 00000000 UNDEF  notype       External     | __imp__ChangeDisplaySettingsExW@20
+038 00000000 UNDEF  notype       External     | __imp__EnumDisplaySettingsW@12
+039 00000000 UNDEF  notype       External     | __imp__EnumDisplaySettingsExW@16
+03A 00000000 UNDEF  notype       External     | __imp__EnumDisplayDevicesW@16
+03B 00000000 UNDEF  notype       External     | __imp__WideCharToMultiByte@32
+03C 00000000 UNDEF  notype       External     | __imp__free
+03D 00000000 UNDEF  notype       External     | __imp__realloc
+03E 00000000 UNDEF  notype ()    External     | __glfwCreateUTF8FromWideString
+03F 00000000 SECT13 notype ()    External     | __glfwSetVideoMode
+040 00000000 SECT11 notype ()    External     | __glfwRestoreVideoMode
+041 00000000 SECT7  notype ()    External     | __glfwPlatformGetMonitors
+042 00000000 SECTD  notype ()    External     | __glfwPlatformIsSameMonitor
+043 00000000 SECT5  notype ()    External     | __glfwPlatformGetMonitorPos
+044 00000000 SECTB  notype ()    External     | __glfwPlatformGetVideoModes
+045 00000000 SECT9  notype ()    External     | __glfwPlatformGetVideoMode
+046 00000000 SECT3  notype ()    External     | __glfwPlatformGetGammaRamp
+047 00000000 SECTF  notype ()    External     | __glfwPlatformSetGammaRamp
+048 00000000 UNDEF  notype ()    External     | __glfwInputError
+049 00000000 UNDEF  notype ()    External     | __glfwChooseVideoMode
+04A 00000000 UNDEF  notype ()    External     | __glfwCompareVideoModes
+04B 00000000 UNDEF  notype ()    External     | __glfwSplitBPP
+04C 00000000 UNDEF  notype ()    External     | __glfwAllocGammaArrays
+04D 00000000 UNDEF  notype ()    External     | __glfwAllocMonitor
+04E 00000000 SECT15 notype ()    External     | _glfwGetWin32Adapter
+04F 00000000 SECT17 notype ()    External     | _glfwGetWin32Monitor
+050 00000000 UNDEF  notype ()    External     | @__security_check_cookie@4
+051 00000000 UNDEF  notype ()    External     | _memset
+052 00000000 UNDEF  notype       External     | __glfwInitialized
+053 00000000 SECT19 notype       Static       | .rdata
+    Section length   20, #relocs    0, #linenums    0, checksum CB627CA6, selection    2 (pick any)
+055 00000000 SECT19 notype       External     | ??_C@_0CA@CNJHNGPE@Win32?3?5Failed?5to?5set?5video?5mode?$AA@ (`string')
+056 00000000 SECT1A notype       Static       | .rdata
+    Section length   29, #relocs    0, #linenums    0, checksum D4F7A1C7, selection    2 (pick any)
+058 00000000 SECT1A notype       External     | ??_C@_0CJ@EFIFNOJC@Win32?3?5Failed?5to?5convert?5string?5@ (`string')
+059 00000000 SECT1B notype       Static       | .rdata
+    Section length   10, #relocs    0, #linenums    0, checksum EB62F23B, selection    2 (pick any)
+05B 00000000 SECT1B notype       External     | ??_C@_1BA@PICGEGJB@?$AAD?$AAI?$AAS?$AAP?$AAL?$AAA?$AAY?$AA?$AA@ (`string')
+05C 00000000 SECT1C notype       Static       | .rdata
+    Section length   23, #relocs    0, #linenums    0, checksum B0435DBD, selection    2 (pick any)
+05E 00000000 SECT1C notype       External     | ??_C@_0CD@EGEEPFHF@Win32?3?5Gamma?5ramp?5size?5must?5be?52@ (`string')
+05F 00000000 UNDEF  notype       External     | ___security_cookie
+
+String Table Size = 0x412 bytes
+
+COFF SYMBOL TABLE
+000 010459F2 ABS    notype       Static       | @comp.id
+001 80000191 ABS    notype       Static       | @feat.00
+002 00000000 SECT1  notype       Static       | .drectve
+    Section length   2F, #relocs    0, #linenums    0, checksum        0
+004 00000000 SECT2  notype       Static       | .debug$S
+    Section length   BC, #relocs    0, #linenums    0, checksum        0
+006 00000000 SECT3  notype       Static       | .text$mn
+    Section length   64, #relocs    4, #linenums    0, checksum B93A582D, selection    1 (pick no duplicates)
+008 00000000 SECT4  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x3)
+00A 00000000 SECT5  notype       Static       | .text$mn
+    Section length   5C, #relocs    4, #linenums    0, checksum 29AB65AF, selection    1 (pick no duplicates)
+00C 00000000 SECT6  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x5)
+00E 00000000 SECT7  notype       Static       | .text$mn
+    Section length   20, #relocs    1, #linenums    0, checksum 79319814, selection    1 (pick no duplicates)
+010 00000000 SECT8  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x7)
+012 00000000 SECT9  notype       Static       | .text$mn
+    Section length    6, #relocs    1, #linenums    0, checksum F4F40212, selection    1 (pick no duplicates)
+014 00000000 SECTA  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x9)
+016 00000000 SECTB  notype       Static       | .text$mn
+    Section length   63, #relocs    A, #linenums    0, checksum 1B5D9B69, selection    1 (pick no duplicates)
+018 00000000 SECTC  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0xB)
+01A 00000000 SECTD  notype       Static       | .text$mn
+    Section length   60, #relocs    B, #linenums    0, checksum C6016F11, selection    1 (pick no duplicates)
+01C 00000000 SECTE  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0xD)
+01E 00000000 SECTF  notype       Static       | .text$mn
+    Section length  26A, #relocs   3E, #linenums    0, checksum 7BEDA643, selection    1 (pick no duplicates)
+020 00000000 SECT10 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0xF)
+022 00000000 SECT11 notype       Static       | .text$mn
+    Section length  110, #relocs   24, #linenums    0, checksum AAA12A90, selection    1 (pick no duplicates)
+024 00000000 SECT12 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x11)
+026 00000000 SECT13 notype       Static       | .text$mn
+    Section length   2D, #relocs    4, #linenums    0, checksum 8AE3B99F, selection    1 (pick no duplicates)
+028 00000000 SECT14 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x13)
+02A 00000000 UNDEF  notype       External     | __imp__FreeLibrary@4
+02B 00000000 UNDEF  notype       External     | __imp__GetProcAddress@8
+02C 00000000 UNDEF  notype       External     | __imp__LoadLibraryW@4
+02D 00000000 UNDEF  notype       External     | __imp__SystemParametersInfoW@16
+02E 00000000 UNDEF  notype       External     | __imp__MultiByteToWideChar@24
+02F 00000000 UNDEF  notype       External     | __imp__WideCharToMultiByte@32
+030 00000000 UNDEF  notype       External     | __imp__calloc
+031 00000000 UNDEF  notype       External     | __imp__free
+032 00000000 UNDEF  notype ()    External     | __glfwInitJoysticks
+033 00000000 UNDEF  notype ()    External     | __glfwTerminateJoysticks
+034 00000000 UNDEF  notype ()    External     | __glfwInitContextAPI
+035 00000000 UNDEF  notype ()    External     | __glfwTerminateContextAPI
+036 00000000 UNDEF  notype ()    External     | __glfwRegisterWindowClass
+037 00000000 UNDEF  notype ()    External     | __glfwUnregisterWindowClass
+038 00000000 SECT7  notype ()    External     | __glfwIsCompositionEnabled
+039 00000000 SECT5  notype ()    External     | __glfwCreateWideStringFromUTF8
+03A 00000000 SECT3  notype ()    External     | __glfwCreateUTF8FromWideString
+03B 00000000 UNDEF  notype ()    External     | __glfwInitTimer
+03C 00000000 SECTB  notype ()    External     | __glfwPlatformInit
+03D 00000000 SECTD  notype ()    External     | __glfwPlatformTerminate
+03E 00000000 SECT9  notype ()    External     | __glfwPlatformGetVersionString
+03F 00000000 UNDEF  notype ()    External     | __glfwInputError
+040 00000000 SECT11 notype ()    Static       | _initLibraries
+041 00000000 SECT13 notype ()    Static       | _terminateLibraries
+042 00000000 SECTF  notype ()    Static       | _createKeyTables
+043 00000000 UNDEF  notype ()    External     | _memset
+044 00000000 UNDEF  notype       External     | __glfw
+045 00000000 SECT15 notype       Static       | .rdata
+    Section length   14, #relocs    0, #linenums    0, checksum AEA4DE16, selection    2 (pick any)
+047 00000000 SECT15 notype       External     | ??_C@_1BE@FOIOLKGE@?$AAw?$AAi?$AAn?$AAm?$AAm?$AA?4?$AAd?$AAl?$AAl?$AA?$AA@ (`string')
+048 00000000 SECT16 notype       Static       | .rdata
+    Section length   20, #relocs    0, #linenums    0, checksum A5617966, selection    2 (pick any)
+04A 00000000 SECT16 notype       External     | ??_C@_0CA@EDJENDDE@Win32?3?5Failed?5to?5load?5winmm?4dll?$AA@ (`string')
+04B 00000000 SECT17 notype       Static       | .rdata
+    Section length    F, #relocs    0, #linenums    0, checksum 29E2B65D, selection    2 (pick any)
+04D 00000000 SECT17 notype       External     | ??_C@_0P@BMOEKEF@joyGetDevCapsW?$AA@ (`string')
+04E 00000000 SECT18 notype       Static       | .rdata
+    Section length    A, #relocs    0, #linenums    0, checksum AF536AEC, selection    2 (pick any)
+050 00000000 SECT18 notype       External     | ??_C@_09LDCGPNGF@joyGetPos?$AA@ (`string')
+051 00000000 SECT19 notype       Static       | .rdata
+    Section length    C, #relocs    0, #linenums    0, checksum CE1B2720, selection    2 (pick any)
+053 00000000 SECT19 notype       External     | ??_C@_0M@EKDBBOLA@joyGetPosEx?$AA@ (`string')
+054 00000000 SECT1A notype       Static       | .rdata
+    Section length    C, #relocs    0, #linenums    0, checksum 8765A86F, selection    2 (pick any)
+056 00000000 SECT1A notype       External     | ??_C@_0M@DEPJBPP@timeGetTime?$AA@ (`string')
+057 00000000 SECT1B notype       Static       | .rdata
+    Section length   26, #relocs    0, #linenums    0, checksum F9524EA1, selection    2 (pick any)
+059 00000000 SECT1B notype       External     | ??_C@_0CG@JOFECKON@Win32?3?5Failed?5to?5load?5winmm?5func@ (`string')
+05A 00000000 SECT1C notype       Static       | .rdata
+    Section length   16, #relocs    0, #linenums    0, checksum BF65F6F6, selection    2 (pick any)
+05C 00000000 SECT1C notype       External     | ??_C@_1BG@OILDLIOJ@?$AAu?$AAs?$AAe?$AAr?$AA3?$AA2?$AA?4?$AAd?$AAl?$AAl?$AA?$AA@ (`string')
+05D 00000000 SECT1D notype       Static       | .rdata
+    Section length   13, #relocs    0, #linenums    0, checksum 6875E92C, selection    2 (pick any)
+05F 00000000 SECT1D notype       External     | ??_C@_0BD@ENICNPLM@SetProcessDPIAware?$AA@ (`string')
+060 00000000 SECT1E notype       Static       | .rdata
+    Section length   1C, #relocs    0, #linenums    0, checksum 9DE03BC4, selection    2 (pick any)
+062 00000000 SECT1E notype       External     | ??_C@_0BM@OCGPLDNC@ChangeWindowMessageFilterEx?$AA@ (`string')
+063 00000000 SECT1F notype       Static       | .rdata
+    Section length   16, #relocs    0, #linenums    0, checksum E7D83B66, selection    2 (pick any)
+065 00000000 SECT1F notype       External     | ??_C@_1BG@LAAOHFHJ@?$AAd?$AAw?$AAm?$AAa?$AAp?$AAi?$AA?4?$AAd?$AAl?$AAl?$AA?$AA@ (`string')
+066 00000000 SECT20 notype       Static       | .rdata
+    Section length   18, #relocs    0, #linenums    0, checksum F5C5A4A8, selection    2 (pick any)
+068 00000000 SECT20 notype       External     | ??_C@_0BI@KJPLJBHH@DwmIsCompositionEnabled?$AA@ (`string')
+069 00000000 SECT21 notype       Static       | .rdata
+    Section length    9, #relocs    0, #linenums    0, checksum ED3BF392, selection    2 (pick any)
+06B 00000000 SECT21 notype       External     | ??_C@_08PEMNBIMD@DwmFlush?$AA@ (`string')
+06C 00000000 SECT22 notype       Static       | .rdata
+    Section length   18, #relocs    0, #linenums    0, checksum 918972B1, selection    2 (pick any)
+06E 00000000 SECT22 notype       External     | ??_C@_0BI@MNLHEHGO@3?41?42?5Win32?5WGL?5VisualC?$AA@ (`string')
+06F 00000000 SECT23 notype       Static       | .rdata
+    Section length   10, #relocs    0, #linenums    0, checksum 720A5797, selection    2 (pick any)
+071 00000000 SECT23 notype       External     | __xmm@00380037003600350034003300320031
+072 00000000 SECT24 notype       Static       | .rdata
+    Section length   10, #relocs    0, #linenums    0, checksum C8E3DC20, selection    2 (pick any)
+074 00000000 SECT24 notype       External     | __xmm@01290128012701260125012401230122
+075 00000000 SECT25 notype       Static       | .rdata
+    Section length   10, #relocs    0, #linenums    0, checksum F861A3F2, selection    2 (pick any)
+077 00000000 SECT25 notype       External     | __xmm@013501340133013201310130012f012e
+
+String Table Size = 0x58D bytes
+
+COFF SYMBOL TABLE
+000 010459F2 ABS    notype       Static       | @comp.id
+001 80000191 ABS    notype       Static       | @feat.00
+002 00000000 SECT1  notype       Static       | .drectve
+    Section length   2F, #relocs    0, #linenums    0, checksum        0
+004 00000000 SECT2  notype       Static       | .debug$S
+    Section length   B8, #relocs    0, #linenums    0, checksum        0
+006 00000000 SECT3  notype       Static       | .text$mn
+    Section length   15, #relocs    0, #linenums    0, checksum 430F852F, selection    1 (pick no duplicates)
+008 00000000 SECT4  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x3)
+00A 00000000 SECT5  notype       Static       | .text$mn
+    Section length   19, #relocs    0, #linenums    0, checksum C72CA659, selection    1 (pick no duplicates)
+00C 00000000 SECT6  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x5)
+00E 00000000 SECT7  notype       Static       | .text$mn
+    Section length   15, #relocs    0, #linenums    0, checksum  6FA2CCB, selection    1 (pick no duplicates)
+010 00000000 SECT8  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x7)
+012 00000000 SECT9  notype       Static       | .text$mn
+    Section length   90, #relocs    4, #linenums    0, checksum 158A9C42, selection    1 (pick no duplicates)
+014 00000000 SECTA  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x9)
+016 00000000 SECTB  notype       Static       | .text$mn
+    Section length   15, #relocs    0, #linenums    0, checksum C973E04C, selection    1 (pick no duplicates)
+018 00000000 SECTC  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0xB)
+01A 00000000 SECTD  notype       Static       | .text$mn
+    Section length   15, #relocs    0, #linenums    0, checksum C8E4D6E7, selection    1 (pick no duplicates)
+01C 00000000 SECTE  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0xD)
+01E 00000000 SECTF  notype       Static       | .text$mn
+    Section length   15, #relocs    0, #linenums    0, checksum 8D117F03, selection    1 (pick no duplicates)
+020 00000000 SECT10 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0xF)
+022 00000000 SECT11 notype       Static       | .text$mn
+    Section length  2FE, #relocs   25, #linenums    0, checksum C5C80A79, selection    1 (pick no duplicates)
+024 00000000 SECT12 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x11)
+026 00000000 SECT13 notype       Static       | .text$mn
+    Section length   90, #relocs    F, #linenums    0, checksum 344A2DF0, selection    1 (pick no duplicates)
+028 00000000 SECT14 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x13)
+02A 00000000 SECT15 notype       Static       | .text$mn
+    Section length   86, #relocs    B, #linenums    0, checksum F1BB91EE, selection    1 (pick no duplicates)
+02C 00000000 SECT16 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x15)
+02E 00000000 SECT17 notype       Static       | .text$mn
+    Section length   42, #relocs    3, #linenums    0, checksum 9A1D38E5, selection    1 (pick no duplicates)
+030 00000000 SECT18 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x17)
+032 00000000 SECT19 notype       Static       | .text$mn
+    Section length  148, #relocs   18, #linenums    0, checksum  4844806, selection    1 (pick no duplicates)
+034 00000000 SECT1A notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x19)
+036 00000000 SECT1B notype       Static       | .text$mn
+    Section length   65, #relocs    3, #linenums    0, checksum 455CE544, selection    1 (pick no duplicates)
+038 00000000 SECT1C notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x1B)
+03A 00000000 SECT1D notype       Static       | .text$mn
+    Section length   23, #relocs    2, #linenums    0, checksum A27B50FC, selection    1 (pick no duplicates)
+03C 00000000 SECT1E notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x1D)
+03E 00000000 SECT1F notype       Static       | .text$mn
+    Section length   42, #relocs    3, #linenums    0, checksum 9A1D38E5, selection    1 (pick no duplicates)
+040 00000000 SECT20 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x1F)
+042 00000000 SECT21 notype       Static       | .text$mn
+    Section length   42, #relocs    3, #linenums    0, checksum 9A1D38E5, selection    1 (pick no duplicates)
+044 00000000 SECT22 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x21)
+046 00000000 SECT23 notype       Static       | .text$mn
+    Section length   23, #relocs    2, #linenums    0, checksum 5393B15A, selection    1 (pick no duplicates)
+048 00000000 SECT24 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x23)
+04A 00000000 SECT25 notype       Static       | .text$mn
+    Section length   2C, #relocs    3, #linenums    0, checksum 29B0503C, selection    1 (pick no duplicates)
+04C 00000000 SECT26 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x25)
+04E 00000000 SECT27 notype       Static       | .text$mn
+    Section length   1E, #relocs    3, #linenums    0, checksum 5207DDEB, selection    1 (pick no duplicates)
+050 00000000 SECT28 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x27)
+052 00000000 SECT29 notype       Static       | .text$mn
+    Section length   1E, #relocs    3, #linenums    0, checksum 5207DDEB, selection    1 (pick no duplicates)
+054 00000000 SECT2A notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x29)
+056 00000000 SECT2B notype       Static       | .text$mn
+    Section length   27, #relocs    4, #linenums    0, checksum 6AA4EC81, selection    1 (pick no duplicates)
+058 00000000 SECT2C notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x2B)
+05A 00000000 SECT2D notype       Static       | .text$mn
+    Section length   1E, #relocs    3, #linenums    0, checksum 5207DDEB, selection    1 (pick no duplicates)
+05C 00000000 SECT2E notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x2D)
+05E 00000000 SECT2F notype       Static       | .text$mn
+    Section length   30, #relocs    2, #linenums    0, checksum 71E6633A, selection    1 (pick no duplicates)
+060 00000000 SECT30 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x2F)
+062 00000000 SECT31 notype       Static       | .text$mn
+    Section length   30, #relocs    2, #linenums    0, checksum BFF03073, selection    1 (pick no duplicates)
+064 00000000 SECT32 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x31)
+066 00000000 SECT33 notype       Static       | .text$mn
+    Section length   30, #relocs    2, #linenums    0, checksum FB55C9BE, selection    1 (pick no duplicates)
+068 00000000 SECT34 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x33)
+06A 00000000 SECT35 notype       Static       | .text$mn
+    Section length   30, #relocs    2, #linenums    0, checksum 34BFB678, selection    1 (pick no duplicates)
+06C 00000000 SECT36 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x35)
+06E 00000000 SECT37 notype       Static       | .text$mn
+    Section length   3F, #relocs    5, #linenums    0, checksum D6499B9B, selection    1 (pick no duplicates)
+070 00000000 SECT38 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x37)
+072 00000000 SECT39 notype       Static       | .text$mn
+    Section length   30, #relocs    2, #linenums    0, checksum 35439AF7, selection    1 (pick no duplicates)
+074 00000000 SECT3A notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x39)
+076 00000000 SECT3B notype       Static       | .text$mn
+    Section length   30, #relocs    2, #linenums    0, checksum BE0C1CFC, selection    1 (pick no duplicates)
+078 00000000 SECT3C notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x3B)
+07A 00000000 SECT3D notype       Static       | .text$mn
+    Section length   2A, #relocs    2, #linenums    0, checksum 5889B503, selection    1 (pick no duplicates)
+07C 00000000 SECT3E notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x3D)
+07E 00000000 SECT3F notype       Static       | .text$mn
+    Section length   42, #relocs    3, #linenums    0, checksum 6F05EABB, selection    1 (pick no duplicates)
+080 00000000 SECT40 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x3F)
+082 00000000 SECT41 notype       Static       | .text$mn
+    Section length   30, #relocs    2, #linenums    0, checksum FAA9E531, selection    1 (pick no duplicates)
+084 00000000 SECT42 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x41)
+086 00000000 SECT43 notype       Static       | .text$mn
+    Section length   23, #relocs    3, #linenums    0, checksum C07FFB41, selection    1 (pick no duplicates)
+088 00000000 SECT44 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x43)
+08A 00000000 SECT45 notype       Static       | .text$mn
+    Section length   2A, #relocs    2, #linenums    0, checksum 48F317FC, selection    1 (pick no duplicates)
+08C 00000000 SECT46 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x45)
+08E 00000000 SECT47 notype       Static       | .text$mn
+    Section length   2C, #relocs    3, #linenums    0, checksum 29B0503C, selection    1 (pick no duplicates)
+090 00000000 SECT48 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x47)
+092 00000000 SECT49 notype       Static       | .text$mn
+    Section length   27, #relocs    4, #linenums    0, checksum 6AA4EC81, selection    1 (pick no duplicates)
+094 00000000 SECT4A notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x49)
+096 00000000 SECT4B notype       Static       | .text$mn
+    Section length  258, #relocs   43, #linenums    0, checksum 574A83F4, selection    1 (pick no duplicates)
+098 00000000 SECT4C notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x4B)
+09A 00000000 SECT4D notype       Static       | .text$mn
+    Section length   24, #relocs    2, #linenums    0, checksum 3F659D59, selection    1 (pick no duplicates)
+09C 00000000 SECT4E notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x4D)
+09E 00000000 SECT13 notype ()    External     | _glfwDefaultWindowHints
+09F 00000000 SECT4B notype ()    External     | _glfwWindowHint
+0A0 00000000 SECT11 notype ()    External     | _glfwCreateWindow
+0A1 00000000 SECT15 notype ()    External     | _glfwDestroyWindow
+0A2 00000000 SECT4D notype ()    External     | _glfwWindowShouldClose
+0A3 00000000 SECT3D notype ()    External     | _glfwSetWindowShouldClose
+0A4 00000000 SECT43 notype ()    External     | _glfwSetWindowTitle
+0A5 00000000 SECT1F notype ()    External     | _glfwGetWindowPos
+0A6 00000000 SECT37 notype ()    External     | _glfwSetWindowPos
+0A7 00000000 SECT21 notype ()    External     | _glfwGetWindowSize
+0A8 00000000 SECT3F notype ()    External     | _glfwSetWindowSize
+0A9 00000000 SECT17 notype ()    External     | _glfwGetFramebufferSize
+0AA 00000000 SECT1B notype ()    External     | _glfwGetWindowFrameSize
+0AB 00000000 SECT27 notype ()    External     | _glfwIconifyWindow
+0AC 00000000 SECT2D notype ()    External     | _glfwRestoreWindow
+0AD 00000000 SECT47 notype ()    External     | _glfwShowWindow
+0AE 00000000 SECT25 notype ()    External     | _glfwHideWindow
+0AF 00000000 SECT1D notype ()    External     | _glfwGetWindowMonitor
+0B0 00000000 SECT19 notype ()    External     | _glfwGetWindowAttrib
+0B1 00000000 SECT45 notype ()    External     | _glfwSetWindowUserPointer
+0B2 00000000 SECT23 notype ()    External     | _glfwGetWindowUserPointer
+0B3 00000000 SECT39 notype ()    External     | _glfwSetWindowPosCallback
+0B4 00000000 SECT41 notype ()    External     | _glfwSetWindowSizeCallback
+0B5 00000000 SECT31 notype ()    External     | _glfwSetWindowCloseCallback
+0B6 00000000 SECT3B notype ()    External     | _glfwSetWindowRefreshCallback
+0B7 00000000 SECT33 notype ()    External     | _glfwSetWindowFocusCallback
+0B8 00000000 SECT35 notype ()    External     | _glfwSetWindowIconifyCallback
+0B9 00000000 SECT2F notype ()    External     | _glfwSetFramebufferSizeCallback
+0BA 00000000 SECT29 notype ()    External     | _glfwPollEvents
+0BB 00000000 SECT49 notype ()    External     | _glfwWaitEvents
+0BC 00000000 SECT2B notype ()    External     | _glfwPostEmptyEvent
+0BD 00000000 UNDEF  notype       External     | __imp__calloc
+0BE 00000000 UNDEF  notype       External     | __imp__free
+0BF 00000000 UNDEF  notype ()    External     | __glfwPlatformSetCursorPos
+0C0 00000000 UNDEF  notype ()    External     | __glfwPlatformCreateWindow
+0C1 00000000 UNDEF  notype ()    External     | __glfwPlatformDestroyWindow
+0C2 00000000 UNDEF  notype ()    External     | __glfwPlatformSetWindowTitle
+0C3 00000000 UNDEF  notype ()    External     | __glfwPlatformGetWindowPos
+0C4 00000000 UNDEF  notype ()    External     | __glfwPlatformSetWindowPos
+0C5 00000000 UNDEF  notype ()    External     | __glfwPlatformGetWindowSize
+0C6 00000000 UNDEF  notype ()    External     | __glfwPlatformSetWindowSize
+0C7 00000000 UNDEF  notype ()    External     | __glfwPlatformGetFramebufferSize
+0C8 00000000 UNDEF  notype ()    External     | __glfwPlatformGetWindowFrameSize
+0C9 00000000 UNDEF  notype ()    External     | __glfwPlatformIconifyWindow
+0CA 00000000 UNDEF  notype ()    External     | __glfwPlatformRestoreWindow
+0CB 00000000 UNDEF  notype ()    External     | __glfwPlatformShowWindow
+0CC 00000000 UNDEF  notype ()    External     | __glfwPlatformUnhideWindow
+0CD 00000000 UNDEF  notype ()    External     | __glfwPlatformHideWindow
+0CE 00000000 UNDEF  notype ()    External     | __glfwPlatformWindowFocused
+0CF 00000000 UNDEF  notype ()    External     | __glfwPlatformWindowIconified
+0D0 00000000 UNDEF  notype ()    External     | __glfwPlatformWindowVisible
+0D1 00000000 UNDEF  notype ()    External     | __glfwPlatformPollEvents
+0D2 00000000 UNDEF  notype ()    External     | __glfwPlatformWaitEvents
+0D3 00000000 UNDEF  notype ()    External     | __glfwPlatformPostEmptyEvent
+0D4 00000000 UNDEF  notype ()    External     | __glfwPlatformMakeContextCurrent
+0D5 00000000 UNDEF  notype ()    External     | __glfwPlatformGetCurrentContext
+0D6 00000000 UNDEF  notype ()    External     | __glfwPlatformSwapBuffers
+0D7 00000000 SECT9  notype ()    External     | __glfwInputWindowFocus
+0D8 00000000 SECTD  notype ()    External     | __glfwInputWindowPos
+0D9 00000000 SECTF  notype ()    External     | __glfwInputWindowSize
+0DA 00000000 SECT3  notype ()    External     | __glfwInputFramebufferSize
+0DB 00000000 SECTB  notype ()    External     | __glfwInputWindowIconify
+0DC 00000000 SECT7  notype ()    External     | __glfwInputWindowDamage
+0DD 00000000 SECT5  notype ()    External     | __glfwInputWindowCloseRequest
+0DE 00000000 UNDEF  notype ()    External     | __glfwInputKey
+0DF 00000000 UNDEF  notype ()    External     | __glfwInputMouseClick
+0E0 00000000 UNDEF  notype ()    External     | __glfwInputError
+0E1 00000000 UNDEF  notype ()    External     | __glfwRefreshContextAttribs
+0E2 00000000 UNDEF  notype ()    External     | __glfwIsValidContextConfig
+0E3 00000000 UNDEF  notype ()    External     | __glfwIsValidContext
+0E4 00000000 UNDEF  notype ()    External     | @__security_check_cookie@4
+0E5 00000000 UNDEF  notype ()    External     | _memset
+0E6 000001E0 SECT4B notype       Static       | $LN41
+0E7 00000040 SECT4B notype       Label        | $LN20
+0E8 0000004D SECT4B notype       Label        | $LN21
+0E9 0000005A SECT4B notype       Label        | $LN22
+0EA 00000067 SECT4B notype       Label        | $LN23
+0EB 00000074 SECT4B notype       Label        | $LN24
+0EC 00000081 SECT4B notype       Label        | $LN25
+0ED 000001FC SECT4B notype       Static       | $LN42
+0EE 000000BE SECT4B notype       Label        | $LN6
+0EF 000000C8 SECT4B notype       Label        | $LN7
+0F0 000000D2 SECT4B notype       Label        | $LN8
+0F1 000000DC SECT4B notype       Label        | $LN9
+0F2 000000E6 SECT4B notype       Label        | $LN10
+0F3 000000F0 SECT4B notype       Label        | $LN11
+0F4 000000FA SECT4B notype       Label        | $LN12
+0F5 00000104 SECT4B notype       Label        | $LN13
+0F6 0000010E SECT4B notype       Label        | $LN14
+0F7 00000118 SECT4B notype       Label        | $LN15
+0F8 00000122 SECT4B notype       Label        | $LN16
+0F9 00000131 SECT4B notype       Label        | $LN17
+0FA 00000140 SECT4B notype       Label        | $LN18
+0FB 0000014A SECT4B notype       Label        | $LN19
+0FC 00000159 SECT4B notype       Label        | $LN34
+0FD 00000238 SECT4B notype       Static       | $LN43
+0FE 0000017E SECT4B notype       Label        | $LN27
+0FF 00000188 SECT4B notype       Label        | $LN28
+100 00000192 SECT4B notype       Label        | $LN29
+101 0000019C SECT4B notype       Label        | $LN30
+102 000001A9 SECT4B notype       Label        | $LN31
+103 000001B6 SECT4B notype       Label        | $LN32
+104 000001C0 SECT4B notype       Label        | $LN33
+105 000001CA SECT4B notype       Label        | $LN35
+106 0000010C SECT19 notype       Static       | $LN24
+107 0000003D SECT19 notype       Label        | $LN5
+108 0000004A SECT19 notype       Label        | $LN6
+109 00000057 SECT19 notype       Label        | $LN7
+10A 00000064 SECT19 notype       Label        | $LN8
+10B 0000006D SECT19 notype       Label        | $LN9
+10C 00000076 SECT19 notype       Label        | $LN10
+10D 00000128 SECT19 notype       Static       | $LN25
+10E 0000009B SECT19 notype       Label        | $LN12
+10F 000000A6 SECT19 notype       Label        | $LN13
+110 000000B1 SECT19 notype       Label        | $LN14
+111 000000BC SECT19 notype       Label        | $LN15
+112 000000C7 SECT19 notype       Label        | $LN16
+113 000000D3 SECT19 notype       Label        | $LN17
+114 000000DF SECT19 notype       Label        | $LN18
+115 000000EA SECT19 notype       Label        | $LN19
+116 000000F5 SECT19 notype       Label        | $LN2
+117 00000000 UNDEF  notype       External     | __glfwInitialized
+118 00000000 UNDEF  notype       External     | __glfw
+119 00000000 SECT4F notype       Static       | .rdata
+    Section length   14, #relocs    0, #linenums    0, checksum A6301F17, selection    2 (pick any)
+11B 00000000 SECT4F notype       External     | ??_C@_0BE@FGBKHLGF@Invalid?5window?5size?$AA@ (`string')
+11C 00000000 SECT50 notype       Static       | .rdata
+    Section length   14, #relocs    0, #linenums    0, checksum F9F69138, selection    2 (pick any)
+11E 00000000 SECT50 notype       External     | ??_C@_0BE@JNMPFEK@Invalid?5window?5hint?$AA@ (`string')
+11F 00000000 SECT51 notype       Static       | .rdata
+    Section length   24, #relocs    0, #linenums    0, checksum 6F442042, selection    2 (pick any)
+121 00000000 SECT51 notype       External     | ??_C@_0CE@PKANGNGI@Full?5screen?5windows?5cannot?5be?5mo@ (`string')
+122 00000000 SECT52 notype       Static       | .rdata
+    Section length   19, #relocs    0, #linenums    0, checksum 1431C35A, selection    2 (pick any)
+124 00000000 SECT52 notype       External     | ??_C@_0BJ@CABDCCK@Invalid?5window?5attribute?$AA@ (`string')
+125 00000000 UNDEF  notype       External     | ___security_cookie
+126 00000000 UNDEF  notype       External     | __fltused
+127 00000000 SECT53 notype       Static       | .rdata
+    Section length   10, #relocs    0, #linenums    0, checksum 634EDAEB, selection    2 (pick any)
+129 00000000 SECT53 notype       External     | __xmm@00000008000000080000000800000008
+
+String Table Size = 0x7D6 bytes
+
+COFF SYMBOL TABLE
+000 010459F2 ABS    notype       Static       | @comp.id
+001 80000191 ABS    notype       Static       | @feat.00
+002 00000000 SECT1  notype       Static       | .drectve
+    Section length   2F, #relocs    0, #linenums    0, checksum        0
+004 00000000 SECT2  notype       Static       | .debug$S
+    Section length   B8, #relocs    0, #linenums    0, checksum        0
+006 00000000 SECT3  notype       Static       | .text$mn
+    Section length   32, #relocs    1, #linenums    0, checksum 7C775D2C, selection    1 (pick no duplicates)
+008 00000000 SECT4  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x3)
+00A 00000000 SECT5  notype       Static       | .text$mn
+    Section length   31, #relocs    2, #linenums    0, checksum D6BBF00B, selection    1 (pick no duplicates)
+00C 00000000 SECT6  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x5)
+00E 00000000 SECT7  notype       Static       | .text$mn
+    Section length  142, #relocs    1, #linenums    0, checksum ADC84BED, selection    1 (pick no duplicates)
+010 00000000 SECT8  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x7)
+012 00000000 SECT9  notype       Static       | .text$mn
+    Section length   3B, #relocs    0, #linenums    0, checksum DD435039, selection    1 (pick no duplicates)
+014 00000000 SECTA  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x9)
+016 00000000 SECTB  notype       Static       | .text$mn
+    Section length   26, #relocs    1, #linenums    0, checksum DB720ABD, selection    1 (pick no duplicates)
+018 00000000 SECTC  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0xB)
+01A 00000000 SECTD  notype       Static       | .text$mn
+    Section length   4E, #relocs    1, #linenums    0, checksum D8E400F3, selection    1 (pick no duplicates)
+01C 00000000 SECTE  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0xD)
+01E 00000000 SECTF  notype       Static       | .text$mn
+    Section length   71, #relocs    1, #linenums    0, checksum 4BD1DE21, selection    1 (pick no duplicates)
+020 00000000 SECT10 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0xF)
+022 00000000 SECT11 notype       Static       | .text$mn
+    Section length  1DD, #relocs   20, #linenums    0, checksum 1C5E0D73, selection    1 (pick no duplicates)
+024 00000000 SECT12 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x11)
+026 00000000 SECT13 notype       Static       | .text$mn
+    Section length   47, #relocs    0, #linenums    0, checksum 84A307B4, selection    1 (pick no duplicates)
+028 00000000 SECT14 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x13)
+02A 00000000 SECT15 notype       Static       | .text$mn
+    Section length   3B, #relocs    0, #linenums    0, checksum DD435039, selection    1 (pick no duplicates)
+02C 00000000 SECT16 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x15)
+02E 00000000 SECT17 notype       Static       | .text$mn
+    Section length   50, #relocs    4, #linenums    0, checksum 392E7AA9, selection    1 (pick no duplicates)
+030 00000000 SECT18 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x17)
+032 00000000 SECT19 notype       Static       | .text$mn
+    Section length   22, #relocs    2, #linenums    0, checksum DB80FA15, selection    1 (pick no duplicates)
+034 00000000 SECT1A notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x19)
+036 00000000 SECT1B notype       Static       | .text$mn
+    Section length   4E, #relocs    2, #linenums    0, checksum 58558AB7, selection    1 (pick no duplicates)
+038 00000000 SECT1C notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x1B)
+03A 00000000 SECT1D notype       Static       | .text$mn
+    Section length   42, #relocs    3, #linenums    0, checksum 9A1D38E5, selection    1 (pick no duplicates)
+03C 00000000 SECT1E notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x1D)
+03E 00000000 SECT1F notype       Static       | .text$mn
+    Section length   32, #relocs    4, #linenums    0, checksum 23D54177, selection    1 (pick no duplicates)
+040 00000000 SECT20 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x1F)
+042 00000000 SECT21 notype       Static       | .text$mn
+    Section length   2C, #relocs    4, #linenums    0, checksum EB28C2D7, selection    1 (pick no duplicates)
+044 00000000 SECT22 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x21)
+046 00000000 SECT23 notype       Static       | .text$mn
+    Section length   31, #relocs    3, #linenums    0, checksum 2E6BC416, selection    1 (pick no duplicates)
+048 00000000 SECT24 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x23)
+04A 00000000 SECT25 notype       Static       | .text$mn
+    Section length   47, #relocs    3, #linenums    0, checksum 28C81E88, selection    1 (pick no duplicates)
+04C 00000000 SECT26 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x25)
+04E 00000000 SECT27 notype       Static       | .text$mn
+    Section length  12B, #relocs    D, #linenums    0, checksum ACB98962, selection    1 (pick no duplicates)
+050 00000000 SECT28 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x27)
+052 00000000 SECT29 notype       Static       | .text$mn
+    Section length   45, #relocs    4, #linenums    0, checksum 31E2ADC3, selection    1 (pick no duplicates)
+054 00000000 SECT2A notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x29)
+056 00000000 SECT2B notype       Static       | .text$mn
+    Section length   2B, #relocs    4, #linenums    0, checksum AC4100B1, selection    1 (pick no duplicates)
+058 00000000 SECT2C notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x2B)
+05A 00000000 SECT2D notype       Static       | .text$mn
+    Section length   5A, #relocs    4, #linenums    0, checksum 45B7E416, selection    1 (pick no duplicates)
+05C 00000000 SECT2E notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x2D)
+05E 00000000 SECT1F notype ()    External     | _glfwGetMonitors
+05F 00000000 SECT21 notype ()    External     | _glfwGetPrimaryMonitor
+060 00000000 SECT1D notype ()    External     | _glfwGetMonitorPos
+061 00000000 SECT1B notype ()    External     | _glfwGetMonitorPhysicalSize
+062 00000000 SECT19 notype ()    External     | _glfwGetMonitorName
+063 00000000 SECT2B notype ()    External     | _glfwSetMonitorCallback
+064 00000000 SECT25 notype ()    External     | _glfwGetVideoModes
+065 00000000 SECT23 notype ()    External     | _glfwGetVideoMode
+066 00000000 SECT27 notype ()    External     | _glfwSetGamma
+067 00000000 SECT17 notype ()    External     | _glfwGetGammaRamp
+068 00000000 SECT29 notype ()    External     | _glfwSetGammaRamp
+069 00000000 UNDEF  notype       External     | __imp___strdup
+06A 00000000 UNDEF  notype       External     | __imp__calloc
+06B 00000000 UNDEF  notype       External     | __imp__free
+06C 00000000 UNDEF  notype ()    External     | __glfwPlatformGetMonitors
+06D 00000000 UNDEF  notype ()    External     | __glfwPlatformIsSameMonitor
+06E 00000000 UNDEF  notype ()    External     | __glfwPlatformGetMonitorPos
+06F 00000000 UNDEF  notype ()    External     | __glfwPlatformGetVideoModes
+070 00000000 UNDEF  notype ()    External     | __glfwPlatformGetVideoMode
+071 00000000 UNDEF  notype ()    External     | __glfwPlatformGetGammaRamp
+072 00000000 UNDEF  notype ()    External     | __glfwPlatformSetGammaRamp
+073 00000000 SECT11 notype ()    External     | __glfwInputMonitorChange
+074 00000000 UNDEF  notype ()    External     | __glfwInputError
+075 00000000 SECT7  notype ()    External     | __glfwChooseVideoMode
+076 00000000 SECT9  notype ()    External     | __glfwCompareVideoModes
+077 00000000 SECT13 notype ()    External     | __glfwSplitBPP
+078 00000000 SECT3  notype ()    External     | __glfwAllocGammaArrays
+079 00000000 SECTB  notype ()    External     | __glfwFreeGammaArrays
+07A 00000000 SECT5  notype ()    External     | __glfwAllocMonitor
+07B 00000000 SECTD  notype ()    External     | __glfwFreeMonitor
+07C 00000000 SECTF  notype ()    External     | __glfwFreeMonitors
+07D 00000000 UNDEF  notype       External     | __imp__qsort
+07E 00000000 SECT15 notype ()    Static       | _compareVideoModes
+07F 00000000 SECT2D notype ()    Static       | _refreshVideoModes
+080 00000000 UNDEF  notype ()    External     | @__security_check_cookie@4
+081 00000000 UNDEF  notype ()    External     | __libm_sse2_pow_precise
+082 00000000 UNDEF  notype       External     | __glfwInitialized
+083 00000000 UNDEF  notype       External     | __glfw
+084 00000000 SECT2F notype       Static       | .rdata
+    Section length   14, #relocs    0, #linenums    0, checksum 58F243FA, selection    2 (pick any)
+086 00000000 SECT2F notype       External     | ??_C@_0BE@KINICHII@Invalid?5gamma?5value?$AA@ (`string')
+087 00000000 UNDEF  notype       External     | ___security_cookie
+088 00000000 UNDEF  notype       External     | __fltused
+089 00000000 SECT30 notype       Static       | .rdata
+    Section length    8, #relocs    0, #linenums    0, checksum E818DED1, selection    2 (pick any)
+08B 00000000 SECT30 notype       External     | __real@3fe0000000000000
+08C 00000000 SECT31 notype       Static       | .rdata
+    Section length    8, #relocs    0, #linenums    0, checksum A2DACC80, selection    2 (pick any)
+08E 00000000 SECT31 notype       External     | __real@3ff0000000000000
+08F 00000000 SECT32 notype       Static       | .rdata
+    Section length    8, #relocs    0, #linenums    0, checksum 3D5BE658, selection    2 (pick any)
+091 00000000 SECT32 notype       External     | __real@406fe00000000000
+092 00000000 SECT33 notype       Static       | .rdata
+    Section length    8, #relocs    0, #linenums    0, checksum C7DDDB66, selection    2 (pick any)
+094 00000000 SECT33 notype       External     | __real@40efffe000000000
+095 00000000 SECT34 notype       Static       | .rdata
+    Section length    4, #relocs    0, #linenums    0, checksum  8803B88, selection    2 (pick any)
+097 00000000 SECT34 notype       External     | __real@7f7fffff
+
+String Table Size = 0x3C5 bytes
+
+COFF SYMBOL TABLE
+000 010459F2 ABS    notype       Static       | @comp.id
+001 80000191 ABS    notype       Static       | @feat.00
+002 00000000 SECT1  notype       Static       | .drectve
+    Section length   2F, #relocs    0, #linenums    0, checksum        0
+004 00000000 SECT2  notype       Static       | .debug$S
+    Section length   B8, #relocs    0, #linenums    0, checksum        0
+006 00000000 SECT3  notype       Static       | .text$mn
+    Section length   4C, #relocs    0, #linenums    0, checksum 9530EA66, selection    1 (pick no duplicates)
+008 00000000 SECT4  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x3)
+00A 00000000 SECT5  notype       Static       | .text$mn
+    Section length   15, #relocs    0, #linenums    0, checksum FDC9EF80, selection    1 (pick no duplicates)
+00C 00000000 SECT6  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x5)
+00E 00000000 SECT7  notype       Static       | .text$mn
+    Section length   79, #relocs    0, #linenums    0, checksum 1FF7FA8E, selection    1 (pick no duplicates)
+010 00000000 SECT8  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x7)
+012 00000000 SECT9  notype       Static       | .text$mn
+    Section length   15, #relocs    0, #linenums    0, checksum 33D715AC, selection    1 (pick no duplicates)
+014 00000000 SECTA  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x9)
+016 00000000 SECTB  notype       Static       | .text$mn
+    Section length   66, #relocs    0, #linenums    0, checksum 6BE9F9CB, selection    1 (pick no duplicates)
+018 00000000 SECTC  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0xB)
+01A 00000000 SECTD  notype       Static       | .text$mn
+    Section length   3F, #relocs    0, #linenums    0, checksum 44E15BE8, selection    1 (pick no duplicates)
+01C 00000000 SECTE  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0xD)
+01E 00000000 SECTF  notype       Static       | .text$mn
+    Section length   2F, #relocs    0, #linenums    0, checksum 7020AEBF, selection    1 (pick no duplicates)
+020 00000000 SECT10 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0xF)
+022 00000000 SECT11 notype       Static       | .text$mn
+    Section length   60, #relocs    7, #linenums    0, checksum  AC6B446, selection    1 (pick no duplicates)
+024 00000000 SECT12 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x11)
+026 00000000 SECT13 notype       Static       | .text$mn
+    Section length   A2, #relocs    9, #linenums    0, checksum  7A3E425, selection    1 (pick no duplicates)
+028 00000000 SECT14 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x13)
+02A 00000000 SECT15 notype       Static       | .text$mn
+    Section length   96, #relocs    A, #linenums    0, checksum  FB6258F, selection    1 (pick no duplicates)
+02C 00000000 SECT16 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x15)
+02E 00000000 SECT17 notype       Static       | .text$mn
+    Section length   20, #relocs    3, #linenums    0, checksum 8B25BBF7, selection    1 (pick no duplicates)
+030 00000000 SECT18 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x17)
+032 00000000 SECT19 notype       Static       | .text$mn
+    Section length   6D, #relocs    3, #linenums    0, checksum 718E4455, selection    1 (pick no duplicates)
+034 00000000 SECT1A notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x19)
+036 00000000 SECT1B notype       Static       | .text$mn
+    Section length   5F, #relocs    4, #linenums    0, checksum 50C4FF8B, selection    1 (pick no duplicates)
+038 00000000 SECT1C notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x1B)
+03A 00000000 SECT1D notype       Static       | .text$mn
+    Section length   50, #relocs    5, #linenums    0, checksum 7869A59C, selection    1 (pick no duplicates)
+03C 00000000 SECT1E notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x1D)
+03E 00000000 SECT1F notype       Static       | .text$mn
+    Section length   50, #relocs    5, #linenums    0, checksum 7869A59C, selection    1 (pick no duplicates)
+040 00000000 SECT20 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x1F)
+042 00000000 SECT21 notype       Static       | .text$mn
+    Section length   42, #relocs    5, #linenums    0, checksum 83F3157D, selection    1 (pick no duplicates)
+044 00000000 SECT22 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x21)
+046 00000000 SECT23 notype       Static       | .text$mn
+    Section length   58, #relocs    4, #linenums    0, checksum D2103C20, selection    1 (pick no duplicates)
+048 00000000 SECT24 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x23)
+04A 00000000 SECT25 notype       Static       | .text$mn
+    Section length   55, #relocs    4, #linenums    0, checksum D46D2E66, selection    1 (pick no duplicates)
+04C 00000000 SECT26 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x25)
+04E 00000000 SECT27 notype       Static       | .text$mn
+    Section length   20, #relocs    3, #linenums    0, checksum A717FF63, selection    1 (pick no duplicates)
+050 00000000 SECT28 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x27)
+052 00000000 SECT29 notype       Static       | .text$mn
+    Section length   42, #relocs    5, #linenums    0, checksum 83F3157D, selection    1 (pick no duplicates)
+054 00000000 SECT2A notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x29)
+056 00000000 SECT2B notype       Static       | .text$mn
+    Section length   30, #relocs    2, #linenums    0, checksum  D36B92B, selection    1 (pick no duplicates)
+058 00000000 SECT2C notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x2B)
+05A 00000000 SECT2D notype       Static       | .text$mn
+    Section length   30, #relocs    2, #linenums    0, checksum C2DCC6ED, selection    1 (pick no duplicates)
+05C 00000000 SECT2E notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x2D)
+05E 00000000 SECT2F notype       Static       | .text$mn
+    Section length   23, #relocs    3, #linenums    0, checksum C07FFB41, selection    1 (pick no duplicates)
+060 00000000 SECT30 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x2F)
+062 00000000 SECT31 notype       Static       | .text$mn
+    Section length   38, #relocs    3, #linenums    0, checksum 5C0E61DD, selection    1 (pick no duplicates)
+064 00000000 SECT32 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x31)
+066 00000000 SECT33 notype       Static       | .text$mn
+    Section length   30, #relocs    2, #linenums    0, checksum  CCA95A4, selection    1 (pick no duplicates)
+068 00000000 SECT34 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x33)
+06A 00000000 SECT35 notype       Static       | .text$mn
+    Section length   69, #relocs    4, #linenums    0, checksum C6E93371, selection    1 (pick no duplicates)
+06C 00000000 SECT36 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x35)
+06E 00000000 SECT37 notype       Static       | .text$mn
+    Section length   30, #relocs    2, #linenums    0, checksum C320EA62, selection    1 (pick no duplicates)
+070 00000000 SECT38 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x37)
+072 00000000 SECT39 notype       Static       | .text$mn
+    Section length   30, #relocs    2, #linenums    0, checksum 878513AF, selection    1 (pick no duplicates)
+074 00000000 SECT3A notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x39)
+076 00000000 SECT3B notype       Static       | .text$mn
+    Section length   C4, #relocs    5, #linenums    0, checksum CEB30FCE, selection    1 (pick no duplicates)
+078 00000000 SECT3C notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x3B)
+07A 00000000 SECT3D notype       Static       | .text$mn
+    Section length   30, #relocs    2, #linenums    0, checksum 486F6C69, selection    1 (pick no duplicates)
+07C 00000000 SECT3E notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x3D)
+07E 00000000 SECT3F notype       Static       | .text$mn
+    Section length   30, #relocs    2, #linenums    0, checksum 86793F20, selection    1 (pick no duplicates)
+080 00000000 SECT40 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x3F)
+082 00000000 SECT41 notype       Static       | .text$mn
+    Section length   30, #relocs    2, #linenums    0, checksum 499340E6, selection    1 (pick no duplicates)
+084 00000000 SECT42 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x41)
+086 00000000 SECT43 notype       Static       | .text$mn
+    Section length   60, #relocs    6, #linenums    0, checksum   8B347C, selection    1 (pick no duplicates)
+088 00000000 SECT44 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x43)
+08A 00000000 SECT45 notype       Static       | .text$mn
+    Section length   FD, #relocs    E, #linenums    0, checksum 97F94106, selection    1 (pick no duplicates)
+08C 00000000 SECT46 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x45)
+08E 00000000 SECT47 notype       Static       | .text$mn
+    Section length   33, #relocs    0, #linenums    0, checksum BF1B2AF5, selection    1 (pick no duplicates)
+090 00000000 SECT48 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x47)
+092 00000000 SECT49 notype       Static       | .text$mn
+    Section length   33, #relocs    0, #linenums    0, checksum 478EA446, selection    1 (pick no duplicates)
+094 00000000 SECT4A notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x49)
+096 00000000 SECT1B notype ()    External     | _glfwGetInputMode
+097 00000000 SECT3B notype ()    External     | _glfwSetInputMode
+098 00000000 SECT23 notype ()    External     | _glfwGetKey
+099 00000000 SECT25 notype ()    External     | _glfwGetMouseButton
+09A 00000000 SECT19 notype ()    External     | _glfwGetCursorPos
+09B 00000000 SECT35 notype ()    External     | _glfwSetCursorPos
+09C 00000000 SECT11 notype ()    External     | _glfwCreateCursor
+09D 00000000 SECT13 notype ()    External     | _glfwCreateStandardCursor
+09E 00000000 SECT15 notype ()    External     | _glfwDestroyCursor
+09F 00000000 SECT31 notype ()    External     | _glfwSetCursor
+0A0 00000000 SECT3D notype ()    External     | _glfwSetKeyCallback
+0A1 00000000 SECT2B notype ()    External     | _glfwSetCharCallback
+0A2 00000000 SECT2D notype ()    External     | _glfwSetCharModsCallback
+0A3 00000000 SECT3F notype ()    External     | _glfwSetMouseButtonCallback
+0A4 00000000 SECT37 notype ()    External     | _glfwSetCursorPosCallback
+0A5 00000000 SECT33 notype ()    External     | _glfwSetCursorEnterCallback
+0A6 00000000 SECT41 notype ()    External     | _glfwSetScrollCallback
+0A7 00000000 SECT39 notype ()    External     | _glfwSetDropCallback
+0A8 00000000 SECT29 notype ()    External     | _glfwJoystickPresent
+0A9 00000000 SECT1D notype ()    External     | _glfwGetJoystickAxes
+0AA 00000000 SECT1F notype ()    External     | _glfwGetJoystickButtons
+0AB 00000000 SECT21 notype ()    External     | _glfwGetJoystickName
+0AC 00000000 SECT2F notype ()    External     | _glfwSetClipboardString
+0AD 00000000 SECT17 notype ()    External     | _glfwGetClipboardString
+0AE 00000000 SECT27 notype ()    External     | _glfwGetTime
+0AF 00000000 SECT43 notype ()    External     | _glfwSetTime
+0B0 00000000 UNDEF  notype       External     | __imp__calloc
+0B1 00000000 UNDEF  notype       External     | __imp__free
+0B2 00000000 UNDEF  notype ()    External     | __glfwPlatformGetCursorPos
+0B3 00000000 UNDEF  notype ()    External     | __glfwPlatformSetCursorPos
+0B4 00000000 UNDEF  notype ()    External     | __glfwPlatformApplyCursorMode
+0B5 00000000 UNDEF  notype ()    External     | __glfwPlatformSetClipboardString
+0B6 00000000 UNDEF  notype ()    External     | __glfwPlatformGetClipboardString
+0B7 00000000 UNDEF  notype ()    External     | __glfwPlatformJoystickPresent
+0B8 00000000 UNDEF  notype ()    External     | __glfwPlatformGetJoystickAxes
+0B9 00000000 UNDEF  notype ()    External     | __glfwPlatformGetJoystickButtons
+0BA 00000000 UNDEF  notype ()    External     | __glfwPlatformGetJoystickName
+0BB 00000000 UNDEF  notype ()    External     | __glfwPlatformGetTime
+0BC 00000000 UNDEF  notype ()    External     | __glfwPlatformSetTime
+0BD 00000000 UNDEF  notype ()    External     | __glfwPlatformGetWindowSize
+0BE 00000000 UNDEF  notype ()    External     | __glfwPlatformCreateCursor
+0BF 00000000 UNDEF  notype ()    External     | __glfwPlatformCreateStandardCursor
+0C0 00000000 UNDEF  notype ()    External     | __glfwPlatformDestroyCursor
+0C1 00000000 UNDEF  notype ()    External     | __glfwPlatformSetCursor
+0C2 00000000 SECTB  notype ()    External     | __glfwInputKey
+0C3 00000000 SECT3  notype ()    External     | __glfwInputChar
+0C4 00000000 SECTF  notype ()    External     | __glfwInputScroll
+0C5 00000000 SECTD  notype ()    External     | __glfwInputMouseClick
+0C6 00000000 SECT7  notype ()    External     | __glfwInputCursorMotion
+0C7 00000000 SECT5  notype ()    External     | __glfwInputCursorEnter
+0C8 00000000 UNDEF  notype ()    External     | __glfwInputError
+0C9 00000000 SECT9  notype ()    External     | __glfwInputDrop
+0CA 00000000 SECT45 notype ()    Static       | _setCursorMode
+0CB 00000000 SECT47 notype ()    Static       | _setStickyKeys
+0CC 00000000 SECT49 notype ()    Static       | _setStickyMouseButtons
+0CD 00000000 UNDEF  notype       External     | __glfwInitialized
+0CE 00000000 UNDEF  notype       External     | __glfw
+0CF 00000000 SECT4B notype       Static       | .rdata
+    Section length   14, #relocs    0, #linenums    0, checksum 46CA06A4, selection    2 (pick any)
+0D1 00000000 SECT4B notype       External     | ??_C@_0BE@LGOAGCNG@Invalid?5cursor?5mode?$AA@ (`string')
+0D2 00000000 SECT4C notype       Static       | .rdata
+    Section length   13, #relocs    0, #linenums    0, checksum 70A3A0F9, selection    2 (pick any)
+0D4 00000000 SECT4C notype       External     | ??_C@_0BD@FFFEJGGJ@Invalid?5input?5mode?$AA@ (`string')
+0D5 00000000 SECT4D notype       Static       | .rdata
+    Section length    C, #relocs    0, #linenums    0, checksum 882F359B, selection    2 (pick any)
+0D7 00000000 SECT4D notype       External     | ??_C@_0M@MAFAMAL@Invalid?5key?$AA@ (`string')
+0D8 00000000 SECT4E notype       Static       | .rdata
+    Section length   15, #relocs    0, #linenums    0, checksum EBF31929, selection    2 (pick any)
+0DA 00000000 SECT4E notype       External     | ??_C@_0BF@FFAICDFN@Invalid?5mouse?5button?$AA@ (`string')
+0DB 00000000 SECT4F notype       Static       | .rdata
+    Section length   18, #relocs    0, #linenums    0, checksum 1B1832EE, selection    2 (pick any)
+0DD 00000000 SECT4F notype       External     | ??_C@_0BI@EHCGAHDB@Invalid?5standard?5cursor?$AA@ (`string')
+0DE 00000000 SECT50 notype       Static       | .rdata
+    Section length   11, #relocs    0, #linenums    0, checksum 2C81437B, selection    2 (pick any)
+0E0 00000000 SECT50 notype       External     | ??_C@_0BB@BKJBENDJ@Invalid?5joystick?$AA@ (`string')
+0E1 00000000 SECT51 notype       Static       | .rdata
+    Section length    D, #relocs    0, #linenums    0, checksum CC964E5C, selection    2 (pick any)
+0E3 00000000 SECT51 notype       External     | ??_C@_0N@DMBNPHCB@Invalid?5time?$AA@ (`string')
+0E4 00000000 UNDEF  notype       External     | __fltused
+0E5 00000000 SECT52 notype       Static       | .rdata
+    Section length    8, #relocs    0, #linenums    0, checksum        0, selection    2 (pick any)
+0E7 00000000 SECT52 notype       External     | __real@0000000000000000
+0E8 00000000 SECT53 notype       Static       | .rdata
+    Section length    8, #relocs    0, #linenums    0, checksum AA402479, selection    2 (pick any)
+0EA 00000000 SECT53 notype       External     | __real@42112e0be8240000
+
+String Table Size = 0x646 bytes
+
+COFF SYMBOL TABLE
+000 010459F2 ABS    notype       Static       | @comp.id
+001 80000191 ABS    notype       Static       | @feat.00
+002 00000000 SECT1  notype       Static       | .drectve
+    Section length   2F, #relocs    0, #linenums    0, checksum        0
+004 00000000 SECT2  notype       Static       | .debug$S
+    Section length   B4, #relocs    0, #linenums    0, checksum        0
+006 00000000 SECT3  notype       Static       | .bss
+    Section length    5, #relocs    0, #linenums    0, checksum        0
+008 00000000 SECT3  notype       Static       | __glfwErrorCallback
+009 00000004 SECT3  notype       External     | __glfwInitialized
+00A 00000918 UNDEF  notype       External     | __glfw
+00B 00000000 SECT4  notype       Static       | .text$mn
+    Section length    6, #relocs    1, #linenums    0, checksum F4F40212, selection    2 (pick any)
+00D 00000000 SECT5  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x4)
+00F 00000000 SECT6  notype       Static       | .text$mn
+    Section length   B1, #relocs    8, #linenums    0, checksum 5CE41D61, selection    1 (pick no duplicates)
+011 00000000 SECT7  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x6)
+013 00000000 SECT8  notype       Static       | .text$mn
+    Section length   78, #relocs   14, #linenums    0, checksum EAB11C3E, selection    1 (pick no duplicates)
+015 00000000 SECT9  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x8)
+017 00000000 SECTA  notype       Static       | .text$mn
+    Section length   2B, #relocs    0, #linenums    0, checksum 5253617C, selection    1 (pick no duplicates)
+019 00000000 SECTB  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0xA)
+01B 00000000 SECTC  notype       Static       | .text$mn
+    Section length    5, #relocs    1, #linenums    0, checksum 25C4A5AE, selection    1 (pick no duplicates)
+01D 00000000 SECTD  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0xC)
+01F 00000000 SECTE  notype       Static       | .text$mn
+    Section length   52, #relocs    A, #linenums    0, checksum B3349CBB, selection    1 (pick no duplicates)
+021 00000000 SECTF  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0xE)
+023 00000000 SECT10 notype       Static       | .text$mn
+    Section length   10, #relocs    2, #linenums    0, checksum CDC6A04D, selection    1 (pick no duplicates)
+025 00000000 SECT11 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x10)
+027 00000000 SECT12 notype       Static       | .text$mn
+    Section length   C8, #relocs   14, #linenums    0, checksum 82414D45, selection    1 (pick no duplicates)
+029 00000000 SECT13 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x12)
+02B 00000000 SECT14 notype       Static       | .text$mn
+    Section length   32, #relocs    2, #linenums    0, checksum 53D474E4, selection    2 (pick any)
+02D 00000000 SECT15 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x14)
+02F 00000000 SECTE  notype ()    External     | _glfwInit
+030 00000000 SECT12 notype ()    External     | _glfwTerminate
+031 00000000 SECTA  notype ()    External     | _glfwGetVersion
+032 00000000 SECTC  notype ()    External     | _glfwGetVersionString
+033 00000000 SECT10 notype ()    External     | _glfwSetErrorCallback
+034 00000000 UNDEF  notype ()    External     | _glfwDefaultWindowHints
+035 00000000 UNDEF  notype ()    External     | _glfwDestroyWindow
+036 00000000 UNDEF  notype ()    External     | _glfwDestroyCursor
+037 00000000 UNDEF  notype ()    External     | __glfwPlatformInit
+038 00000000 UNDEF  notype ()    External     | __glfwPlatformTerminate
+039 00000000 UNDEF  notype ()    External     | __glfwPlatformGetVersionString
+03A 00000000 UNDEF  notype ()    External     | __glfwPlatformGetMonitors
+03B 00000000 UNDEF  notype ()    External     | __glfwPlatformSetGammaRamp
+03C 00000000 SECT6  notype ()    External     | __glfwInputError
+03D 00000000 UNDEF  notype ()    External     | __glfwFreeMonitors
+03E 00000000 SECT4  notype ()    External     | ___local_stdio_printf_options
+03F 00000000 UNDEF  notype       External     | __imp____stdio_common_vsprintf
+040 00000000 SECT14 notype ()    External     | _vsnprintf
+041 00000000 SECT8  notype ()    Static       | _getErrorString
+042 00000000 UNDEF  notype ()    External     | @__security_check_cookie@4
+043 00000000 UNDEF  notype ()    External     | __chkstk
+044 00000000 UNDEF  notype ()    External     | _memset
+045 00000054 SECT8  notype       Static       | $LN15
+046 00000015 SECT8  notype       Label        | $LN4
+047 0000001B SECT8  notype       Label        | $LN5
+048 00000021 SECT8  notype       Label        | $LN6
+049 00000027 SECT8  notype       Label        | $LN7
+04A 0000002D SECT8  notype       Label        | $LN8
+04B 00000033 SECT8  notype       Label        | $LN9
+04C 00000039 SECT8  notype       Label        | $LN10
+04D 0000003F SECT8  notype       Label        | $LN11
+04E 00000045 SECT8  notype       Label        | $LN12
+04F 00000008 UNDEF  notype       External     | ?_OptionsStorage@?1??__local_stdio_printf_options@@9@9 (`__local_stdio_printf_options'::`2'::_OptionsStorage)
+050 00000000 SECT16 notype       Static       | .rdata
+    Section length   24, #relocs    0, #linenums    0, checksum 810245DC, selection    2 (pick any)
+052 00000000 SECT16 notype       External     | ??_C@_0CE@BEELAIPG@The?5GLFW?5library?5is?5not?5initiali@ (`string')
+053 00000000 SECT17 notype       Static       | .rdata
+    Section length   1C, #relocs    0, #linenums    0, checksum 85F0D3FA, selection    2 (pick any)
+055 00000000 SECT17 notype       External     | ??_C@_0BM@PKHPFLOM@There?5is?5no?5current?5context?$AA@ (`string')
+056 00000000 SECT18 notype       Static       | .rdata
+    Section length   24, #relocs    0, #linenums    0, checksum 3653166E, selection    2 (pick any)
+058 00000000 SECT18 notype       External     | ??_C@_0CE@KDBKFLEE@Invalid?5argument?5for?5enum?5parame@ (`string')
+059 00000000 SECT19 notype       Static       | .rdata
+    Section length   1C, #relocs    0, #linenums    0, checksum 6FBD57FA, selection    2 (pick any)
+05B 00000000 SECT19 notype       External     | ??_C@_0BM@BADCNPOM@Invalid?5value?5for?5parameter?$AA@ (`string')
+05C 00000000 SECT1A notype       Static       | .rdata
+    Section length    E, #relocs    0, #linenums    0, checksum FEF2E5AD, selection    2 (pick any)
+05E 00000000 SECT1A notype       External     | ??_C@_0O@NALGGDJF@Out?5of?5memory?$AA@ (`string')
+05F 00000000 SECT1B notype       Static       | .rdata
+    Section length   28, #relocs    0, #linenums    0, checksum 759D485F, selection    2 (pick any)
+061 00000000 SECT1B notype       External     | ??_C@_0CI@GDIOIKBB@The?5requested?5client?5API?5is?5unav@ (`string')
+062 00000000 SECT1C notype       Static       | .rdata
+    Section length   30, #relocs    0, #linenums    0, checksum D11ADB6E, selection    2 (pick any)
+064 00000000 SECT1C notype       External     | ??_C@_0DA@NMGNJHAE@The?5requested?5client?5API?5version@ (`string')
+065 00000000 SECT1D notype       Static       | .rdata
+    Section length   23, #relocs    0, #linenums    0, checksum 8F46EE7B, selection    2 (pick any)
+067 00000000 SECT1D notype       External     | ??_C@_0CD@HJEBEGLD@A?5platform?9specific?5error?5occurr@ (`string')
+068 00000000 SECT1E notype       Static       | .rdata
+    Section length   24, #relocs    0, #linenums    0, checksum 67FD8694, selection    2 (pick any)
+06A 00000000 SECT1E notype       External     | ??_C@_0CE@PCLEMLLO@The?5requested?5format?5is?5unavaila@ (`string')
+06B 00000000 SECT1F notype       Static       | .rdata
+    Section length   35, #relocs    0, #linenums    0, checksum 4293734A, selection    2 (pick any)
+06D 00000000 SECT1F notype       External     | ??_C@_0DF@KEMDPLLL@ERROR?3?5UNKNOWN?5ERROR?5TOKEN?5PASSE@ (`string')
+06E 00000000 UNDEF  notype       External     | ___security_cookie
+
+String Table Size = 0x445 bytes
+
+COFF SYMBOL TABLE
+000 010459F2 ABS    notype       Static       | @comp.id
+001 80000191 ABS    notype       Static       | @feat.00
+002 00000000 SECT1  notype       Static       | .drectve
+    Section length   2F, #relocs    0, #linenums    0, checksum        0
+004 00000000 SECT2  notype       Static       | .debug$S
+    Section length   B8, #relocs    0, #linenums    0, checksum        0
+006 00000000 SECT3  notype       Static       | .text$mn
+    Section length    6, #relocs    1, #linenums    0, checksum F4F40212, selection    2 (pick any)
+008 00000000 SECT4  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x3)
+00A 00000000 SECT5  notype       Static       | .text$mn
+    Section length  1CF, #relocs    0, #linenums    0, checksum  9F040A4, selection    1 (pick no duplicates)
+00C 00000000 SECT6  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x5)
+00E 00000000 SECT7  notype       Static       | .text$mn
+    Section length   36, #relocs    2, #linenums    0, checksum 22475468, selection    1 (pick no duplicates)
+010 00000000 SECT8  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x7)
+012 00000000 SECT9  notype       Static       | .text$mn
+    Section length  196, #relocs   10, #linenums    0, checksum 3F38C714, selection    1 (pick no duplicates)
+014 00000000 SECTA  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x9)
+016 00000000 SECTB  notype       Static       | .text$mn
+    Section length  2D8, #relocs   26, #linenums    0, checksum AF63D834, selection    1 (pick no duplicates)
+018 00000000 SECTC  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0xB)
+01A 00000000 SECTD  notype       Static       | .text$mn
+    Section length   64, #relocs    1, #linenums    0, checksum 897A5FF9, selection    1 (pick no duplicates)
+01C 00000000 SECTE  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0xD)
+01E 00000000 SECTF  notype       Static       | .text$mn
+    Section length   26, #relocs    2, #linenums    0, checksum 933FC468, selection    2 (pick any)
+020 00000000 SECT10 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0xF)
+022 00000000 SECT11 notype       Static       | .text$mn
+    Section length  131, #relocs    B, #linenums    0, checksum 94691F22, selection    1 (pick no duplicates)
+024 00000000 SECT12 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x11)
+026 00000000 SECT13 notype       Static       | .text$mn
+    Section length   20, #relocs    3, #linenums    0, checksum 8B25BBF7, selection    1 (pick no duplicates)
+028 00000000 SECT14 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x13)
+02A 00000000 SECT15 notype       Static       | .text$mn
+    Section length   3A, #relocs    5, #linenums    0, checksum 494533E4, selection    1 (pick no duplicates)
+02C 00000000 SECT16 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x15)
+02E 00000000 SECT17 notype       Static       | .text$mn
+    Section length   1E, #relocs    3, #linenums    0, checksum 5207DDEB, selection    1 (pick no duplicates)
+030 00000000 SECT18 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x17)
+032 00000000 SECT19 notype       Static       | .text$mn
+    Section length   1E, #relocs    3, #linenums    0, checksum 5207DDEB, selection    1 (pick no duplicates)
+034 00000000 SECT1A notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x19)
+036 00000000 SECT1B notype       Static       | .text$mn
+    Section length   36, #relocs    5, #linenums    0, checksum 91402452, selection    1 (pick no duplicates)
+038 00000000 SECT1C notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x1B)
+03A 00000000 SECT1D notype       Static       | .text$mn
+    Section length  129, #relocs   10, #linenums    0, checksum 643B08F0, selection    1 (pick no duplicates)
+03C 00000000 SECT1E notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x1D)
+03E 00000000 SECT1F notype       Static       | .text$mn
+    Section length   25, #relocs    2, #linenums    0, checksum BC02A6AD, selection    2 (pick any)
+040 00000000 SECT20 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 0x1F)
+042 00000000 SECT17 notype ()    External     | _glfwMakeContextCurrent
+043 00000000 SECT13 notype ()    External     | _glfwGetCurrentContext
+044 00000000 SECT19 notype ()    External     | _glfwSwapBuffers
+045 00000000 SECT1B notype ()    External     | _glfwSwapInterval
+046 00000000 SECT11 notype ()    External     | _glfwExtensionSupported
+047 00000000 SECT15 notype ()    External     | _glfwGetProcAddress
+048 00000000 UNDEF  notype       External     | __imp__strstr
+049 00000000 UNDEF  notype       External     | __imp__strncmp
+04A 00000000 UNDEF  notype ()    External     | __glfwPlatformMakeContextCurrent
+04B 00000000 UNDEF  notype ()    External     | __glfwPlatformGetCurrentContext
+04C 00000000 UNDEF  notype ()    External     | __glfwPlatformSwapBuffers
+04D 00000000 UNDEF  notype ()    External     | __glfwPlatformSwapInterval
+04E 00000000 UNDEF  notype ()    External     | __glfwPlatformExtensionSupported
+04F 00000000 UNDEF  notype ()    External     | __glfwPlatformGetProcAddress
+050 00000000 UNDEF  notype ()    External     | __glfwInputError
+051 00000000 SECTD  notype ()    External     | __glfwStringInExtensionString
+052 00000000 SECT5  notype ()    External     | __glfwChooseFBConfig
+053 00000000 SECTB  notype ()    External     | __glfwRefreshContextAttribs
+054 00000000 SECT9  notype ()    External     | __glfwIsValidContextConfig
+055 00000000 SECT7  notype ()    External     | __glfwIsValidContext
+056 00000000 SECT3  notype ()    External     | ___local_stdio_scanf_options
+057 00000000 UNDEF  notype       External     | __imp____stdio_common_vsscanf
+058 00000000 SECTF  notype ()    External     | __vsscanf_l
+059 00000000 SECT1F notype ()    External     | _sscanf
+05A 00000000 SECT1D notype ()    Static       | _parseVersionString
+05B 00000000 UNDEF  notype ()    External     | @__security_check_cookie@4
+05C 00000000 UNDEF  notype       External     | __glfwInitialized
+05D 00000008 UNDEF  notype       External     | ?_OptionsStorage@?1??__local_stdio_scanf_options@@9@9 (`__local_stdio_scanf_options'::`2'::_OptionsStorage)
+05E 00000000 SECT21 notype       Static       | .rdata
+    Section length    E, #relocs    0, #linenums    0, checksum 632311E9, selection    2 (pick any)
+060 00000000 SECT21 notype       External     | ??_C@_0O@ENGHJHNB@OpenGL?5ES?9CM?5?$AA@ (`string')
+061 00000000 SECT22 notype       Static       | .rdata
+    Section length    E, #relocs    0, #linenums    0, checksum 62E17BDE, selection    2 (pick any)
+063 00000000 SECT22 notype       External     | ??_C@_0O@EMKFPNOG@OpenGL?5ES?9CL?5?$AA@ (`string')
+064 00000000 SECT23 notype       Static       | .rdata
+    Section length    B, #relocs    0, #linenums    0, checksum  F2FAC73, selection    2 (pick any)
+066 00000000 SECT23 notype       External     | ??_C@_0L@JLFHOCGA@OpenGL?5ES?5?$AA@ (`string')
+067 00000000 SECT24 notype       Static       | .rdata
+    Section length   2A, #relocs    0, #linenums    0, checksum BCCCF742, selection    2 (pick any)
+069 00000000 SECT24 notype       External     | ??_C@_0CK@KHFMCAEG@Failed?5to?5retrieve?5context?5versi@ (`string')
+06A 00000000 SECT25 notype       Static       | .rdata
+    Section length    9, #relocs    0, #linenums    0, checksum 476C9CC1, selection    2 (pick any)
+06C 00000000 SECT25 notype       External     | ??_C@_08FOJKHHJA@?$CFd?4?$CFd?4?$CFd?$AA@ (`string')
+06D 00000000 SECT26 notype       Static       | .rdata
+    Section length   2B, #relocs    0, #linenums    0, checksum 4541C862, selection    2 (pick any)
+06F 00000000 SECT26 notype       External     | ??_C@_0CL@ECDHJMKM@No?5version?5found?5in?5context?5vers@ (`string')
+070 00000000 SECT27 notype       Static       | .rdata
+    Section length   13, #relocs    0, #linenums    0, checksum 444D0637, selection    2 (pick any)
+072 00000000 SECT27 notype       External     | ??_C@_0BD@GBLKDAKH@Invalid?5client?5API?$AA@ (`string')
+073 00000000 SECT28 notype       Static       | .rdata
+    Section length   1D, #relocs    0, #linenums    0, checksum C30F26FF, selection    2 (pick any)
+075 00000000 SECT28 notype       External     | ??_C@_0BN@DHKEBMCG@Invalid?5OpenGL?5version?5?$CFi?4?$CFi?$AA@ (`string')
+076 00000000 SECT29 notype       Static       | .rdata
+    Section length   17, #relocs    0, #linenums    0, checksum 78165684, selection    2 (pick any)
+078 00000000 SECT29 notype       External     | ??_C@_0BH@PFEJINDP@Invalid?5OpenGL?5profile?$AA@ (`string')
+079 00000000 SECT2A notype       Static       | .rdata
+    Section length   43, #relocs    0, #linenums    0, checksum A98096CF, selection    2 (pick any)
+07B 00000000 SECT2A notype       External     | ??_C@_0ED@FEABOOIM@Context?5profiles?5are?5only?5define@ (`string')
+07C 00000000 SECT2B notype       Static       | .rdata
+    Section length   47, #relocs    0, #linenums    0, checksum 1EE551D0, selection    2 (pick any)
+07E 00000000 SECT2B notype       External     | ??_C@_0EH@CMDCLIEA@Forward?9compatibility?5is?5only?5de@ (`string')
+07F 00000000 SECT2C notype       Static       | .rdata
+    Section length   20, #relocs    0, #linenums    0, checksum 5376CA2B, selection    2 (pick any)
+081 00000000 SECT2C notype       External     | ??_C@_0CA@LFIDGAHJ@Invalid?5OpenGL?5ES?5version?5?$CFi?4?$CFi?$AA@ (`string')
+082 00000000 SECT2D notype       Static       | .rdata
+    Section length   20, #relocs    0, #linenums    0, checksum F8BB84FE, selection    2 (pick any)
+084 00000000 SECT2D notype       External     | ??_C@_0CA@BOEOCOKM@Invalid?5context?5robustness?5mode?$AA@ (`string')
+085 00000000 SECT2E notype       Static       | .rdata
+    Section length   21, #relocs    0, #linenums    0, checksum 50B36D63, selection    2 (pick any)
+087 00000000 SECT2E notype       External     | ??_C@_0CB@NFDAKIBB@Invalid?5context?5release?5behavior@ (`string')
+088 00000000 SECT2F notype       Static       | .rdata
+    Section length    E, #relocs    0, #linenums    0, checksum 1937A48D, selection    2 (pick any)
+08A 00000000 SECT2F notype       External     | ??_C@_0O@DHHDCCLF@glGetIntegerv?$AA@ (`string')
+08B 00000000 SECT30 notype       Static       | .rdata
+    Section length    C, #relocs    0, #linenums    0, checksum 6BCB6AB1, selection    2 (pick any)
+08D 00000000 SECT30 notype       External     | ??_C@_0M@OPOBFDCB@glGetString?$AA@ (`string')
+08E 00000000 SECT31 notype       Static       | .rdata
+    Section length    8, #relocs    0, #linenums    0, checksum 1BD2D0EF, selection    2 (pick any)
+090 00000000 SECT31 notype       External     | ??_C@_07IBAPPAHJ@glClear?$AA@ (`string')
+091 00000000 SECT32 notype       Static       | .rdata
+    Section length    D, #relocs    0, #linenums    0, checksum  832989E, selection    2 (pick any)
+093 00000000 SECT32 notype       External     | ??_C@_0N@PILJCBOD@glGetStringi?$AA@ (`string')
+094 00000000 SECT33 notype       Static       | .rdata
+    Section length   20, #relocs    0, #linenums    0, checksum 55F575DE, selection    2 (pick any)
+096 00000000 SECT33 notype       External     | ??_C@_0CA@LDAANPIM@Entry?5point?5retrieval?5is?5broken?$AA@ (`string')
+097 00000000 SECT34 notype       Static       | .rdata
+    Section length   14, #relocs    0, #linenums    0, checksum 17A513BB, selection    2 (pick any)
+099 00000000 SECT34 notype       External     | ??_C@_0BE@OHIPHHMJ@GL_ARB_debug_output?$AA@ (`string')
+09A 00000000 SECT35 notype       Static       | .rdata
+    Section length   15, #relocs    0, #linenums    0, checksum 9733B662, selection    2 (pick any)
+09C 00000000 SECT35 notype       External     | ??_C@_0BF@CJMIIMBG@GL_ARB_compatibility?$AA@ (`string')
+09D 00000000 SECT36 notype       Static       | .rdata
+    Section length   12, #relocs    0, #linenums    0, checksum D6FEA39E, selection    2 (pick any)
+09F 00000000 SECT36 notype       External     | ??_C@_0BC@EOBKJDCM@GL_ARB_robustness?$AA@ (`string')
+0A0 00000000 SECT37 notype       Static       | .rdata
+    Section length   12, #relocs    0, #linenums    0, checksum 9A576561, selection    2 (pick any)
+0A2 00000000 SECT37 notype       External     | ??_C@_0BC@CLDFFND@GL_EXT_robustness?$AA@ (`string')
+0A3 00000000 SECT38 notype       Static       | .rdata
+    Section length   1D, #relocs    0, #linenums    0, checksum A99D9EF9, selection    2 (pick any)
+0A5 00000000 SECT38 notype       External     | ??_C@_0BN@FNDGKECA@GL_KHR_context_flush_control?$AA@ (`string')
+0A6 00000000 SECT39 notype       Static       | .rdata
+    Section length   27, #relocs    0, #linenums    0, checksum BC62955F, selection    2 (pick any)
+0A8 00000000 SECT39 notype       External     | ??_C@_0CH@MDGPJOIA@Failed?5to?5retrieve?5extension?5str@ (`string')
+0A9 00000000 SECT3A notype       Static       | .rdata
+    Section length   24, #relocs    0, #linenums    0, checksum 8FCC5C18, selection    2 (pick any)
+0AB 00000000 SECT3A notype       External     | ??_C@_0CE@BKIFBBDC@Failed?5to?5retrieve?5extension?5str@ (`string')
+0AC 00000000 UNDEF  notype       External     | ___security_cookie
+
+String Table Size = 0x7A3 bytes
+
+  Summary
+
+           5 .bss
+         D90 .debug$F
+         8C0 .debug$S
+         234 .drectve
+         DEF .rdata
+        6D73 .text$mn
