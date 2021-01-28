@@ -8,3 +8,4 @@
 	a - [cmake ../ -A Win32] (Genera la solution)
 	b - [cmake --build .] (COMPILA)
 	c - [& .\Debug\ShaderWorkshopMain.exe] (RUN)
+6 - En visual setupear as starting proyect: ShaderWorkshop project
