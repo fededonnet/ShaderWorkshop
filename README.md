@@ -9,3 +9,9 @@
 	b - [cmake --build .] (COMPILA)
 	c - [& .\Debug\ShaderWorkshopMain.exe] (RUN)
 6 - En visual setupear as starting proyect: ShaderWorkshop project
+
+
+
+
+glBufferData():
+https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBufferData.xhtml
