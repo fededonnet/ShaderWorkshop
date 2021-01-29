@@ -161,6 +161,8 @@ int main()
 	glBindVertexArray(VAO);
 	{
 		// We need to bind a valid vbo before call glVertexAttribPointer()
+		// https://www.khronos.org/opengl/wiki/Vertex_Specification#Vertex_Array_Object 
+		// See "Vertex Buffer Object" section
 		// https://stackoverflow.com/questions/3665671/is-vertexattribpointer-needed-after-each-bindbuffer
 		glBindBuffer(GL_ARRAY_BUFFER, VBO);
 		{
