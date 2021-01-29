@@ -1,17 +1,14 @@
 # ShaderWorkshop
 
-1 - Bajen el repo (git: https://github.com/fededonnet/ShaderWorkshop)
-2 - Descomprimir file (ShaderWorkshop)
-3 - Crear carpeta: build (en el root)
-4 - Correr consola en la carpeta build (sobre [build] shift + click derecho: "Open Powershell windows here") 
-5 - Generar proyecto en visual studio (x86) usando CMAKE:
-	a - [cmake ../ -A Win32] (Genera la solution)
-	b - [cmake --build .] (COMPILA)
-	c - [& .\Debug\ShaderWorkshopMain.exe] (RUN)
-6 - En visual setupear as starting proyect: ShaderWorkshop project
+1 - Get/Clone https://github.com/fededonnet/ShaderWorkshop
+2 - Unzip the file file
+3 - Create folder called [build] in the root of the descompressed folder
+4 - Run console in the [build] folder (shift + right click -> "Open Powershell windows here") 
+5 - Generate a new visual studio proyect (x86) using CMAKE:
+	a - [cmake ../ -A Win32] (This generates the VS solution)
+	b - [cmake --build .] (This compiles the solution)
+	c - [& .\Debug\ShaderWorkshopMain.exe] (Runs the executable)
+6 - Once in the VS solution, take the ShaderWorkshop project and setup as starting proyect
 
-
-
-
-glBufferData():
-https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBufferData.xhtml
+VAO & VBO:
+https://youtu.be/WMiggUPst-Q - OpenGL 3D Game Tutorial 2: VAOs and VBOs
