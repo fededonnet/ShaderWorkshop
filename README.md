@@ -17,7 +17,7 @@ This is a simple OpenGL program wich uses a simple shader and draw a triangle.
 # VAO & VBO:
 
 https://www.khronos.org/opengl/wiki/Vertex_Specification#Vertex_Array_Object
-https://youtu.be/WMiggUPst-Q - OpenGL 3D Game Tutorial 2: VAOs and VBOs
+OpenGL 3D Game Tutorial 2: VAOs and VBOs: https://youtu.be/WMiggUPst-Q
 https://www.khronos.org/opengl/wiki/GLAPI/glVertexAttribPointer
 
 # glDrawArrays:
