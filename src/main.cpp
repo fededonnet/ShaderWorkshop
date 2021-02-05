@@ -9,9 +9,12 @@
 #include <sstream>
 #include <iostream>
 
-#include <glm/vec3.hpp>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
 
 #include <vector>
+glm::mat4 transform;
+glm::mat4 projection;
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow* window);
@@ -120,24 +123,69 @@ int main()
 	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
 	{
 		std::cout << "Failed to initialize GLAD" << std::endl;
+		glfwTerminate();
 		return -1;
 	}
 
-	int shaderProgram = -1;
+	glEnable(GL_CULL_FACE);
+	glCullFace(GL_BACK);
+
+	projection = glm::perspective(glm::radians(75.0f), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.01f, 100.0f);
+	//projection = glm::ortho(-10.0f, 10.0f, -10.0f, 10.0f, 0.01f, 100.0f);
+
 	{
-		// Step 0 Read, build and compile the Vertex & Fragment shaders program
-		const std::string vertexShaderSource = ReadShader("../res/shaders/shader.vs");
-		const std::string fragmentShaderSource = ReadShader("../res/shaders/shader.fs");
-		shaderProgram = CreateCompileAndLinkShaderProgram(vertexShaderSource.c_str(), fragmentShaderSource.c_str());
+		//transform = glm::translate(transform, glm::vec3(1.0f, 0.0f, 0.0f));
 	}
 
-	// Step 1: Load geometry data
-	std::vector<glm::vec3> vertexData =
+	GLfloat cube_vertex_data[] =
 	{
-		glm::vec3(0.5f, -0.5f, 0.0f),	glm::vec3(1.0f, 0.0f, 0.0f),
-		glm::vec3(-0.5f, -0.5f, 0.0f),	glm::vec3(0.0f, 1.0f, 0.0f),
-		glm::vec3(0.0f,  0.5f, 0.0f),	glm::vec3(0.0f, 0.0f, 1.0f)
+		// Vertex position		// Vertex color
+		// front
+		-0.5f, -0.5f, 0.5f,		1.0, 0.0, 0.0,
+		 0.5f, -0.5f, 0.5f,		0.0, 1.0, 0.0,
+		 0.5f,  0.5f, 0.5f,		0.0, 0.0, 1.0,
+		-0.5f,  0.5f, 0.5f,		1.0, 1.0, 1.0,
+		// back
+		-0.5f, -0.5f, -0.5f,	1.0, 0.0, 0.0,
+		 0.5f, -0.5f, -0.5f,	0.0, 1.0, 0.0,
+		 0.5f,  0.5f, -0.5f,	0.0, 0.0, 1.0,
+		-0.5f,  0.5f, -0.5f,	1.0, 1.0, 1.0
 	};
+
+	/* init_resources */
+	unsigned int cube_elements[] = 
+	{
+		// front
+		0, 1, 2,
+		2, 3, 0,
+		1, 5, 6,
+		6, 2, 1,
+		// back
+		7, 6, 5,
+		5, 4, 7,
+		// left
+		4, 0, 3,
+		3, 7, 4,
+		// bottom
+		4, 5, 1,
+		1, 0, 4,
+		// top
+		3, 2, 6,
+		6, 7, 3
+	};
+
+	unsigned int IBO;
+	{ // Create IBO (INDEX BUFFER OBJECT)
+		glGenBuffers(1, &IBO);
+
+		// Bind IBO
+		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);
+		{
+			glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(cube_elements), cube_elements, GL_STATIC_DRAW);
+		}
+		// Unbind IBO
+		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+	}
 
 	// Step 2: Creates a VBO (Vertex buffer object)
 	unsigned int VBO;
@@ -149,7 +197,8 @@ int main()
 	{
 		// b: Store geometry data into the buffer data using "glBufferData"
 		// https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBufferData.xhtml
-		glBufferData(GL_ARRAY_BUFFER, sizeof(vertexData[0]) * vertexData.size(), &vertexData[0], GL_STATIC_DRAW);
+		//glBufferData(GL_ARRAY_BUFFER, sizeof(vertexData[0]) * vertexData.size(), &vertexData[0], GL_STATIC_DRAW);
+		glBufferData(GL_ARRAY_BUFFER, sizeof(cube_vertex_data), cube_vertex_data, GL_STATIC_DRAW);
 	}
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 
@@ -168,21 +217,35 @@ int main()
 		{
 			// https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttribPointer.xhtml
 			// position attribute
-			GLsizei stride = 6 * sizeof(float);
+			GLsizei bytePerVertex = 6 * sizeof(GLfloat);
 			void* offset = (void*)0;
 
 			glEnableVertexAttribArray(0);
-			glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, stride, offset);
+			glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, bytePerVertex, offset);
 
 			// color attribute
 			offset = (void*)(3 * sizeof(float));
 			glEnableVertexAttribArray(1);
-			glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, stride, offset);
-			
+			glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, bytePerVertex, offset);	
 		}
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
 	}
 	glBindVertexArray(0);
+
+	int shaderProgram = -1;
+	{ // Create shader
+		{
+			// Step 0 Read, build and compile the Vertex & Fragment shaders program
+			const std::string vertexShaderSource = ReadShader("../res/shaders/shader.vs");
+			const std::string fragmentShaderSource = ReadShader("../res/shaders/shader.fs");
+			shaderProgram = CreateCompileAndLinkShaderProgram(vertexShaderSource.c_str(), fragmentShaderSource.c_str());
+		}
+	}
+
+	int transformUniformLocation = glGetUniformLocation(shaderProgram, "transform");
+	int projectionUniformLocation = glGetUniformLocation(shaderProgram, "projection");
+
+	transform = glm::translate(transform, glm::vec3(0.0f, 0.0f, -3.0f));
 
 	// Loop
 	while (!glfwWindowShouldClose(window))
@@ -194,7 +257,7 @@ int main()
 
 		// Update
 		{
-			// TODO
+			//transform = glm::rotate(transform, 0.01f, glm::vec3(1.0f, 1.0f, 1.0f));
 		}
 
 		// Render Pass
@@ -206,12 +269,19 @@ int main()
 			glBindVertexArray(VAO);
 			{
 				glBindBuffer(GL_ARRAY_BUFFER, VBO);
+				glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);
 				{
 					glUseProgram(shaderProgram);
-					// Update uniforms here!
+					{
+						// Update shader
+						glUniformMatrix4fv(transformUniformLocation, 1, GL_FALSE, &transform[0][0]);
+						glUniformMatrix4fv(projectionUniformLocation, 1, GL_FALSE, &projection[0][0]);
+					}
 
-					glDrawArrays(GL_TRIANGLES, 0, 3);
+					// Draw call
+					glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, nullptr);
 				}
+				glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 				glBindBuffer(GL_ARRAY_BUFFER, 0);
 			}
 			glBindVertexArray(0);
@@ -244,6 +314,26 @@ void processInput(GLFWwindow* window)
 	{
 		glfwSetWindowShouldClose(window, true);
 	}
+	if (glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS)
+	{
+		transform = glm::rotate(transform, -0.1f, glm::vec3(0.0f, 1.0f, 0.0f));
+	}
+	if (glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS)
+	{
+		transform = glm::translate(transform, glm::vec3(-0.01f, 0.0f, 0.0f));
+	}
+	if (glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS)
+	{
+		transform = glm::translate(transform, glm::vec3(0.01f, 0.0f, 0.0f));
+	}
+	if (glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS)
+	{
+		transform = glm::translate(transform, glm::vec3(0.0f, 0.01f, 0.0f));
+	}
+	if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS)
+	{
+		transform = glm::translate(transform, glm::vec3(0.0f, -0.01f, 0.0f));
+	}
 }
 
 // glfw: whenever the window size changed (by OS or user resize) this callback function executes
@@ -253,4 +343,6 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 	// make sure the viewport matches the new window dimensions; note that width and 
 	// height will be significantly larger than specified on retina displays.
 	glViewport(0, 0, width, height);
+
+	projection = glm::perspective(glm::radians(75.0f), (float)width / (float)height, 0.01f, 100.0f);
 }
