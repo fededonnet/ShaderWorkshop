@@ -204,7 +204,6 @@ void SetImageToGLTexture(
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
 int main()
 {
 	// glfw: initialize and configure
@@ -244,17 +243,17 @@ int main()
 
 	GLfloat cube_vertex_data[] =
 	{
-		// Vertex position		// Vertex color
+		// Vertex position		// Vertex color			// UV
 		// front
-		-0.5f, -0.5f, 0.5f,		1.0, 0.0, 0.0,
-		 0.5f, -0.5f, 0.5f,		0.0, 1.0, 0.0,
-		 0.5f,  0.5f, 0.5f,		0.0, 0.0, 1.0,
-		-0.5f,  0.5f, 0.5f,		1.0, 1.0, 1.0,
+		-0.5f, -0.5f, 0.5f,		1.0, 0.0, 0.0,			0.666667f, 0.333333f,
+		 0.5f, -0.5f, 0.5f,		0.0, 1.0, 0.0,			0.333333f, 0.333333f,
+		 0.5f,  0.5f, 0.5f,		0.0, 0.0, 1.0,			0.333333, 0.000000f,
+		-0.5f,  0.5f, 0.5f,		1.0, 1.0, 1.0,			0.666667, 0.000000f,
 		// back
-		-0.5f, -0.5f, -0.5f,	1.0, 0.0, 0.0,
-		 0.5f, -0.5f, -0.5f,	0.0, 1.0, 0.0,
-		 0.5f,  0.5f, -0.5f,	0.0, 0.0, 1.0,
-		-0.5f,  0.5f, -0.5f,	1.0, 1.0, 1.0
+		-0.5f, -0.5f, -0.5f,	1.0, 0.0, 0.0,			0.333333f, 0.666667f,
+		 0.5f, -0.5f, -0.5f,	0.0, 1.0, 0.0,			0.000000f, 0.666667f,
+		 0.5f,  0.5f, -0.5f,	0.0, 0.0, 1.0,			0.000000f, 0.333333f,
+		-0.5f,  0.5f, -0.5f,	1.0, 1.0, 1.0,			0.333333f, 0.333333f
 	};
 
 	/* init_resources */
@@ -322,7 +321,7 @@ int main()
 		{
 			// https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttribPointer.xhtml
 			// position attribute
-			GLsizei bytePerVertex = 6 * sizeof(GLfloat);
+			GLsizei bytePerVertex = 8 * sizeof(GLfloat);
 			void* offset = (void*)0;
 
 			glEnableVertexAttribArray(0);
@@ -331,7 +330,12 @@ int main()
 			// color attribute
 			offset = (void*)(3 * sizeof(float));
 			glEnableVertexAttribArray(1);
-			glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, bytePerVertex, offset);	
+			glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, bytePerVertex, offset);
+
+			// UV attribute
+			offset = (void*)(6 * sizeof(float));
+			glEnableVertexAttribArray(2);
+			glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, bytePerVertex, offset);
 		}
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
 	}
@@ -351,6 +355,23 @@ int main()
 	int projectionUniformLocation = glGetUniformLocation(shaderProgram, "projection");
 
 	transform = glm::translate(transform, glm::vec3(0.0f, 0.0f, -3.0f));
+
+	unsigned int texture;
+	{ // Load texture
+
+		CreateGLTexture(texture);
+
+		// load image, create texture and generate mipmaps:
+		int width = 0;
+		int height = 0;
+		int channelsCount = 0;
+		unsigned char* pixelsData = LoadImage("../res/textures/placeHolder.jpg", width, height, channelsCount, 3, true);
+		if (pixelsData)
+		{
+			SetImageToGLTexture(texture, width, height, GL_RGB, GL_RGB, GL_UNSIGNED_BYTE, pixelsData);
+		}
+		FreeImage(pixelsData);
+	}
 
 	// Loop
 	while (!glfwWindowShouldClose(window))
@@ -383,6 +404,11 @@ int main()
 							glUniformMatrix4fv(transformUniformLocation, 1, GL_FALSE, &transform[0][0]);
 							glUniformMatrix4fv(projectionUniformLocation, 1, GL_FALSE, &projection[0][0]);
 						}
+
+						{
+							//	Bind Textures
+							glBindTexture(GL_TEXTURE_2D, texture);
+						}
 					}
 
 					// Draw call
@@ -408,6 +434,11 @@ int main()
 		glDeleteVertexArrays(1, &VAO);
 		glDeleteBuffers(1, &VBO);
 	}
+
+	{ // Destroy textures
+		glDeleteTextures(1, &texture);
+	}
+
 
 	glfwTerminate();
 	return 0;
