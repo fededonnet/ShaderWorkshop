@@ -13,6 +13,11 @@
 #include <glm/gtc/matrix_transform.hpp>
 
 #include <vector>
+
+// http://stackoverflow.com/questions/24088002/stb-image-h-in-visual-studio-unresolved-external-symbol
+#define STB_IMAGE_IMPLEMENTATION
+#include <stb/stb_image.h>
+
 glm::mat4 transform;
 glm::mat4 projection;
 
@@ -23,6 +28,51 @@ void processInput(GLFWwindow* window);
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
 
+///////////////////// STBI HELPERS FUNCTIONS //////////////////////////////////////////////////////////////////////////////
+unsigned char* LoadImage(
+	const char* absoluteFilePath,
+	int& x,
+	int& y,
+	int& channels_in_file,
+	const unsigned int& desired_channels,
+	const bool& flip_vertically)
+{
+	// Basic usage (see HDR discussion below for HDR usage):
+	//    int x,y,n;
+	//    unsigned char *data = stbi_load(filename, &x, &y, &n, 0);
+	//    // ... process data if not NULL ...
+	//    // ... x = width, y = height, n = # 8-bit components per pixel ...
+	//    // ... replace '0' with '1'..'4' to force that many components per pixel
+	//    // ... but 'n' will always be the number that it would have been if you said 0
+	//    stbi_image_free(data)
+
+	stbi_set_flip_vertically_on_load(flip_vertically);
+
+	int _x = 0;
+	int _y = 0;
+	int _channels_in_file = 0;
+
+	unsigned char* buffer = stbi_load(absoluteFilePath, &_x, &_y, &_channels_in_file, desired_channels);
+	if (buffer == nullptr)
+	{
+		std::cout << "failed to load texture: " << absoluteFilePath <<std::endl;
+		return nullptr;
+	}
+
+	x = _x;
+	y = _y;
+	channels_in_file = _channels_in_file;
+
+	return buffer;
+}
+
+void FreeImage(unsigned char* pixelsData)
+{
+	stbi_image_free(pixelsData);
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+///////////////////// GENERAL GL SHADERS HELPERS FUNCTIONS //////////////////////////////////////////////////////////////////////////////
 const std::string ReadShader(const char* shaderPath)
 {
 	// 1. retrieve the vertex/fragment source code from filePath
@@ -99,6 +149,61 @@ int CreateCompileAndLinkShaderProgram(const char* vertexShaderSource, const char
 
 	return shaderProgram;
 }
+///////////////////// GENERAL GL TEXTURE HELPERS FUNCTIONS //////////////////////////////////////////////////////////////////////////////
+void CreateGLTexture(unsigned int& texture)
+{
+	glGenTextures(1, &texture);
+	glBindTexture(GL_TEXTURE_2D, texture); // all upcoming GL_TEXTURE_2D operations now have effect on this texture object
+	{
+		// set the texture wrapping parameters
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);	// set texture wrapping to GL_REPEAT (default wrapping method)
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+		// set texture filtering parameters
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	}
+	glBindTexture(GL_TEXTURE_2D, 0);
+}
+
+/// <summary>
+/// 
+/// </summary>
+/// <param name="texture"> The texture </param>
+/// <param name="width"> Specifies the width of the texture image. All implementations support texture images that are at least 1024 texels wide. </param>
+/// <param name="height"> Specifies the height of the texture image, or the number of layers in a texture array, in the case of the GL_TEXTURE_1D_ARRAY and GL_PROXY_TEXTURE_1D_ARRAY targets. All implementations support 2D texture images that are at least 1024 texels high, and texture arrays that are at least 256 layers deep. </param>
+/// <param name="internalformat"> Specifies the number of color components in the texture. Must be one of base internal formats given in Table 1, one of the sized internal formats given in Table 2, or one of the compressed internal formats given in Table 3, below. </param>
+/// <param name="format"> Specifies the format of the pixel data. The following symbolic values are accepted: GL_RED, GL_RG, GL_RGB, GL_BGR, GL_RGBA, GL_BGRA, GL_RED_INTEGER, GL_RG_INTEGER, GL_RGB_INTEGER, GL_BGR_INTEGER, GL_RGBA_INTEGER, GL_BGRA_INTEGER, GL_STENCIL_INDEX, GL_DEPTH_COMPONENT, GL_DEPTH_STENCIL. </param>
+/// <param name="type"> Specifies the data type of the pixel data. The following symbolic values are accepted: GL_UNSIGNED_BYTE, GL_BYTE, GL_UNSIGNED_SHORT, GL_SHORT, GL_UNSIGNED_INT, GL_INT, GL_HALF_FLOAT, GL_FLOAT, GL_UNSIGNED_BYTE_3_3_2, GL_UNSIGNED_BYTE_2_3_3_REV, GL_UNSIGNED_SHORT_5_6_5, GL_UNSIGNED_SHORT_5_6_5_REV, GL_UNSIGNED_SHORT_4_4_4_4, GL_UNSIGNED_SHORT_4_4_4_4_REV, GL_UNSIGNED_SHORT_5_5_5_1, GL_UNSIGNED_SHORT_1_5_5_5_REV, GL_UNSIGNED_INT_8_8_8_8, GL_UNSIGNED_INT_8_8_8_8_REV, GL_UNSIGNED_INT_10_10_10_2, and GL_UNSIGNED_INT_2_10_10_10_REV. </param>
+/// <param name="pixelsData"></param>
+/// <returns></returns>
+void SetImageToGLTexture(
+	unsigned int texture,
+	const int width, const int height,
+	GLint internalformat,
+	GLenum format,
+	GLenum type,
+	const void* pixelsData,
+	const bool generateMipMaps = false)
+{
+	// https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glTexImage2D.xhtml
+	if (pixelsData == nullptr)
+	{
+		return;
+	}
+
+	glBindTexture(GL_TEXTURE_2D, texture); // all upcoming GL_TEXTURE_2D operations now have effect on this texture object
+	{
+		glTexImage2D(GL_TEXTURE_2D, 0, internalformat, width, height, 0, format, type, pixelsData);
+		if (generateMipMaps)
+		{
+			glGenerateMipmap(GL_TEXTURE_2D);
+		}
+	}
+	glBindTexture(GL_TEXTURE_2D, 0);
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 int main()
 {
@@ -273,9 +378,11 @@ int main()
 				{
 					glUseProgram(shaderProgram);
 					{
-						// Update shader
-						glUniformMatrix4fv(transformUniformLocation, 1, GL_FALSE, &transform[0][0]);
-						glUniformMatrix4fv(projectionUniformLocation, 1, GL_FALSE, &projection[0][0]);
+						// Update shader uniforms
+						{
+							glUniformMatrix4fv(transformUniformLocation, 1, GL_FALSE, &transform[0][0]);
+							glUniformMatrix4fv(projectionUniformLocation, 1, GL_FALSE, &projection[0][0]);
+						}
 					}
 
 					// Draw call
