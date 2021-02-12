@@ -38,3 +38,5 @@ target_include_directories(ShaderWorkshopMain
 	PUBLIC
 		"${CMAKE_CURRENT_LIST_DIR}/include"
 )
+
+file(COPY "${CMAKE_CURRENT_LIST_DIR}/lib/assimp-vc140-mtd.dll" DESTINATION "${CMAKE_BINARY_DIR}/Debug")
