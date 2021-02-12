@@ -2,17 +2,24 @@
 
 This is a simple OpenGL program wich uses a simple shader and draw a triangle.
 
+# Requirements:
+	CMAKE - https://cmake.org/download/
+	GIT - https://git-scm.com/downloads
+
 # Building (Windows)
 
   - Get/Clone https://github.com/fededonnet/ShaderWorkshop
-  - Unzip the file file
-  - Create folder called [build] in the root of the descompressed folder
+  - Create folder called [build] in the root.
   - Run console in the [build] folder (shift + right click -> "Open Powershell windows here") 
   - Generate a new visual studio proyect (x86) using CMAKE:
     - [cmake ../ -A Win32] (This generates the VS solution)
     - [cmake --build .] (This compiles the solution)
-    - [& .\Debug\ShaderWorkshopMain.exe] (Runs the executable)
+    - [& .\Debug\ShaderWorkshopMain.exe]
 - Once in the VS solution, take the ShaderWorkshop project and setup as starting proyect 
+
+
+- NOTE: Setup the "ShaderWorkshop" project as the starting project!!!
+
 
 # VAO & VBO:
 
