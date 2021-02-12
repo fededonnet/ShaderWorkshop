@@ -1,6 +1,6 @@
 # ShaderWorkshop
 
-This is a simple OpenGL program wich uses a simple shader and draw a triangle.
+This is a simple OpenGL program uses to draw a geometry using shaders.
 
 # Requirements:
 	CMAKE - https://cmake.org/download/
@@ -8,7 +8,8 @@ This is a simple OpenGL program wich uses a simple shader and draw a triangle.
 
 # Building (Windows)
 
-  - Get/Clone https://github.com/fededonnet/ShaderWorkshop
+  - Get/Clone
+  - git clone https://github.com/fededonnet/ShaderWorkshop
   - Create folder called [build] in the root.
   - Run console in the [build] folder (shift + right click -> "Open Powershell windows here") 
   - Generate a new visual studio proyect (x86) using CMAKE:
