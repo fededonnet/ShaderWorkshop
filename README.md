@@ -19,7 +19,18 @@ This is a simple OpenGL program wich uses a simple shader and draw a triangle.
 https://www.khronos.org/opengl/wiki/Vertex_Specification#Vertex_Array_Object
 https://www.khronos.org/opengl/wiki/GLAPI/glVertexAttribPointer
 
-OpenGL 3D Game Tutorial 2: VAOs and VBOs: https://youtu.be/WMiggUPst-Q
+OpenGL 3D Game Tutorial 2: VAOs and VBOs: https://youtu.be/WMiggUPst-Q (mirar hasta que se ponga a codear)
 
 # glDrawArrays:
 https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glDrawArrays.xhtml
+
+# glBindTexture:
+https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBindTexture.xhtml
+
+Videos:
+1 - https://drive.google.com/file/d/1lK8PKbAIoqy4KvSps5HvVONIY4G1ahv5/view?usp=sharing
+2 - https://drive.google.com/file/d/12w_75Fm5CDqAhZKM0XnP6lP_jjeEVOxJ/view?usp=sharing
+3 - https://drive.google.com/file/d/1ONsSzWfP6k9M1ke1MzVk2_bw96ZZALc_/view?usp=sharing
+
+Assimp:
+	https://github.com/assimp/assimp
