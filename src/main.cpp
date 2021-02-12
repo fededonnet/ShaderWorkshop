@@ -14,6 +14,7 @@
 
 #include <vector>
 
+#include "AssimpHelper.h"
 
 
 // http://stackoverflow.com/questions/24088002/stb-image-h-in-visual-studio-unresolved-external-symbol
@@ -180,7 +181,8 @@ void CreateGLTexture(unsigned int& texture)
 /// <returns></returns>
 void SetImageToGLTexture(
 	unsigned int texture,
-	const int width, const int height,
+	const int width, 
+	const int height,
 	GLint internalformat,
 	GLenum format,
 	GLenum type,
@@ -236,6 +238,8 @@ int main()
 	glEnable(GL_CULL_FACE);
 	glCullFace(GL_BACK);
 
+	glEnable(GL_DEPTH_TEST);
+
 	projection = glm::perspective(glm::radians(75.0f), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.01f, 100.0f);
 	//projection = glm::ortho(-10.0f, 10.0f, -10.0f, 10.0f, 0.01f, 100.0f);
 
@@ -243,42 +247,66 @@ int main()
 		//transform = glm::translate(transform, glm::vec3(1.0f, 0.0f, 0.0f));
 	}
 
-	GLfloat cube_vertex_data[] =
+	//GLfloat cube_vertex_data[] =
+	//{
+	//	// Vertex position		// Vertex color			// UV
+	//	// front
+	//	-0.5f, -0.5f, 0.5f,		1.0, 0.0, 0.0,			0.666667f, 0.333333f,
+	//	 0.5f, -0.5f, 0.5f,		0.0, 1.0, 0.0,			0.333333f, 0.333333f,
+	//	 0.5f,  0.5f, 0.5f,		0.0, 0.0, 1.0,			0.333333, 0.000000f,
+	//	-0.5f,  0.5f, 0.5f,		1.0, 1.0, 1.0,			0.666667, 0.000000f,
+	//	// back
+	//	-0.5f, -0.5f, -0.5f,	1.0, 0.0, 0.0,			0.333333f, 0.666667f,
+	//	 0.5f, -0.5f, -0.5f,	0.0, 1.0, 0.0,			0.000000f, 0.666667f,
+	//	 0.5f,  0.5f, -0.5f,	0.0, 0.0, 1.0,			0.000000f, 0.333333f,
+	//	-0.5f,  0.5f, -0.5f,	1.0, 1.0, 1.0,			0.333333f, 0.333333f
+	//};
+
+	///* init_resources */
+	//unsigned int cube_elements[] = 
+	//{
+	//	// front
+	//	0, 1, 2,
+	//	2, 3, 0,
+	//	1, 5, 6,
+	//	6, 2, 1,
+	//	// back
+	//	7, 6, 5,
+	//	5, 4, 7,
+	//	// left
+	//	4, 0, 3,
+	//	3, 7, 4,
+	//	// bottom
+	//	4, 5, 1,
+	//	1, 0, 4,
+	//	// top
+	//	3, 2, 6,
+	//	6, 7, 3
+	//};
+
+	struct VertexData
 	{
-		// Vertex position		// Vertex color
-		// front
-		-0.5f, -0.5f, 0.5f,		1.0, 0.0, 0.0,
-		 0.5f, -0.5f, 0.5f,		0.0, 1.0, 0.0,
-		 0.5f,  0.5f, 0.5f,		0.0, 0.0, 1.0,
-		-0.5f,  0.5f, 0.5f,		1.0, 1.0, 1.0,
-		// back
-		-0.5f, -0.5f, -0.5f,	1.0, 0.0, 0.0,
-		 0.5f, -0.5f, -0.5f,	0.0, 1.0, 0.0,
-		 0.5f,  0.5f, -0.5f,	0.0, 0.0, 1.0,
-		-0.5f,  0.5f, -0.5f,	1.0, 1.0, 1.0,
+		glm::vec3 position;
+		glm::vec3 color;
+		glm::vec2 uv;
 	};
 
-	/* init_resources */
-	unsigned int cube_elements[] = 
+	std::vector<glm::vec3> positions;
+	std::vector<glm::vec2> uvs;
+	std::vector<glm::vec3> normals;
+	std::vector<unsigned int> indices;
+	if (AssimpHelper::ImportMesh("../res/models/Monkey.fbx", positions, uvs, normals, indices))
 	{
-		// front
-		0, 1, 2,
-		2, 3, 0,
-		1, 5, 6,
-		6, 2, 1,
-		// back
-		7, 6, 5,
-		5, 4, 7,
-		// left
-		4, 0, 3,
-		3, 7, 4,
-		// bottom
-		4, 5, 1,
-		1, 0, 4,
-		// top
-		3, 2, 6,
-		6, 7, 3
-	};
+
+	}
+
+	std::vector<VertexData> vertices = std::vector<VertexData>(positions.size());
+	for (size_t n = 0; n < positions.size(); ++n)
+	{
+		vertices[n].position = positions[n];
+		vertices[n].uv = uvs[n];
+		vertices[n].color = glm::vec3();
+	}
 
 	unsigned int IBO;
 	{ // Create IBO (INDEX BUFFER OBJECT)
@@ -287,7 +315,7 @@ int main()
 		// Bind IBO
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);
 		{
-			glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(cube_elements), cube_elements, GL_STATIC_DRAW);
+			glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices[0]) * indices.size(), indices.data(), GL_STATIC_DRAW);
 		}
 		// Unbind IBO
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
@@ -304,7 +332,7 @@ int main()
 		// b: Store geometry data into the buffer data using "glBufferData"
 		// https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBufferData.xhtml
 		//glBufferData(GL_ARRAY_BUFFER, sizeof(vertexData[0]) * vertexData.size(), &vertexData[0], GL_STATIC_DRAW);
-		glBufferData(GL_ARRAY_BUFFER, sizeof(cube_vertex_data), cube_vertex_data, GL_STATIC_DRAW);
+		glBufferData(GL_ARRAY_BUFFER, sizeof(vertices[0]) * vertices.size(), vertices.data(), GL_STATIC_DRAW);
 	}
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 
@@ -323,7 +351,7 @@ int main()
 		{
 			// https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttribPointer.xhtml
 			// position attribute
-			GLsizei bytePerVertex = 6 * sizeof(GLfloat);
+			GLsizei bytePerVertex = 8 * sizeof(GLfloat);
 			void* offset = (void*)0;
 
 			glEnableVertexAttribArray(0);
@@ -333,6 +361,11 @@ int main()
 			offset = (void*)(3 * sizeof(float));
 			glEnableVertexAttribArray(1);
 			glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, bytePerVertex, offset);
+
+			// uvs attribute
+			offset = (void*)(6 * sizeof(float));
+			glEnableVertexAttribArray(2);
+			glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, bytePerVertex, offset);
 		}
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
 	}
@@ -350,8 +383,28 @@ int main()
 
 	int transformUniformLocation = glGetUniformLocation(shaderProgram, "transform");
 	int projectionUniformLocation = glGetUniformLocation(shaderProgram, "projection");
+	int alphaUniformLocation = glGetUniformLocation(shaderProgram, "alpha");
 
 	transform = glm::translate(transform, glm::vec3(0.0f, 0.0f, -3.0f));
+	transform = glm::rotate(transform, glm::radians(-90.0f), glm::vec3(1.0f, 0.0f, 0.0f));
+
+	unsigned int texture = 0;
+	{
+		// Create and load texture:
+
+		CreateGLTexture(texture);
+
+		// Load the pixels data
+		int w;
+		int h;
+		int channelsCount;
+		unsigned char* pixelsData = LoadImage("../res/textures/placeHolder.jpg", w, h, channelsCount, 3, true);
+		if (pixelsData != nullptr)
+		{
+			SetImageToGLTexture(texture, w, h, GL_RGB, GL_RGB, GL_UNSIGNED_BYTE, pixelsData);
+		}
+		FreeImage(pixelsData);
+	}
 
 	// Loop
 	while (!glfwWindowShouldClose(window))
@@ -364,12 +417,15 @@ int main()
 		// Update
 		{
 			//transform = glm::rotate(transform, 0.01f, glm::vec3(1.0f, 1.0f, 1.0f));
+			
 		}
+
+		float alpha = 0.0f;
 
 		// Render Pass
 		{
 			glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-			glClear(GL_COLOR_BUFFER_BIT);
+			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 			
 			// Draw the VAO using the VBO
 			glBindVertexArray(VAO);
@@ -383,11 +439,16 @@ int main()
 						{
 							glUniformMatrix4fv(transformUniformLocation, 1, GL_FALSE, &transform[0][0]);
 							glUniformMatrix4fv(projectionUniformLocation, 1, GL_FALSE, &projection[0][0]);
+							glUniform1f(alphaUniformLocation, alpha);
+						}
+
+						{ // Bind the textures
+							glBindTexture(GL_TEXTURE_2D, texture);
 						}
 					}
 
 					// Draw call
-					glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, nullptr);
+					glDrawElements(GL_TRIANGLES, indices.size(), GL_UNSIGNED_INT, nullptr);
 				}
 				glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 				glBindBuffer(GL_ARRAY_BUFFER, 0);
@@ -408,6 +469,11 @@ int main()
 	{ // Destroy the VBO
 		glDeleteVertexArrays(1, &VAO);
 		glDeleteBuffers(1, &VBO);
+	}
+
+	{
+		// Destroy the Textures
+		glDeleteTextures(1, &texture);
 	}
 
 	glfwTerminate();
