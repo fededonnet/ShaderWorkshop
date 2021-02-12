@@ -9,7 +9,7 @@ This is a simple OpenGL program uses to draw a geometry using shaders.
 # Building (Windows)
 
   - Get/Clone
-  - git clone https://github.com/fededonnet/ShaderWorkshop
+  - [git clone https://github.com/fededonnet/ShaderWorkshop]
   - Create folder called [build] in the root.
   - Run console in the [build] folder (shift + right click -> "Open Powershell windows here") 
   - Generate a new visual studio proyect (x86) using CMAKE:
