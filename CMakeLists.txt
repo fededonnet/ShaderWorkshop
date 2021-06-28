@@ -6,11 +6,12 @@ PROJECT(ShaderWorkshop CXX)
 SET(SRCS
 	"${CMAKE_CURRENT_LIST_DIR}/src/main.cpp"
 	"${CMAKE_CURRENT_LIST_DIR}/src/AssimpHelper.cpp"
+	"${CMAKE_CURRENT_LIST_DIR}/src/AssimpHelper.h"
+	"${CMAKE_CURRENT_LIST_DIR}/src/camera.h"
 )
 
 SET(HDRS
-	"${CMAKE_CURRENT_LIST_DIR}/src/AssimpHelper.h"
-	"${CMAKE_CURRENT_LIST_DIR}/src/camera.h"
+
 )
 
 add_library(glad STATIC "src/glad/glad.cpp")
