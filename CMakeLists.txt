@@ -10,6 +10,7 @@ SET(SRCS
 
 SET(HDRS
 	"${CMAKE_CURRENT_LIST_DIR}/src/AssimpHelper.h"
+	"${CMAKE_CURRENT_LIST_DIR}/src/camera.h"
 )
 
 add_library(glad STATIC "src/glad/glad.cpp")

@@ -3,6 +3,8 @@
 
 #include <iostream> // cout
 
+#include <vector>
+
 // read shader file
 #include <string>
 #include <fstream>
@@ -12,24 +14,34 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
-#include <vector>
-
 #include "AssimpHelper.h"
-
+#include "camera.h"
 
 // http://stackoverflow.com/questions/24088002/stb-image-h-in-visual-studio-unresolved-external-symbol
 #define STB_IMAGE_IMPLEMENTATION
 #include <stb/stb_image.h>
 
-glm::mat4 transform;
-glm::mat4 projection;
-
-void framebuffer_size_callback(GLFWwindow* window, int width, int height);
-void processInput(GLFWwindow* window);
-
 // settings
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
+
+glm::mat4 model;
+glm::mat4 projection;
+
+// camera
+Camera camera(glm::vec3(0.0f, 2.0f, 8.0f));
+bool firstMouse = true;
+float lastX = SCR_WIDTH / 2.0f;
+float lastY = SCR_HEIGHT / 2.0f;
+
+// timing
+float deltaTime = 0.0f;	// time between current frame and last frame
+float lastFrame = 0.0f;
+
+void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
+void mouse_callback(GLFWwindow* window, double xpos, double ypos);
+void framebuffer_size_callback(GLFWwindow* window, int width, int height);
+void processInput(GLFWwindow* window);
 
 ///////////////////// STBI HELPERS FUNCTIONS //////////////////////////////////////////////////////////////////////////////
 unsigned char* LoadImage(
@@ -58,7 +70,7 @@ unsigned char* LoadImage(
 	unsigned char* buffer = stbi_load(absoluteFilePath, &_x, &_y, &_channels_in_file, desired_channels);
 	if (buffer == nullptr)
 	{
-		std::cout << "failed to load texture: " << absoluteFilePath <<std::endl;
+		std::cout << "failed to load texture: " << absoluteFilePath << std::endl;
 		return nullptr;
 	}
 
@@ -81,7 +93,7 @@ const std::string ReadShader(const char* shaderPath)
 	// 1. retrieve the vertex/fragment source code from filePath
 	std::string shaderString;
 	std::ifstream shaderFile;
-	
+
 	// ensure ifstream objects can throw exceptions:
 	shaderFile.exceptions(std::ifstream::failbit | std::ifstream::badbit);
 	try
@@ -141,7 +153,7 @@ int CreateCompileAndLinkShaderProgram(const char* vertexShaderSource, const char
 	glLinkProgram(shaderProgram);
 	// check for linking errors
 	glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
-	if (!success) 
+	if (!success)
 	{
 		glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
 		std::cout << "ERROR::SHADER::PROGRAM::LINKING_FAILED\n" << infoLog << std::endl;
@@ -181,7 +193,7 @@ void CreateGLTexture(unsigned int& texture)
 /// <returns></returns>
 void SetImageToGLTexture(
 	unsigned int texture,
-	const int width, 
+	const int width,
 	const int height,
 	GLint internalformat,
 	GLenum format,
@@ -226,6 +238,12 @@ int main()
 	}
 	glfwMakeContextCurrent(window);
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+	glfwSetCursorPosCallback(window, mouse_callback);
+	glfwSetScrollCallback(window, scroll_callback);
+
+	// tell GLFW to capture our mouse
+	glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+
 
 	// glad: load all OpenGL function pointers
 	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
@@ -240,50 +258,6 @@ int main()
 
 	glEnable(GL_DEPTH_TEST);
 
-	projection = glm::perspective(glm::radians(75.0f), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.01f, 100.0f);
-	//projection = glm::ortho(-10.0f, 10.0f, -10.0f, 10.0f, 0.01f, 100.0f);
-
-	{
-		//transform = glm::translate(transform, glm::vec3(1.0f, 0.0f, 0.0f));
-	}
-
-	//GLfloat cube_vertex_data[] =
-	//{
-	//	// Vertex position		// Vertex color			// UV
-	//	// front
-	//	-0.5f, -0.5f, 0.5f,		1.0, 0.0, 0.0,			0.666667f, 0.333333f,
-	//	 0.5f, -0.5f, 0.5f,		0.0, 1.0, 0.0,			0.333333f, 0.333333f,
-	//	 0.5f,  0.5f, 0.5f,		0.0, 0.0, 1.0,			0.333333, 0.000000f,
-	//	-0.5f,  0.5f, 0.5f,		1.0, 1.0, 1.0,			0.666667, 0.000000f,
-	//	// back
-	//	-0.5f, -0.5f, -0.5f,	1.0, 0.0, 0.0,			0.333333f, 0.666667f,
-	//	 0.5f, -0.5f, -0.5f,	0.0, 1.0, 0.0,			0.000000f, 0.666667f,
-	//	 0.5f,  0.5f, -0.5f,	0.0, 0.0, 1.0,			0.000000f, 0.333333f,
-	//	-0.5f,  0.5f, -0.5f,	1.0, 1.0, 1.0,			0.333333f, 0.333333f
-	//};
-
-	///* init_resources */
-	//unsigned int cube_elements[] = 
-	//{
-	//	// front
-	//	0, 1, 2,
-	//	2, 3, 0,
-	//	1, 5, 6,
-	//	6, 2, 1,
-	//	// back
-	//	7, 6, 5,
-	//	5, 4, 7,
-	//	// left
-	//	4, 0, 3,
-	//	3, 7, 4,
-	//	// bottom
-	//	4, 5, 1,
-	//	1, 0, 4,
-	//	// top
-	//	3, 2, 6,
-	//	6, 7, 3
-	//};
-
 	struct VertexData
 	{
 		glm::vec3 position;
@@ -295,9 +269,12 @@ int main()
 	std::vector<glm::vec2> uvs;
 	std::vector<glm::vec3> normals;
 	std::vector<unsigned int> indices;
-	if (AssimpHelper::ImportMesh("../res/models/Monkey.fbx", positions, uvs, normals, indices))
-	{
+	//const std::string modelPath = "../res/models/Monkey.fbx";
+	const std::string modelPath = "../res/models/ShaderBall.fbx";
 
+	if (!AssimpHelper::ImportMesh(modelPath, positions, uvs, normals, indices))
+	{
+		// LOG ERROR!
 	}
 
 	std::vector<VertexData> vertices = std::vector<VertexData>(positions.size());
@@ -383,10 +360,9 @@ int main()
 
 	int transformUniformLocation = glGetUniformLocation(shaderProgram, "transform");
 	int projectionUniformLocation = glGetUniformLocation(shaderProgram, "projection");
-	int alphaUniformLocation = glGetUniformLocation(shaderProgram, "alpha");
+	int viewUniformLocation = glGetUniformLocation(shaderProgram, "view");
 
-	transform = glm::translate(transform, glm::vec3(0.0f, 0.0f, -3.0f));
-	transform = glm::rotate(transform, glm::radians(-90.0f), glm::vec3(1.0f, 0.0f, 0.0f));
+	int alphaUniformLocation = glGetUniformLocation(shaderProgram, "alpha");
 
 	unsigned int texture = 0;
 	{
@@ -409,6 +385,13 @@ int main()
 	// Loop
 	while (!glfwWindowShouldClose(window))
 	{
+		// per-frame time logic
+		{
+			float currentFrame = glfwGetTime();
+			deltaTime = currentFrame - lastFrame;
+			lastFrame = currentFrame;
+		}
+
 		// Input
 		{
 			processInput(window);
@@ -416,17 +399,18 @@ int main()
 
 		// Update
 		{
-			//transform = glm::rotate(transform, 0.01f, glm::vec3(1.0f, 1.0f, 1.0f));
-			
+			// Update the projection matrix each frame based on the camera zoom
+			projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.01f, 100.0f);
 		}
 
-		float alpha = 0.0f;
+
+		const glm::mat4 view = camera.GetViewMatrix();
 
 		// Render Pass
 		{
 			glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-			
+
 			// Draw the VAO using the VBO
 			glBindVertexArray(VAO);
 			{
@@ -437,9 +421,9 @@ int main()
 					{
 						// Update shader uniforms
 						{
-							glUniformMatrix4fv(transformUniformLocation, 1, GL_FALSE, &transform[0][0]);
+							glUniformMatrix4fv(transformUniformLocation, 1, GL_FALSE, &model[0][0]);
 							glUniformMatrix4fv(projectionUniformLocation, 1, GL_FALSE, &projection[0][0]);
-							glUniform1f(alphaUniformLocation, alpha);
+							glUniformMatrix4fv(viewUniformLocation, 1, GL_FALSE, &view[0][0]);
 						}
 
 						{ // Bind the textures
@@ -490,24 +474,34 @@ void processInput(GLFWwindow* window)
 	}
 	if (glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS)
 	{
-		transform = glm::rotate(transform, -0.1f, glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::rotate(model, -0.1f, glm::vec3(0.0f, 1.0f, 0.0f));
 	}
 	if (glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS)
 	{
-		transform = glm::translate(transform, glm::vec3(-0.01f, 0.0f, 0.0f));
+		model = glm::translate(model, glm::vec3(-0.01f, 0.0f, 0.0f));
 	}
 	if (glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS)
 	{
-		transform = glm::translate(transform, glm::vec3(0.01f, 0.0f, 0.0f));
+		model = glm::translate(model, glm::vec3(0.01f, 0.0f, 0.0f));
 	}
 	if (glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS)
 	{
-		transform = glm::translate(transform, glm::vec3(0.0f, 0.01f, 0.0f));
+		model = glm::translate(model, glm::vec3(0.0f, 0.01f, 0.0f));
 	}
 	if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS)
 	{
-		transform = glm::translate(transform, glm::vec3(0.0f, -0.01f, 0.0f));
+		model = glm::translate(model, glm::vec3(0.0f, -0.01f, 0.0f));
 	}
+
+	// CAMERA MOVEMENT
+	if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
+		camera.ProcessKeyboard(FORWARD, deltaTime);
+	if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
+		camera.ProcessKeyboard(BACKWARD, deltaTime);
+	if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
+		camera.ProcessKeyboard(LEFT, deltaTime);
+	if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
+		camera.ProcessKeyboard(RIGHT, deltaTime);
 }
 
 // glfw: whenever the window size changed (by OS or user resize) this callback function executes
@@ -518,5 +512,32 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 	// height will be significantly larger than specified on retina displays.
 	glViewport(0, 0, width, height);
 
-	projection = glm::perspective(glm::radians(75.0f), (float)width / (float)height, 0.01f, 100.0f);
+	projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.01f, 100.0f);
+}
+
+// glfw: whenever the mouse moves, this callback is called
+// -------------------------------------------------------
+void mouse_callback(GLFWwindow* window, double xpos, double ypos)
+{
+	if (firstMouse)
+	{
+		lastX = xpos;
+		lastY = ypos;
+		firstMouse = false;
+	}
+
+	float xoffset = xpos - lastX;
+	float yoffset = lastY - ypos; // reversed since y-coordinates go from bottom to top
+
+	lastX = xpos;
+	lastY = ypos;
+
+	camera.ProcessMouseMovement(xoffset, yoffset);
+}
+
+// glfw: whenever the mouse scroll wheel scrolls, this callback is called
+// ----------------------------------------------------------------------
+void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
+{
+	camera.ProcessMouseScroll(yoffset);
 }
