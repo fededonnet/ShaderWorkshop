@@ -14,6 +14,8 @@ void MeshProcessing(
 	std::vector<glm::vec3>& positions,
 	std::vector<glm::vec2>& uvs,
 	std::vector<glm::vec3>& normals,
+	std::vector<glm::vec3>& tangents,
+	std::vector<glm::vec3>& bitangents,
 	std::vector<unsigned int>& indices)
 {
 	// Walk through each of the mesh's vertices
@@ -50,17 +52,17 @@ void MeshProcessing(
 			uvs.push_back(glm::vec2(0.0f, 0.0f));
 		}
 
-		//// tangent
-		//vector.x = mesh->mTangents[i].x;
-		//vector.y = mesh->mTangents[i].y;
-		//vector.z = mesh->mTangents[i].z;
-		//tangents.push_back(vector);
+		// tangents
+		vector.x = mesh->mTangents[i].x;
+		vector.y = mesh->mTangents[i].y;
+		vector.z = mesh->mTangents[i].z;
+		tangents.push_back(vector);
 
-		//// bitangent
-		//vector.x = mesh->mBitangents[i].x;
-		//vector.y = mesh->mBitangents[i].y;
-		//vector.z = mesh->mBitangents[i].z;
-		//bitangents.push_back(vector);
+		// bitangents
+		vector.x = mesh->mBitangents[i].x;
+		vector.y = mesh->mBitangents[i].y;
+		vector.z = mesh->mBitangents[i].z;
+		bitangents.push_back(vector);
 	}
 
 	// now wak through each of the mesh's faces (a face is a mesh its triangle) and retrieve the corresponding vertex indices.
@@ -81,6 +83,8 @@ void NodeProcessing(
 	std::vector<glm::vec3>& positions,
 	std::vector<glm::vec2>& uvs,
 	std::vector<glm::vec3>& normals,
+	std::vector<glm::vec3>& tangents,
+	std::vector<glm::vec3>& bitangents,
 	std::vector<unsigned int>& indices)
 {
 	// process each mesh located at the current node
@@ -89,18 +93,25 @@ void NodeProcessing(
 		// the node object only contains indices to index the actual objects in the scene. 
 		// the scene contains all the data, node is just to keep stuff organized (like relations between nodes).
 		aiMesh* mesh = scene->mMeshes[node->mMeshes[i]];
-		MeshProcessing(mesh, scene, positions, uvs, normals, indices);
+		MeshProcessing(mesh, scene, positions, uvs, normals, tangents, bitangents, indices);
 	}
 	// after we've processed all of the meshes (if any) we then recursively process each of the children nodes
 	for (unsigned int i = 0; i < node->mNumChildren; i++)
 	{
-		NodeProcessing(scene, node->mChildren[i], positions, uvs, normals, indices);
+		NodeProcessing(scene, node->mChildren[i], positions, uvs, normals, tangents, bitangents, indices);
 	}
 }
 
-void SceneProcessing(const aiScene* scene, std::vector<glm::vec3>& positions, std::vector<glm::vec2>& uvs, std::vector<glm::vec3>& normals, std::vector<unsigned int>& indices)
+void SceneProcessing(
+	const aiScene* scene,
+	std::vector<glm::vec3>& positions,
+	std::vector<glm::vec2>& uvs,
+	std::vector<glm::vec3>& normals,
+	std::vector<glm::vec3>& tangents,
+	std::vector<glm::vec3>& bitangents,
+	std::vector<unsigned int>& indices)
 {
-	NodeProcessing(scene, scene->mRootNode, positions, uvs, normals, indices);
+	NodeProcessing(scene, scene->mRootNode, positions, uvs, normals, tangents, bitangents, indices);
 }
 
 // http://assimp.sourceforge.net/lib_html/usage.html
@@ -109,7 +120,9 @@ bool AssimpHelper::ImportMesh(
 	std::vector<glm::vec3>& vertices,
 	std::vector<glm::vec2>& uvs,
 	std::vector<glm::vec3>& normals,
-	std::vector<unsigned int>& indices)
+	std::vector<unsigned int>& indices,
+	std::vector<glm::vec3>& tangents,
+	std::vector<glm::vec3>& bitangents)
 {
 	// Create an instance of the Importer class
 	Assimp::Importer importer;
@@ -129,7 +142,7 @@ bool AssimpHelper::ImportMesh(
 		return false;
 	}
 	// Now we can access the file's contents. 
-	SceneProcessing(scene, vertices, uvs, normals, indices);
+	SceneProcessing(scene, vertices, uvs, normals, tangents, bitangents, indices);
 
 	// We're done. Everything will be cleaned up by the importer destructor
 	return true;
