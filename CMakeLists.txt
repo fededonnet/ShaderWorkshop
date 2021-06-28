@@ -29,6 +29,8 @@ set_target_properties(assimp PROPERTIES
     IMPORTED_LOCATION "${CMAKE_CURRENT_LIST_DIR}/lib/assimp-vc140-mtd.lib"
 )
 
+set_property (DIRECTORY PROPERTY VS_STARTUP_PROJECT "ShaderWorkshopMain")
+
 add_executable(ShaderWorkshopMain "${SRCS}")
 set_property(TARGET ShaderWorkshopMain PROPERTY
   MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL")
