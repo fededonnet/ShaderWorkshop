@@ -374,7 +374,7 @@ int main()
 		int w;
 		int h;
 		int channelsCount;
-		unsigned char* pixelsData = LoadImage("../res/textures/placeHolder.jpg", w, h, channelsCount, 3, true);
+		unsigned char* pixelsData = LoadImage("../res/textures/Wood018_1K-PNG/Wood018_1K_Color.png", w, h, channelsCount, 3, true);
 		if (pixelsData != nullptr)
 		{
 			SetImageToGLTexture(texture, w, h, GL_RGB, GL_RGB, GL_UNSIGNED_BYTE, pixelsData);
