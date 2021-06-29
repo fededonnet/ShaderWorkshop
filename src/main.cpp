@@ -422,7 +422,9 @@ int main()
 		int w;
 		int h;
 		int channelsCount;
-		unsigned char* pixelsData = LoadImage("../res/textures/Tiles093_1K-PNG/Tiles093_1K_Color.png", w, h, channelsCount, 3, false);
+		const char* texturePath = "../res/textures/Tiles093_1K-PNG/Tiles093_1K_Color.png";
+		//const char* texturePath = "../res/textures/Ground035_1K-PNG/Ground035_1K_Color.png";
+		unsigned char* pixelsData = LoadImage(texturePath, w, h, channelsCount, 3, false);
 		if (pixelsData != nullptr)
 		{
 			SetImageToGLTexture(texture, w, h, GL_RGB, GL_RGB, GL_UNSIGNED_BYTE, pixelsData);
@@ -440,7 +442,9 @@ int main()
 		int w;
 		int h;
 		int channelsCount;
-		unsigned char* pixelsData = LoadImage("../res/textures/Tiles093_1K-PNG/Tiles093_1K_Normal.png", w, h, channelsCount, 3, false);
+		const char* texturePath = "../res/textures/Tiles093_1K-PNG/Tiles093_1K_Normal.png";
+		//const char* texturePath = "../res/textures/Ground035_1K-PNG/Ground035_1K_Normal.png";
+		unsigned char* pixelsData = LoadImage(texturePath, w, h, channelsCount, 3, false);
 		if (pixelsData != nullptr)
 		{
 			SetImageToGLTexture(normalSampler, w, h, GL_RGB, GL_RGB, GL_UNSIGNED_BYTE, pixelsData);

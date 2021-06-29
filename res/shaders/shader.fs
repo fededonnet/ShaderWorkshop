@@ -34,9 +34,10 @@ void main()
 	vec3 diffuse = (diff * lightColor); 
 	
 	// Specular
-	float specularStrength = 2.5;
+	float specularStrength = 0.5;
 	vec3 viewDir = normalize(cameraWorldPosition - fragmentWorldPosition);
 	vec3 reflectDir = reflect(-lightDir, normalWorldSpace);
+	
 	// Blinn
 	float spec = pow(max(dot(viewDir, reflectDir), 0.0), 32);
 	vec3 specular = specularStrength * spec * lightColor;  
