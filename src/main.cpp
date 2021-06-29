@@ -263,16 +263,22 @@ int main()
 		glm::vec3 position;
 		glm::vec3 color;
 		glm::vec2 uv;
+		glm::vec3 normal;
+		glm::vec3 tangent;
+		glm::vec3 bitangent;
 	};
 
 	std::vector<glm::vec3> positions;
 	std::vector<glm::vec2> uvs;
 	std::vector<glm::vec3> normals;
+	std::vector<glm::vec3> tangents;
+	std::vector<glm::vec3> bitangents;
 	std::vector<unsigned int> indices;
 	//const std::string modelPath = "../res/models/Monkey.fbx";
-	const std::string modelPath = "../res/models/ShaderBall.fbx";
+	//const std::string modelPath = "../res/models/ShaderBall.fbx";
+	const std::string modelPath = "../res/models/Plane.fbx";
 
-	if (!AssimpHelper::ImportMesh(modelPath, positions, uvs, normals, indices))
+	if (!AssimpHelper::ImportMesh(modelPath, positions, uvs, normals, indices, tangents, bitangents))
 	{
 		// LOG ERROR!
 	}
@@ -283,6 +289,9 @@ int main()
 		vertices[n].position = positions[n];
 		vertices[n].uv = uvs[n];
 		vertices[n].color = glm::vec3();
+		vertices[n].normal = normals[n];
+		vertices[n].tangent = tangents[n];
+		vertices[n].bitangent = bitangents[n];
 	}
 
 	unsigned int IBO;
@@ -328,9 +337,9 @@ int main()
 		{
 			// https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttribPointer.xhtml
 			// position attribute
-			GLsizei bytePerVertex = 8 * sizeof(GLfloat);
-			void* offset = (void*)0;
+			GLsizei bytePerVertex = sizeof(VertexData);
 
+			void* offset = (void*)0;
 			glEnableVertexAttribArray(0);
 			glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, bytePerVertex, offset);
 
@@ -343,6 +352,21 @@ int main()
 			offset = (void*)(6 * sizeof(float));
 			glEnableVertexAttribArray(2);
 			glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, bytePerVertex, offset);
+
+			// normal attribute
+			offset = (void*)(8 * sizeof(float));
+			glEnableVertexAttribArray(3);
+			glVertexAttribPointer(3, 3, GL_FLOAT, GL_FALSE, bytePerVertex, offset);
+
+			// tangent attribute
+			offset = (void*)(11 * sizeof(float));
+			glEnableVertexAttribArray(4);
+			glVertexAttribPointer(4, 3, GL_FLOAT, GL_FALSE, bytePerVertex, offset);
+
+			// bitangent attribute
+			offset = (void*)(14 * sizeof(float));
+			glEnableVertexAttribArray(5);
+			glVertexAttribPointer(5, 3, GL_FLOAT, GL_FALSE, bytePerVertex, offset);
 		}
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
 	}
@@ -355,6 +379,25 @@ int main()
 			const std::string vertexShaderSource = ReadShader("../res/shaders/shader.vs");
 			const std::string fragmentShaderSource = ReadShader("../res/shaders/shader.fs");
 			shaderProgram = CreateCompileAndLinkShaderProgram(vertexShaderSource.c_str(), fragmentShaderSource.c_str());
+
+			// Link samplers?
+			{
+				glUseProgram(shaderProgram);
+				{
+					int albedoSamplerUniformLocation = glGetUniformLocation(shaderProgram, "albedoMap");
+					if (albedoSamplerUniformLocation != -1)
+					{
+						glUniform1i(albedoSamplerUniformLocation, 0);
+					}
+
+					int normalSamplerUniformLocation = glGetUniformLocation(shaderProgram, "normalMap");
+					if (normalSamplerUniformLocation != -1)
+					{
+						glUniform1i(normalSamplerUniformLocation, 1);
+					}
+				}
+				glUseProgram(0);
+			}
 		}
 	}
 
@@ -362,7 +405,12 @@ int main()
 	int projectionUniformLocation = glGetUniformLocation(shaderProgram, "projection");
 	int viewUniformLocation = glGetUniformLocation(shaderProgram, "view");
 
-	int alphaUniformLocation = glGetUniformLocation(shaderProgram, "alpha");
+	int lightPositionUniformLocation = glGetUniformLocation(shaderProgram, "lightWorldPosition");
+	int lightColorUniformLocation = glGetUniformLocation(shaderProgram, "lightColor");
+
+	int baseColorUniformLocation = glGetUniformLocation(shaderProgram, "baseColor");
+
+	int cameraPositionUniformLocation = glGetUniformLocation(shaderProgram, "cameraWorldPosition");
 
 	unsigned int texture = 0;
 	{
@@ -374,13 +422,39 @@ int main()
 		int w;
 		int h;
 		int channelsCount;
-		unsigned char* pixelsData = LoadImage("../res/textures/Wood018_1K-PNG/Wood018_1K_Color.png", w, h, channelsCount, 3, true);
+		unsigned char* pixelsData = LoadImage("../res/textures/Tiles093_1K-PNG/Tiles093_1K_Color.png", w, h, channelsCount, 3, false);
 		if (pixelsData != nullptr)
 		{
 			SetImageToGLTexture(texture, w, h, GL_RGB, GL_RGB, GL_UNSIGNED_BYTE, pixelsData);
 		}
 		FreeImage(pixelsData);
 	}
+
+	unsigned int normalSampler = 0;
+	{
+		// Create and load texture:
+
+		CreateGLTexture(normalSampler);
+
+		// Load the pixels data
+		int w;
+		int h;
+		int channelsCount;
+		unsigned char* pixelsData = LoadImage("../res/textures/Tiles093_1K-PNG/Tiles093_1K_Normal.png", w, h, channelsCount, 3, false);
+		if (pixelsData != nullptr)
+		{
+			SetImageToGLTexture(normalSampler, w, h, GL_RGB, GL_RGB, GL_UNSIGNED_BYTE, pixelsData);
+		}
+		FreeImage(pixelsData);
+	}
+
+
+	// Lighting
+	glm::vec3 lightPosition = glm::vec3(-4.0f, 2.0f, 4.0f);
+	glm::vec3 lightColor = glm::vec3(1.0f, 1.0f, 1.0f);
+
+	// Material
+	glm::vec3 baseColor = glm::vec3(1.0f, 1.0f, 1.0f);
 
 	// Loop
 	while (!glfwWindowShouldClose(window))
@@ -401,8 +475,19 @@ int main()
 		{
 			// Update the projection matrix each frame based on the camera zoom
 			projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.01f, 100.0f);
+
+			// set light position
+			float lightX = (2.0f * sin(glfwGetTime()));
+			float lightY = (0.0f);
+			float lightZ = (2.0f * cos(glfwGetTime()));
+
+			lightPosition.x = lightX;
+			lightPosition.y = lightY;
+			lightPosition.z = lightZ;
 		}
 
+
+		const glm::vec3& cameraPosition = camera.Position;
 
 		const glm::mat4 view = camera.GetViewMatrix();
 
@@ -424,10 +509,22 @@ int main()
 							glUniformMatrix4fv(transformUniformLocation, 1, GL_FALSE, &model[0][0]);
 							glUniformMatrix4fv(projectionUniformLocation, 1, GL_FALSE, &projection[0][0]);
 							glUniformMatrix4fv(viewUniformLocation, 1, GL_FALSE, &view[0][0]);
+
+							glUniform3f(baseColorUniformLocation, baseColor.x, baseColor.y, baseColor.z);
+
+							glUniform3f(cameraPositionUniformLocation, cameraPosition.x, cameraPosition.y, cameraPosition.z);
+
+							// Ligthing
+							glUniform3f(lightPositionUniformLocation, lightPosition.x, lightPosition.y, lightPosition.z);
+							glUniform3f(lightColorUniformLocation, lightColor.x, lightColor.y, lightColor.z);
 						}
 
 						{ // Bind the textures
+							glActiveTexture(GL_TEXTURE0);
 							glBindTexture(GL_TEXTURE_2D, texture);
+
+							glActiveTexture(GL_TEXTURE0 + 1);
+							glBindTexture(GL_TEXTURE_2D, normalSampler);
 						}
 					}
 
