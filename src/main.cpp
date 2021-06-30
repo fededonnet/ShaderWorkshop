@@ -29,7 +29,7 @@ glm::mat4 model;
 glm::mat4 projection;
 
 // camera
-Camera camera(glm::vec3(0.0f, 2.0f, 8.0f));
+Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));
 bool firstMouse = true;
 float lastX = SCR_WIDTH / 2.0f;
 float lastY = SCR_HEIGHT / 2.0f;
@@ -274,6 +274,7 @@ int main()
 	std::vector<glm::vec3> tangents;
 	std::vector<glm::vec3> bitangents;
 	std::vector<unsigned int> indices;
+	
 	//const std::string modelPath = "../res/models/Monkey.fbx";
 	//const std::string modelPath = "../res/models/ShaderBall.fbx";
 	const std::string modelPath = "../res/models/Plane.fbx";
@@ -337,36 +338,36 @@ int main()
 		{
 			// https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttribPointer.xhtml
 			// position attribute
-			GLsizei bytePerVertex = sizeof(VertexData);
+			GLsizei bytesPerVertex = sizeof(VertexData);
 
 			void* offset = (void*)0;
 			glEnableVertexAttribArray(0);
-			glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, bytePerVertex, offset);
+			glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, bytesPerVertex, offset);
 
 			// color attribute
 			offset = (void*)(3 * sizeof(float));
 			glEnableVertexAttribArray(1);
-			glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, bytePerVertex, offset);
+			glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, bytesPerVertex, offset);
 
 			// uvs attribute
 			offset = (void*)(6 * sizeof(float));
 			glEnableVertexAttribArray(2);
-			glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, bytePerVertex, offset);
+			glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, bytesPerVertex, offset);
 
 			// normal attribute
 			offset = (void*)(8 * sizeof(float));
 			glEnableVertexAttribArray(3);
-			glVertexAttribPointer(3, 3, GL_FLOAT, GL_FALSE, bytePerVertex, offset);
+			glVertexAttribPointer(3, 3, GL_FLOAT, GL_FALSE, bytesPerVertex, offset);
 
 			// tangent attribute
 			offset = (void*)(11 * sizeof(float));
 			glEnableVertexAttribArray(4);
-			glVertexAttribPointer(4, 3, GL_FLOAT, GL_FALSE, bytePerVertex, offset);
+			glVertexAttribPointer(4, 3, GL_FLOAT, GL_FALSE, bytesPerVertex, offset);
 
 			// bitangent attribute
 			offset = (void*)(14 * sizeof(float));
 			glEnableVertexAttribArray(5);
-			glVertexAttribPointer(5, 3, GL_FLOAT, GL_FALSE, bytePerVertex, offset);
+			glVertexAttribPointer(5, 3, GL_FLOAT, GL_FALSE, bytesPerVertex, offset);
 		}
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
 	}
@@ -424,6 +425,8 @@ int main()
 		int channelsCount;
 		const char* texturePath = "../res/textures/Tiles093_1K-PNG/Tiles093_1K_Color.png";
 		//const char* texturePath = "../res/textures/Ground035_1K-PNG/Ground035_1K_Color.png";
+		//const char* texturePath = "../res/textures/Gravel020_4K-PNG/Gravel020_4K_Color.png";
+		
 		unsigned char* pixelsData = LoadImage(texturePath, w, h, channelsCount, 3, false);
 		if (pixelsData != nullptr)
 		{
@@ -444,6 +447,8 @@ int main()
 		int channelsCount;
 		const char* texturePath = "../res/textures/Tiles093_1K-PNG/Tiles093_1K_Normal.png";
 		//const char* texturePath = "../res/textures/Ground035_1K-PNG/Ground035_1K_Normal.png";
+		//const char* texturePath = "../res/textures/Gravel020_4K-PNG/Gravel020_4K_Normal.png";
+
 		unsigned char* pixelsData = LoadImage(texturePath, w, h, channelsCount, 3, false);
 		if (pixelsData != nullptr)
 		{
@@ -559,6 +564,7 @@ int main()
 	{
 		// Destroy the Textures
 		glDeleteTextures(1, &texture);
+		glDeleteTextures(1, &normalSampler);
 	}
 
 	glfwTerminate();
@@ -575,7 +581,15 @@ void processInput(GLFWwindow* window)
 	}
 	if (glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS)
 	{
+		model = glm::rotate(model, -0.1f, glm::vec3(1.0f, 0.0f, 0.0f));
+	}
+	if (glfwGetKey(window, GLFW_KEY_T) == GLFW_PRESS)
+	{
 		model = glm::rotate(model, -0.1f, glm::vec3(0.0f, 1.0f, 0.0f));
+	}
+	if (glfwGetKey(window, GLFW_KEY_Y) == GLFW_PRESS)
+	{
+		model = glm::rotate(model, -0.1f, glm::vec3(0.0f, 0.0f, 1.0f));
 	}
 	if (glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS)
 	{
